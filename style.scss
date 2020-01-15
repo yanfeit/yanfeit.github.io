@@ -350,8 +350,8 @@ img {
 }
 
 .site-info {
-  text-align:center;
-  margin: 100px auto 0;
+  text-align: center;
+  margin: 20px auto 0;
 
   @include mobile {
     float: none;
@@ -360,6 +360,7 @@ img {
   }
 
   .site-avatar {
+    // margin-top: 20px;
     margin:0 auto;
     display: block;
     max-width: 200px;
