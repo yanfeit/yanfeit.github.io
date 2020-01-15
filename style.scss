@@ -402,8 +402,9 @@ img {
 }
 
 nav {
-  display: block;
+  display : block;
   margin-top: 23px; // @TODO: Vertically middle align
+  text-align : center;
   font-family: $base-font;
   font-weight: 500;
   font-size: 18px;
@@ -414,12 +415,14 @@ nav {
   }
 
   a {
+    display: block;
     margin: 0 10px;
-    text-align: right;
+    text-align: center;
     font-weight: 300;
     letter-spacing: 1px;
 
     @include mobile {
+      display: inline;
       margin: 0 10px;
       color: $link-color;
     }
@@ -539,7 +542,7 @@ nav {
   padding: 60px 20px 0 20px;
   
   &:before{
-    content:"目录";
+    content:"Content";
     margin: 0 0 1em 1em;
     font-weight: 700;
     font-size: 1.2em;
