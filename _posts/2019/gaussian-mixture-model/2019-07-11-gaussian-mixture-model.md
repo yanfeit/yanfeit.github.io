@@ -14,6 +14,10 @@ comments: false
 
 <!-- more -->
 
+<p align="center">
+   <img src="/images/2019/gaussian-mixture-model/gmm.png" alt="drawing" align="middle"/>
+</p>
+
 ## 模型概述
 
 言归正传，我们现在要解决一个归类的问题：我们有一组数据$N \times M$, $N$是数据的个数，$M$是数据的维度（由于模型的局限，最多4维）。然后我们希望给这组数据归为$K$个类，每个类用一个多元高斯分布（multivariate gaussian distribution）来表示，比如说单个数据点是2维，那么就是$K$个2元高斯分布。而事先，我们是不知道这$K$个多元高斯分布的中心位置（means）和协方差矩阵（covariance matrix）的，我们甚至不知道$K$是多少。（当然这些数据是否符合$K$个多元高斯分布的叠加也是未知的。）
