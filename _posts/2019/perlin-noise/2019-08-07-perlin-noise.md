@@ -3,7 +3,7 @@ layout: post
 title:  Perlin噪声和Python的ctypes
 date: 2019-08-07
 Author: Yanfei Tang
-tags: [python, C, algorithm, computer science]
+tags: [python, C, algorithm]
 comments: false
 ---
 
