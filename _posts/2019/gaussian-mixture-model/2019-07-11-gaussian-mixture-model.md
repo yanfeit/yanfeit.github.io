@@ -7,22 +7,23 @@ tags: [python, algorithm, machine learning, 译作]
 comments: false
 ---
 
-数值计算界的鸿篇巨著Numerical Recipes的第三版（简称NR）有一章专门介绍机器学习的分类算法。笔者最近尝试机器学习，便以此书为入门，记下自己的学习过程。高斯混合模型(Gaussian mixture model)是在机器学习里的一个经典算法。它适用于无监督学习(unsupervised learning)下的聚类问题。本篇主要借鉴（照搬）NR的叙述，从原理出发介绍高斯混合模型和 EM (expectation-maximizaton)算法，最后使用python实现其过程，不想看文章的，自取[代码](https://github.com/yanfeit/MLbook/blob/master/gaumixmod/gaussian%20mixture.ipynb)。我个人认为此篇继承了原著NR的如下优点：
+数值计算界的鸿篇巨著Numerical Recipes的第三版（简称NR）有一章专门介绍机器学习的分类算法。笔者最近尝试机器学习，便以此书为入门，记下自己的学习过程。高斯混合模型(Gaussian mixture model)是在机器学习里的一个经典算法。它适用于无监督学习(unsupervised learning)下的聚类问题。本篇主要借鉴（照搬）NR的叙述，从原理出发介绍高斯混合模型和 EM (expectation-maximizaton)算法，最后使用python实现其过程, [代码](https://github.com/yanfeit/MLbook/blob/master/gaumixmod/gaussian%20mixture.ipynb)请自取。我个人认为此篇继承了原著NR的如下优点：
 
-1. 详细地从原理介绍高斯混合模型，而不仅仅陈列出算法的步骤和数学公式。
-2. 尽可能的少用外部的包。
+1. 详细地从原理出发介绍高斯混合模型，而不仅仅陈列出算法的步骤和数学公式。
+2. 尽可能地少用外部的库函数。
 
 <!-- more -->
 
 <p align="center">
    <img src="/images/2019/gaussian-mixture-model/gmm.png" alt="drawing" align="middle"/>
+   <em>图1. NR中聚类的图，展示了EM算法迭代的过程。</em>
 </p>
 
 ## 模型概述
 
-言归正传，我们现在要解决一个归类的问题：我们有一组数据$N \times M$, $N$是数据的个数，$M$是数据的维度（由于模型的局限，最多4维）。然后我们希望给这组数据归为$K$个类，每个类用一个多元高斯分布（multivariate gaussian distribution）来表示，比如说单个数据点是2维，那么就是$K$个2元高斯分布。而事先，我们是不知道这$K$个多元高斯分布的中心位置（means）和协方差矩阵（covariance matrix）的，我们甚至不知道$K$是多少。（当然这些数据是否符合$K$个多元高斯分布的叠加也是未知的。）
+言归正传，我们现在要解决一个归类的问题：我们有一组数据$N \times M$, $N$是数据的个数，$M$是数据的维度（由于模型的局限，维度最好是个位数）。然后我们希望把这组数据归为$K$个类，每个类用一个多元高斯分布（multivariate gaussian distribution）来表示，比如说单个数据点是2维，那么数据集可以用$K$个2元高斯分布来表征。而事先，我们是不知道这$K$个多元高斯分布的中心位置（means）和协方差矩阵（covariance matrix）的，我们甚至不知道$K$是多少。（当然这些数据是否符合$K$个多元高斯分布的叠加也是未知的。）
 
-那为什么说这是无监督学习呢？因为我们事先也不知道哪些数据点是归于哪个高斯分布的。而这，倒是我们期待从模型中得到的结果，也就是说我们希望知道到底我这个数据点归到各个类的概率是多少？我们把这个概率记作<span>$p(k|n)$</span>或者<span>$p\_{nk}$​</span>，其中$0 \le k < K$且$0 \le n < N​$。在文献中，<span>$p\_{nk}$</span>有时也被称为责任矩阵， 就是说第$K$个类需要对第$n$个数据点负多少责任。
+那为什么说这是无监督学习呢？因为我们事先也不知道哪些数据点是归于哪个高斯分布的。而这，倒是我们期待从模型和EM算法中得到的结果。对于高斯混合模型来说我们希望知道到底我这个数据点通过算法是归到了哪个类，概率是多少？我们把这个概率记作<span>$p(k|n)$</span>或者<span>$p\_{nk}$​</span>，其中$0 \le k < K$且$0 \le n < N​$。在文献中，<span>$p\_{nk}$</span>有时也被称为责任矩阵， 就是说第$K$个类需要对第$n$个数据点负多少点责任。
 
 总结下来，在给定一组数据，比如说$( N \times M )$的矩阵，我们希望估计以下的一组参数:
 
@@ -34,20 +35,20 @@ $$
 \end{align} \tag{1} 
 $$
 
-其中<span>$\boldsymbol{\mu}\_k (K \times M)$</span>是多元高斯分布的平均, <span>$\boldsymbol{\Sigma}\_k (K \times M \times M)$</span>是多元高斯分布的协方差矩阵。
+其中<span>$\boldsymbol{\mu}\_k (K \times M)$</span>是多元高斯分布的中心, <span>$\boldsymbol{\Sigma}\_k (K \times M \times M)$</span>是多元高斯分布的协方差矩阵。
 
-我们也会得到一些副产品，比如说$P(k)$, 它表示在第$k$​类的数据的个数在总数据个数的占比，等同于任意数据点在第$k$类的概率，很显然<span>$\sum\_{k} P(k) = 1​$</span>; 我们也可以得到<span>$P(\mathbf{x})​$</span>，它表示在任意位置$\mathbf{x}​$找到数据点的概率密度； 最重要的是我们可以得到整个数据集得到似然函数$\mathscr L​ (likelihood)$。
+我们也会得到一些副产品，比如说$P(k)$, 它表示在第$k$​类的数据的个数在总数据个数的占比，等同于任意数据点在第$k$类的概率，很显然<span>$\sum\_{k} P(k) = 1​$</span>; 我们也可以得到<span>$P(\mathbf{x})​$</span>，它表示在任意位置$\mathbf{x}​$找到数据点的概率密度； 最重要的是我们可以得到整个数据集的似然函数$\mathscr L​ (likelihood)$。
 
 其实整个模型的核心就是就是最大化似然函数$\mathscr L​$，似然函数正比于，给定拟合参数(比如说这里的<span>$\boldsymbol{\mu}\_k$</span>,  <span>$\boldsymbol{\Sigma}\_k$</span>)​, 数据集在这套模型下的概率。现在让我们从似然函数出发推导出高斯混合模型的流程。我们假设所有的数据都是独立的，那么似然函数就是在位置<span>$\mathbf{x}\_n​$</span>找到数据点概率的乘积,
 
 $$
-\mathscr{L} = \prod\limits_{n} P(\mathbf{x}\_n)  \tag{2}
+\mathscr{L} = \prod\limits_{n} P(\mathbf{x}_n)  \tag{2}
 $$
 
 我们可以把<span>$P(\mathbf{x}\_n)​$</span>拆成来自于$K$个高斯分布的贡献，记作
 
 $$
-P(\mathbf{x}_n) = \sum\limits_{k}N(\mathbf{x}\_n|\boldsymbol{\mu}\_k, \boldsymbol{\Sigma}\_k)P(k) \tag{3}
+P(\mathbf{x}_n) = \sum\limits_{k}N(\mathbf{x}_n|\boldsymbol{\mu}_k, \boldsymbol{\Sigma}_k)P(k) \tag{3}
 $$
 
 其中<span>$N(\mathbf{x}|\boldsymbol{\mu}, \boldsymbol{\Sigma})$</span>是多元高斯分布，
@@ -56,7 +57,7 @@ $$
 N(\mathbf{x}|\boldsymbol{\mu}, \boldsymbol{\Sigma}) = \frac{1}{(2\pi)^{M/2}\text{det}(\boldsymbol{\Sigma})^{1/2}}\exp(-\frac{1}{2} (\mathbf{x} - \boldsymbol{\mu})^{\text{T}} \cdot \boldsymbol{\Sigma}^{-1} \cdot (\mathbf{x} - \boldsymbol{\mu}))  \\ \tag{4}
 $$
 
-从式(2)到式(5)是我们用来计算似然函数 $\mathscr L​$的流程，前提当然是我们已经知道了数据和给定的参数比如<span>$\boldsymbol{\mu}\_k$</span>, <span>\boldsymbol{\Sigma}\_k</span>和$P(k)​$。在EM算法里面，我么把它叫做期望步骤(Expectation step)或(E-step)。
+从式(2)到式(5)是我们用来计算似然函数 $\mathscr L​$的流程，前提当然是我们已经知道了数据和给定的参数比如<span>$\boldsymbol{\mu}\_k$</span>, <span>$\boldsymbol{\Sigma}\_k$</span>和$P(k)​$。在EM算法里面，我么把这个流程叫做期望步骤(Expectation step)或(E-step)。
 
 那我们怎么得到<span>$\boldsymbol{\mu}\_k$</span>, <span>$\boldsymbol{\Sigma}\_k$</span> 和$P(k)$呢？
 

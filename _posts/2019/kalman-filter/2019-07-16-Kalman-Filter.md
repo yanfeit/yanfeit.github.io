@@ -11,7 +11,7 @@ comments: false
 
 <!-- more -->
 
-在正文之前，我首先致谢(ackownledge)我所采用的参考资料。程序部分主要参考了[Richard Teammco](https://www.cs.utexas.edu/~teammco/misc/kalman_filter/)的JavaScript代码，我对其中极小的错误进行了修改, 删减了我认为不重要的功能。因为本人不会JavaScript，所以我改成了python的代码。GUI动画的引擎参考了[Irmen de Jong](https://github.com/irmen/rocketsimulator)的程序。
+在正文之前，我首先致谢(ackownledge)我所采用的参考资料。程序部分主要参考了[Richard Teammco](https://www.cs.utexas.edu/~teammco/misc/kalman_filter/)的JavaScript代码，我对其中极小的错误进行了修改, 删减了我认为不重要的功能。因为本人不会JavaScript，所以我改成了python的代码。GUI动画的引擎借鉴（基本照搬）了[Irmen de Jong](https://github.com/irmen/rocketsimulator)的程序。
 
 程序的效果如图所示，[代码](https://github.com/yanfeit/Kalman-Filter)可以自取。
 <p align="center">
@@ -46,7 +46,7 @@ $$
 
 ### 迭代算法
 
-卡尔曼滤波器是一种递归的估计，它需要知道之前一段的历史状态，即<span>$\mathbf{x}\_{k-1}$</span>。同时我们又知道当前的一些信息，即控制单元$\mathbf{u}\_k$和观测$\mathbf{z}\_k$。我们可以粗略地想象这样的迭代算法可以是由两部分组成的，一部分是首先根据前一段的信息去估计当前的状态，第二部分是根据已知的当前信息纠正先前的估计。这听起来像是predictor corrector算法（我不喜欢中文把他翻译成预测校正算法）我更愿意称它为**预测子-校正子算法**。这样的叫法提醒我们，需要计算一个预测子，之后再计算一个校正子，校正子也就是我们k时刻最后的输出。
+卡尔曼滤波器是一种递归的估计，它需要知道之前一段的历史状态，即<span>$\mathbf{x}\_{k-1}$</span>。同时我们又知道当前的一些信息，即控制单元$\mathbf{u}\_k$和观测$\mathbf{z}\_k$。我们可以粗略地想象这样的迭代算法可以是由两部分组成的，一部分是首先根据前一段的信息去估计当前的状态，第二部分是根据已知的当前信息纠正先前的估计。这听起来像是predictor corrector算法（我不喜欢中文把他翻译成预测校正算法）我更愿意称它为**预测子-校正子算法**。这样的叫法提醒我们，需要计算一个预测子，之后再计算一个校正子，校正子也就是我们$k$时刻最后的输出。
 
 我们定义<span>$\mathbf{\hat{x}'}\_{k}$</span>为$k$时刻先验估计，也就是我们的预测子，
 
@@ -58,7 +58,7 @@ $$
 
 $$
 \mathbf{e}'_k \equiv \mathbf{x}_k - \mathbf{\hat{x}'}_k, \\
-\mathbf{e}_k  \equiv \mathbf{x}_k - \mathbf{x}_k。  \tag{4}
+\mathbf{e}_k  \equiv \mathbf{x}_k - \mathbf{\hat{x}}_k。  \tag{4}
 $$
 
 先验误差的协方差矩阵$\mathbf{P'}\_k$和后验误差的协方差矩阵$\mathbf{P}\_k$分别为
@@ -70,7 +70,7 @@ $$
 
 有了这些定义，我们的目标就很明确了，一个好的校正子意味着它与真实的状态之间的误差相差无几。那么，很显然我们希望后验误差尽可能的小，在数学上也就是我们希望协方差矩阵$\mathbf{P}\_k$的迹尽可能的小。
 
-我这里不会去推导整个流程，具体怎么得到最小化的流程可以参考[Tony Lacey]([http://web.mit.edu/kirtley/kirtley/binlustuff/literature/control/Kalman%20filter.pdf](http://web.mit.edu/kirtley/kirtley/binlustuff/literature/control/Kalman filter.pdf))的笔记。根据公式(3)， 有了之前的后验估计<span>$\mathbf{\hat{x}}\_{k-1}$</span>， 我可以求出先验估计<span>$\mathbf{\hat{x}'}\_k$</span>。但怎么从先验估计计算k时刻的后验估计，我们却不清楚。我们大胆假设k时刻的后验估计<span>$\mathbf{\hat{x}}\_{k}$</span>和先验估计<span>$\mathbf{\hat{x}’}\_{k}$</span>存在如下的关系，
+我这里不会去推导整个流程，具体怎么得到最小化的流程可以参考[Tony Lacey]([http://web.mit.edu/kirtley/kirtley/binlustuff/literature/control/Kalman%20filter.pdf](http://web.mit.edu/kirtley/kirtley/binlustuff/literature/control/Kalman filter.pdf))的笔记。根据公式(3)， 有了之前的后验估计<span>$\mathbf{\hat{x}}\_{k-1}$</span>， 我可以求出先验估计<span>$\mathbf{\hat{x}'}\_k$</span>。但怎么从先验估计计算$k$时刻的后验估计，我们却不清楚。我们大胆假设k时刻的后验估计<span>$\mathbf{\hat{x}}\_{k}$</span>和先验估计<span>$\mathbf{\hat{x}’}\_{k}$</span>存在如下的关系，
 
 $$
 \mathbf{\hat{x}}_{k} = \mathbf{\hat{x}’}_{k} + \mathbf{K}_k (\mathbf{z}_k -  \mathbf{H} \mathbf{\hat{x}’}_{k})， \tag{6}
@@ -82,7 +82,7 @@ $$
 \mathbf{K}_k = \mathbf{P'}_k \mathbf{H}^T (\mathbf{H} \mathbf{P'}_k \mathbf{H}^T + \mathbf{R})^{-1} \tag{7}
 $$
 
-到这里，我们基本上已经得到了真个算法的流程（我们还缺少协方差矩阵的递归公式，这里就不详细介绍了）。下面我就直接给出卡尔曼滤波器的伪代码，
+到这里，我们基本上已经得到了整个算法的流程（我们还缺少协方差矩阵的递归公式，这里就不详细介绍了）。下面我就直接给出卡尔曼滤波器的伪代码，
 
 **预测：**
 
@@ -140,7 +140,7 @@ $$
 \end{bmatrix} \times \begin{bmatrix}
 \ddot{x}_{k-1}  \\
 \ddot{y}_{k-1}
-\end{bmatrix}= \mathbf{A} \mathbf{x}_{k-1} + \mathbf{B} \mathbf{u}\_k \tag{8}
+\end{bmatrix}= \mathbf{A} \mathbf{x}_{k-1} + \mathbf{B} \mathbf{u}_k \tag{8}
 $$
 
 其中$\delta t$ 是一个小量，在程序中我设置为一帧的时间，也就是我们每次都是按一帧来更新状态的。在这个简单的系统中，我们没有控制单元$\mathbf{u}\_k$，因为我们不知道模型的加速度等（大大地简化了我们的模型）。模型噪声的来源可以假设是一个多维的高斯分布。如果按照中文维基百科的解释，我们也可以认为噪声的来源是来自模型的加速度，这里就不展开了。我们粗暴地认为，
