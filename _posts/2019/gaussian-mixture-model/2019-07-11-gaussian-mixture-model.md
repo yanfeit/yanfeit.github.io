@@ -3,7 +3,7 @@ layout: post
 title:  高斯混合模型
 date: 2019-07-11
 Author: Yanfei Tang
-tags: [python, algorithm, machine learning, 译作]
+tags: [python, algorithm, machine learning]
 comments: false
 ---
 
