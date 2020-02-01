@@ -7,7 +7,7 @@ tags: [algorithm, math]
 comments: false
 ---
 
-*Maurer Rose* was introduced by Peter M. Maurer in his paper titled as [*A Rose is a Rose...*](https://www.jstor.org/stable/2322215?origin=crossref&seq=1). 
+*Maurer Rose* was introduced by Peter M. Maurer in his paper titled as [*A Rose is a Rose...*](https://www.jstor.org/stable/2322215?origin=crossref&seq=1). under construction...
 
 <!-- more -->
 
