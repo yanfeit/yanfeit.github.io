@@ -5,21 +5,26 @@ var sliderD;
 var sliderN;
 
 function setup() {
+
     canvas = createCanvas(400, 400);
     canvas.parent('canvas-holder');
+
     sliderD = createSlider(1, 20, 10, 1);
     sliderN = createSlider(1, 20, 10, 1);
+
     sliderD.parent('button-holder');
-    //sliderN.parent('button-holder');
+    sliderN.parent('button-holder');
+
     sliderD.input(draw);
     sliderN.input(draw);
 }
 
 function draw() {
+
     d = sliderD.value();
     n = sliderN.value();
     var k = n / d;
-    background(51);
+    background('black');
     push();
     translate(width / 2, height / 2);
 

@@ -12,11 +12,11 @@ comments: false
 
 <!-- more -->
 
-<div id="canvas-holder">
+<div align = "center" id="canvas-holder">
     <!-- Our sketch will go here! -->
 </div>
 
-<div id="button-holder">
+<div align = "center" id="button-holder">
     <!-- Our buttons will go here! -->
 </div>
 
