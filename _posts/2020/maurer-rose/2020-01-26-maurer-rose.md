@@ -7,16 +7,21 @@ tags: [algorithm, math]
 comments: false
 ---
 
+
 *Maurer Rose* was introduced by Peter M. Maurer in his paper titled as [*A Rose is a Rose...*](https://www.jstor.org/stable/2322215?origin=crossref&seq=1). under construction...
 
 <!-- more -->
 
+<div id="canvas-holder">
+    <!-- Our sketch will go here! -->
+</div>
+
+<div id="button-holder">
+    <!-- Our buttons will go here! -->
+</div>
+
+<script type="text/javascript" src="/assets/2020/scripts/sketch.js"></script>
 
 
-<canvas id="theCanvas" width="600" height="240">This application runs only in modern
-browsers. For best results, use Google Chrome.</canvas>
 
-<button>Primary</button>
-
-<script type="text/javascript" src="/assets/scripts/sketch.js"></script>
 

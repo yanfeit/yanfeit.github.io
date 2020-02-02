@@ -1,32 +1,46 @@
-// Boilerplate, gotta be somewhere, right?
-
-const canv = document.('canvas');
-const ctx = canv.getContext('2d');
-
 // Alright, rose time.
-let n = 6, d = 71; // These can be any combination, but this one is nice.
+var d = 8;
+var n = 5;
+var sliderD;
+var sliderN;
 
-ctx.beginPath();
-ctx.lineWidth = 0.5;
-ctx.strokeStyle = 'blue';
-for (let theta = 0; theta <= 360 /* we're working with degrees, remember? */; theta++){
-    let k = theta * d * Math.PI / 180;
-    let r = 300 * Math.sin(n * k);
-    let x = r * Math.cos(k) + canv.width/2;
-    let y = r * Math.sin(k) + canv.height/2;
-    ctx.lineTo(x, y);
-    ctx.moveTo(x, y);
+function setup() {
+    canvas = createCanvas(400, 400);
+    canvas.parent('canvas-holder');
+    sliderD = createSlider(1, 20, 10, 1);
+    sliderN = createSlider(1, 20, 10, 1);
+    sliderD.parent('button-holder');
+    //sliderN.parent('button-holder');
+    sliderD.input(draw);
+    sliderN.input(draw);
 }
-ctx.stroke();
-ctx.beginPath();
-ctx.lineWidth = 4;
-ctx.strokeStyle = 'red';
-for (let theta = 0; theta <= 360; theta++){
-    let k = theta * Math.PI / 180;
-    let r = 300 * Math.sin(n * k);
-    let x = r * Math.cos(k) + canv.width/2;
-    let y = r * Math.sin(k) + canv.height/2;
-    ctx.lineTo(x, y);
-    ctx.moveTo(x, y);
+
+function draw() {
+    d = sliderD.value();
+    n = sliderN.value();
+    var k = n / d;
+    background(51);
+    push();
+    translate(width / 2, height / 2);
+
+    beginShape();
+    stroke(255);
+    noFill();
+    strokeWeight(1);
+    for (var a = 0; a < TWO_PI * reduceDenominator(n, d); a += 0.02) {
+        var r = 200 * cos(k * a);
+        var x = r * cos(a);
+        var y = r * sin(a);
+        vertex(x, y);
+    }
+    endShape(CLOSE);
+    pop();
+    noLoop();
 }
-ctx.stroke();
+
+function reduceDenominator(numerator, denominator) {
+    function rec(a, b) {
+        return b ? rec(b, a % b) : a;
+    }
+    return denominator / rec(numerator, denominator);
+}
