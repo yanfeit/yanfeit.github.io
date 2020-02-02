@@ -11,5 +11,12 @@ comments: false
 
 <!-- more -->
 
+
+
 <canvas id="theCanvas" width="600" height="240">This application runs only in modern
 browsers. For best results, use Google Chrome.</canvas>
+
+<button>Primary</button>
+
+<script type="text/javascript" src="sketch.js"></script>
+
