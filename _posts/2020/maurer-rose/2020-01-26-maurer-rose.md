@@ -3,7 +3,7 @@ layout: post
 title:  Maurer Rose
 date: 2020-01-26
 Author: Yanfei Tang
-tags: [algorithm, math]
+tags: [algorithm, math, JavaScript, p5.js]
 comments: false
 ---
 
@@ -12,13 +12,24 @@ comments: false
 
 <!-- more -->
 
-<div align = "center" id="canvas-holder">
+<div class="mycontainer" id="canvas-holder">
     <!-- Our sketch will go here! -->
 </div>
 
-<div align = "center" id="button-holder">
-    <!-- Our buttons will go here! -->
+<div class="mycontainer">
+	<div class="flex-box-container">
+		<span>n</span>
+		<div id="button-holder1"></div>
+		<span id="rose-params-n">10</span>
+		<span>d</span>
+		<div id="button-holder2"></div>
+		<span id="rose-params-d">10</span>
+	</div>
 </div>
+
+
+
+
 
 <script type="text/javascript" src="/assets/2020/scripts/sketch.js"></script>
 

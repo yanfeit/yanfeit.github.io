@@ -6,23 +6,25 @@ var sliderN;
 
 function setup() {
 
-    canvas = createCanvas(400, 400);
+    canvas = createCanvas(500, 500);
     canvas.parent('canvas-holder');
 
-    sliderD = createSlider(1, 20, 10, 1);
     sliderN = createSlider(1, 20, 10, 1);
-
-    sliderD.parent('button-holder');
-    sliderN.parent('button-holder');
-
-    sliderD.input(draw);
+    sliderD = createSlider(1, 20, 10, 1);
+    
+    sliderN.parent('button-holder1');
+    sliderD.parent('button-holder2');
+    
     sliderN.input(draw);
+    sliderD.input(draw);
+    
 }
 
 function draw() {
 
-    d = sliderD.value();
     n = sliderN.value();
+    d = sliderD.value();
+    
     var k = n / d;
     background('black');
     push();
@@ -40,6 +42,12 @@ function draw() {
     }
     endShape(CLOSE);
     pop();
+
+    var spantagn = document.getElementById("rose-params-n");
+    spantagn.innerHTML = sliderN.value();
+    var spantagd = document.getElementById("rose-params-d");
+    spantagd.innerHTML = sliderD.value();
+
     noLoop();
 }
 
