@@ -18,5 +18,5 @@ browsers. For best results, use Google Chrome.</canvas>
 
 <button>Primary</button>
 
-<script type="text/javascript" src="sketch.js"></script>
+<script type="text/javascript" src="/assets/scripts/sketch.js"></script>
 

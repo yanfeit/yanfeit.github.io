@@ -1,9 +1,6 @@
 // Boilerplate, gotta be somewhere, right?
-document.body.outerHTML = ''; // Strips the page of its stuff, in case you just want to paste this into the console in a new tab or really anywhere.
-const canv = document.createElement('canvas');
-canv.width = 800;
-canv.height = 800;
-document.body.appendChild(canv);
+
+const canv = document.('canvas');
 const ctx = canv.getContext('2d');
 
 // Alright, rose time.
