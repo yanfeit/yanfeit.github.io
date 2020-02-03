@@ -35,7 +35,7 @@ function draw() {
     noFill();
     strokeWeight(1);
     for (var a = 0; a < TWO_PI * reduceDenominator(n, d); a += 0.02) {
-        var r = 200 * cos(k * a);
+        var r = 250 * cos(k * a);
         var x = r * cos(a);
         var y = r * sin(a);
         vertex(x, y);
