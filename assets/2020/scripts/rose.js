@@ -35,6 +35,7 @@ function draw() {
     translate(width / 2, height / 2);
 
     beginShape();
+    stroke('#999999');
     // stroke(color(`hsl(160, 100%, 50%)`));
     noFill();
     strokeWeight(2);
@@ -52,7 +53,7 @@ function draw() {
     push();
     translate(width / 2, height / 2);
     beginShape();
-    stroke('cyan');
+    stroke('#66CCFF');
     // stroke(color('hsl(210, 100%, 50%)'));
     noFill();
     strokeWeight(2);
