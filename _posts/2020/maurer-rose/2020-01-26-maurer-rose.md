@@ -24,14 +24,14 @@ comments: false
 		<span>d</span>
 		<div id="button-holder2"></div>
 		<span id="rose-params-d">10</span>
+		<span>k</span>
+		<div id="button-holder3"></div>
+		<span id="rose-params-k">40</span>
 	</div>
 </div>
 
+<script type="text/javascript" src="/assets/2020/scripts/rose.js"></script>
 
-
-
-
-<script type="text/javascript" src="/assets/2020/scripts/sketch.js"></script>
 
 
 
