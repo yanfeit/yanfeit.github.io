@@ -7,10 +7,12 @@ tags: [algorithm, math, JavaScript, p5.js]
 comments: false
 ---
 
-
-*Maurer Rose* was introduced by Peter M. Maurer in his paper titled as [*A Rose is a Rose...*](https://www.jstor.org/stable/2322215?origin=crossref&seq=1). under construction...
+*Maurer Rose* was introduced by Peter M. Maurer in his paper titled as [*A Rose is a Rose...*](https://www.jstor.org/stable/2322215?origin=crossref&seq=1). 
 
 <!-- more -->
+
+It happens that Maurer Rose is a very good choice to be as an icon image. Readers can find many materials about Maurer Rose on the website, such as [The Coding Train's vedio](https://www.youtube.com/watch?v=f5QBExMNB1I), [Wikipedia](https://en.wikipedia.org/wiki/Maurer_rose)'s introductory page, as well as [raw JavaScript code](https://codepen.io/Igor_Konovalov/full/ZJwPQv/) on codepen.io. Actually, the picture below is what I took from [CodingTrain](https://github.com/CodingTrain/website/tree/master/CodingChallenges/CC_055_Roses/P5) with very little modification. 
+
 
 <div class="mycontainer" id="canvas-holder">
     <!-- Our sketch will go here! -->
