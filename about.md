@@ -30,3 +30,13 @@ Papers that include me:
 
 1. We are ready for any unforeseen event that may or may not occur. <br><em>- Dan Quayle</em> 
 2. Unthinking respect for authority is the greatest enemy of truth. <br><em>- Albert Einstein</em>
+3. 你们有一个好，全世界跑到什么地方，你们比其他的西方记者跑得还快，就是问的问题too simple, sometimes naive. <br><em>- 长者 </em>
+4. 中国有句话叫‘闷声大发财’……但是我见到你们这样热情，一句话不说也不好。 <br><em>- 长者 </em>
+5. [It's] time for the human race to enter the solar system. <br><em>- Dan Quayle</em> 
+6. What I am going to tell you about is what we teach our physics students in the third or fourth year of graduate school... It is my task to convince you not to turn away because you don't understand it. You see my physics students don't understand it... That is because I don't understand it. Nobody does. <br><em>- R. P. Feynman</em> 
+7. It is not even wrong. <br><em>- Wolfgang Pauli</em> 
+8. What you said was so confused that one could not tell whether it was nonsense or not. <br><em>- Wolfgang Pauli replied to Lev Landau</em> 
+9. Our enemies are innovative and resourceful, and so are we. They never stop thinking about new ways to harm our country and our people, and neither do we. <br><em>- George W. Bush</em>
+10. The most incomprehensible thing about the world is that it is at all comprehensible. <br><em>- Albert Einstein</em>
+11. 我爸是李刚。 <br><em>- 李刚的儿子</em>
+12. Stop Trying to Reinvent the Wheel（不要重复造轮子 ）<br><em>- 佚名</em>
