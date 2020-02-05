@@ -34,24 +34,46 @@ Papers that include me:
 
 ### Quotes that I like OR make me laugh
 
+
+<b>(21)</b> If you know what bubble sort is, wipe it from your mind; if you don’t know, make a point of never finding out! <br><em>- Press, Teukolsky, Vetterling and Flannery in Numerical Recipes</em> <br>
+
 <b>(20)</b> If a statistic falls in a reasonable part of the distribution, you must not make the mistake of concluding that the null hypothesis is “verified” or “proved.” That is the curse of statistics, that it can never prove things, only disprove them! At best, you can substantiate a hypothesis by ruling out, statistically, a whole long list of competing hypotheses, every one that has ever been proposed. After a while your adversaries and competitors will give up trying to think of alternative hypotheses, or else they will grow old and die, and then your hypothesis will become accepted. Sounds crazy, we know, but that’s how science works! <br><em>- Press, Teukolsky, Vetterling and Flannery in Numerical Recipes</em> <br>
+
 <b>(19)</b> 阅读霍金，懂与不懂都是收获。  <br><em>- 书商推销霍金的《时间简史》用的广告语</em> <br>
+
 <b>(18)</b> 德国人用精确到秒的时间做出了世界上最难吃的菜。  <br><em>- 顾思义（可能是引用网上的话）</em> <br>
+
 <b>(17)</b> 看别人的代码还不如自己写一遍来的快。  <br><em>- 张宇钟</em> <br>
+
 <b>(16)</b> You would rather kill me than make me read other people's codes.  <br><em>- Shengfeng Cheng joked in a group meeting</em> <br>
+
 <b>(15)</b> Not all of those problems will lead to papers, but some should, and you should have, say, about four papers by the time you graduate. <br><em>- Eric Sharpe</em> <br>
+
 <b>(14)</b> Too many good docs are getting out of the business. Too many OB-GYNs aren't able to practice their love with women all across this country. <br><em>- George W. Bush</em> <br>
+
 <b>(13)</b> We are ready for any unforeseen event that may or may not occur. <br><em>- Dan Quayle</em> <br>
+
 <b>(12)</b> Unthinking respect for authority is the greatest enemy of truth. <br><em>- Albert Einstein</em> <br>
+
 <b>(11)</b> 你们有一个好，全世界跑到什么地方，你们比其他的西方记者跑得还快，就是问的问题too simple, sometimes naive. <br><em>- 长者 </em> <br>
+
 <b>(10)</b> 中国有句话叫‘闷声大发财’……但是我见到你们这样热情，一句话不说也不好。 <br><em>- 长者 </em> <br>
+
 <b>(9)</b> [It's] time for the human race to enter the solar system. <br><em>- Dan Quayle</em> <br>
+
 <b>(8)</b> What I am going to tell you about is what we teach our physics students in the third or fourth year of graduate school... It is my task to convince you not to turn away because you don't understand it. You see my physics students don't understand it... That is because I don't understand it. Nobody does. <br><em>- R. P. Feynman</em> <br>
+
 <b>(7)</b> It is not even wrong. <br><em>- Wolfgang Pauli</em> <br>
+
 <b>(6)</b> What you said was so confused that one could not tell whether it was nonsense or not. <br><em>- Wolfgang Pauli replied to Lev Landau</em> <br>
+
 <b>(5)</b> Our enemies are innovative and resourceful, and so are we. They never stop thinking about new ways to harm our country and our people, and neither do we. <br><em>- George W. Bush</em> <br>
+
 <b>(4)</b> The most incomprehensible thing about the world is that it is at all comprehensible. <br><em>- Albert Einstein</em> <br>
+
 <b>(3)</b> 我爸是李刚。 <br><em>- 李刚的儿子</em> <br>
+
 <b>(2)</b> Stop Trying to Reinvent the Wheel（不要重复造轮子 ）<br><em>- 佚名</em> <br>
+
 <b>(1)</b> I think we agree, the past is over. <br><em>- George W. Bush</em> <br>
  
