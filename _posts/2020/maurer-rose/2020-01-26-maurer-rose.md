@@ -3,7 +3,7 @@ layout: post
 title:  Maurer Rose
 date: 2020-01-26
 Author: Yanfei Tang
-tags: [algorithm, math, JavaScript, p5.js]
+tags: [math, JavaScript, p5.js]
 comments: false
 ---
 
