@@ -34,6 +34,15 @@ Papers that include me:
 
 ### Quotes that I like OR make me laugh
 
+<b>(26)</b> This book is full of errors. <br><em>- Daniel V. Schroeder, </em> commented his book <em>An Introduction to Quantum Field Theory</em> coauthored with Michael E. Peskin<br>
+
+<b>(25)</b> Derek says it's always good to end a paper with a quote. He said someone else has already said it best, so if you can't top it steal from them and go out strong. <br>- Movie<em> American History X</em> <br>
+
+<b>(24)</b> 工欲善其事，必先利其器。<br><em>- 《论语》</em> <br>
+
+<b>(23)</b> 庾信平生最萧瑟，暮年诗赋动江关。 <br><em>- 杜甫，被张益唐引用 </em> <br>
+
+<b>(22)</b> If I had eight hours to chop down a tree, I'd spend six hours sharpening my axe. <br><em>- Abraham Lincoln </em> <br>
 
 <b>(21)</b> If you know what bubble sort is, wipe it from your mind; if you don’t know, make a point of never finding out! <br><em>- Press, Teukolsky, Vetterling and Flannery in Numerical Recipes</em> <br>
 
