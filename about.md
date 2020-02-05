@@ -33,6 +33,8 @@ Papers that include me:
 
 ### Quotes that I like OR make me laugh
 
+<b>(32)</b> 遇事不决，量子力学。逻辑不通，穿越时空。<br><em>- 网友</em> <br>
+
 <b>(31)</b> The Russian school led by Derjaguin worked on capillarity problems for 50 years. <br><em>- de Gennes, Brochard-Wyart, and Quéré</em> <br>
 
 <b>(30)</b> 人可以有霉运，但不可有霉相。<br><em>- 张伯苓</em> <br>
@@ -59,13 +61,13 @@ Papers that include me:
 
 <b>(19)</b> 阅读霍金，懂与不懂都是收获。  <br><em>- 书商推销霍金的《时间简史》用的广告语</em> <br>
 
-<b>(18)</b> 德国人用精确到秒的时间做出了世界上最难吃的菜。  <br><em>- 顾思义（可能是引用网上的话）</em> <br>
+<b>(18)</b> 德国人用精确到秒的时间做出了世界上最难吃的菜。  <br><em>- 大学同学，顾思义（可能是引用网上的话）</em> <br>
 
-<b>(17)</b> 看别人的代码还不如自己写一遍来的快。  <br><em>- 张宇钟</em> <br>
+<b>(17)</b> 看别人的代码还不如自己写一遍来的快。  <br><em>- 大学导师，张宇钟</em> <br>
 
-<b>(16)</b> You would rather kill me than make me read other people's codes.  <br><em>- Shengfeng Cheng joked in a group meeting</em> <br>
+<b>(16)</b> You would rather kill me than make me read other people's codes.  <br><em>- My advisor Prof. Shengfeng Cheng joked in a group meeting</em> <br>
 
-<b>(15)</b> Not all of those problems will lead to papers, but some should, and you should have, say, about four papers by the time you graduate. <br><em>- Eric Sharpe</em> <br>
+<b>(15)</b> Not all of those problems will lead to papers, but some should, and you should have, say, about four papers by the time you graduate. <br><em>- Eric Sharpe, Professor in VT </em> <br>
 
 <b>(14)</b> Too many good docs are getting out of the business. Too many OB-GYNs aren't able to practice their love with women all across this country. <br><em>- George W. Bush</em> <br>
 
