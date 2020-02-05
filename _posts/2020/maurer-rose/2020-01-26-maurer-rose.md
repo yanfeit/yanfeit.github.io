@@ -11,7 +11,7 @@ comments: false
 
 <!-- more -->
 
-It happens that Maurer Rose is a very good choice to be as an icon image. Readers can find many materials about Maurer Rose on the website, such as [The Coding Train's vedio](https://www.youtube.com/watch?v=f5QBExMNB1I), [Wikipedia](https://en.wikipedia.org/wiki/Maurer_rose)'s introductory page, as well as [raw JavaScript code](https://codepen.io/Igor_Konovalov/full/ZJwPQv/) on codepen.io. Actually, the picture below is what I took from [CodingTrain](https://github.com/CodingTrain/website/tree/master/CodingChallenges/CC_055_Roses/P5) with very little modification. 
+It happens that Maurer Rose is a very good choice to be as an icon image. Readers can find many materials about Maurer Rose on the website, such as [The Coding Train's vedio](https://www.youtube.com/watch?v=f5QBExMNB1I), [Wikipedia](https://en.wikipedia.org/wiki/Maurer_rose)'s introductory page, as well as [raw JavaScript code](https://codepen.io/Igor_Konovalov/full/ZJwPQv/) on codepen.io. Actually, the picture below is what I took from [CodingTrain](https://github.com/CodingTrain/website/tree/master/CodingChallenges/CC_055_Roses/P5) with some modification. 
 
 
 <div class="mycontainer" id="canvas-holder">
