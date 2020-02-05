@@ -33,6 +33,16 @@ Papers that include me:
 
 ### Quotes that I like OR make me laugh
 
+<b>(31)</b> The Russian school led by Derjaguin worked on capillarity problems for 50 years. <br><em>- de Gennes, Brochard-Wyart, and Quéré</em> <br>
+
+<b>(30)</b> 人可以有霉运，但不可有霉相。<br><em>- 张伯苓</em> <br>
+
+<b>(29)</b> 自杀没有决心，活着没有信心。 <br><em>- 父亲在酒桌上笑谈</em> <br>
+
+<b>(28)</b> 别跟我谈房子，票子，娘子，我酒都喝不下了。<br><em>- 父亲在酒桌上笑谈</em> <br>
+
+<b>(27)</b> 黄瓜敲锣，摔了一段。 <br><em>- 吴江莘塔地区歇后语</em> <br>
+
 <b>(26)</b> This book is full of errors. <br><em>- Daniel V. Schroeder, </em> commented his book <em>An Introduction to Quantum Field Theory</em> coauthored with Michael E. Peskin<br>
 
 <b>(25)</b> Derek says it's always good to end a paper with a quote. He said someone else has already said it best, so if you can't top it steal from them and go out strong. <br>- Movie<em> American History X</em> <br>
