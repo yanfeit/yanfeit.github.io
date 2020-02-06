@@ -33,6 +33,8 @@ Papers that include me:
 
 ### Quotes that I like OR make me laugh
 
+<b>(33)</b> 我亦无他，唯手熟尔。<br><em>- 欧阳修《卖油翁》</em> <br>
+
 <b>(32)</b> 遇事不决，量子力学。逻辑不通，穿越时空。<br><em>- 网友</em> <br>
 
 <b>(31)</b> The Russian school led by Derjaguin worked on capillarity problems for 50 years. <br><em>- de Gennes, Brochard-Wyart, and Quéré</em> <br>
