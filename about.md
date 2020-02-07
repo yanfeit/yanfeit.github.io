@@ -33,6 +33,8 @@ Papers that include me:
 
 ### Quotes that I like OR make me laugh
 
+<b>(34)</b> 科学的世界需要畅所欲言。<br><em>- 父亲有感于武汉疫情中李文亮医生之死 </em> <br>
+
 <b>(33)</b> 我亦无他，唯手熟尔。<br><em>- 欧阳修《卖油翁》</em> <br>
 
 <b>(32)</b> 遇事不决，量子力学。逻辑不通，穿越时空。<br><em>- 网友</em> <br>
@@ -55,7 +57,7 @@ Papers that include me:
 
 <b>(23)</b> 庾信平生最萧瑟，暮年诗赋动江关。 <br><em>- 杜甫，被张益唐引用 </em> <br>
 
-<b>(22)</b> If I had eight hours to chop down a tree, I'd spend six hours sharpening my axe. <br><em>- Abraham Lincoln </em> <br>
+<b>(22)</b> If I had eight hours to chop down a tree, I'd spend six hours sharpening my axe. <br><em>- Abraham Lincoln </em> 王婕评论美国版“磨刀不误砍柴工” <br>
 
 <b>(21)</b> If you know what bubble sort is, wipe it from your mind; if you don’t know, make a point of never finding out! <br><em>- Press, Teukolsky, Vetterling and Flannery in Numerical Recipes</em> <br>
 
