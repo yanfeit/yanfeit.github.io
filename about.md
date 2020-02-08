@@ -49,7 +49,7 @@ Papers that include me:
 
 <b>(27)</b> 黄瓜敲锣，摔了一段。 <br><em>- 吴江莘塔地区歇后语</em> <br>
 
-<b>(26)</b> This book is full of errors. <br><em>- Daniel V. Schroeder, </em> commented his book <em>An Introduction to Quantum Field Theory</em> coauthored with Michael E. Peskin<br>
+<b>(26)</b> This book is full of errors. <br><em>- Daniel V. Schroeder, </em> commented his own book <em>An Introduction to Quantum Field Theory</em> coauthored with Michael E. Peskin<br>
 
 <b>(25)</b> Derek says it's always good to end a paper with a quote. He said someone else has already said it best, so if you can't top it steal from them and go out strong. <br>- Movie<em> American History X</em> <br>
 

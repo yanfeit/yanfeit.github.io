@@ -12,6 +12,9 @@ This blog is continously under construction...
 
 <!-- more -->
 
+Here are some personal ideas about how to do *data structure and algorithms* problems: 
+1. Do not rush to write codes, but write down thoughts on papers. 
+
 ## Greedy
 
 ### Jump Game
@@ -39,9 +42,7 @@ Explanation: You will always arrive at index 3 no matter what. Its maximum
 
 Here are some thoughts about how to solve the problem:
 1. It is always good to pay more attentions about the boundaries or **extreme cases**. First, If the array is empty, then the result should be False. Second, if the length of the array is 1, I am already sitting on the last index when the program starts. Therefore, the result is True. Third, if there is no 0 in the array, I can always step into the next element and the result should be True.
-2. asfdsf
-3. asdfdasf
-4. afdsf
+2. From the problem's description, game is over if I have zero steps and I am not at the last step. 
 
 Below is my answer which passes the test. 
 
