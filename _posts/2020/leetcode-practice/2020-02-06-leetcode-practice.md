@@ -13,7 +13,7 @@ This blog is continously under construction...
 <!-- more -->
 
 Here are some personal ideas about how to do *data structure and algorithms* problems: 
-1. Do not rush to write codes, but write down thoughts on papers. 
+1. Do not rush to write codes, but write down thoughts on papers. 先把伪代码写在草稿纸上。
 
 ## Greedy
 
@@ -42,7 +42,7 @@ Explanation: You will always arrive at index 3 no matter what. Its maximum
 
 Here are some thoughts about how to solve the problem:
 1. It is always good to pay more attentions about the boundaries or **extreme cases**. First, If the array is empty, then the result should be False. Second, if the length of the array is 1, I am already sitting on the last index when the program starts. Therefore, the result is True. Third, if there is no 0 in the array, I can always step into the next element and the result should be True.
-2. From the problem's description, game is over if I have zero steps and I am not at the last step. 
+2. From the problem's description, game is over if I have zero steps and I am not at the last step. I can loop from the first and update my remaining steps if the current location can provide more steps for me.
 
 Below is my answer which passes the test. 
 
@@ -70,4 +70,26 @@ def canJump(self, nums):
             
     return True
 ```
+
+## Dynamic Programming
+
+1. 什么是动态规划？
+2. 动态规划和递归的区别
+3. 存在性的问题， 有多少解的问题， 最优解问题
+4. 解题思路：（a）确定状态（b）转移方程（3）初始化（4）给出答案
+
+
+
+## DFS
+## BFS
+## Matching Parenthesis problem
+## Using Hash Tables
+## Variables/Pointers manipulation
+## Reverse linked list (duplicates , removing duplicates)
+## sorting fundamentals (quicksort, mergesort)
+## Recursion
+## custom data structures (object oriented programming)
+
+
+
 
