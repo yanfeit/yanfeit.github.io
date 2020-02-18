@@ -81,6 +81,33 @@ def canJump(self, nums):
 
 
 ## DFS
+
+Given a binary tree, return the sum of values of nodes with even-valued grandparent.  (A grandparent of a node is the parent of its parent, if it exists.)
+
+If there are no nodes with an even-valued grandparent, return 0.
+
+这题可以使用二叉树的引索（index）的性质来解答。我们知道第1层根节点的引索是1，那么第2层的引索是2， 3，那么第3层的引索是4， 5， 6， 7，...， 第n层的引索是$[2^{(n-1)}, 2^n - 1]$，那么只要把引索整除4就可以得到
+
+```python
+def sumEvenGrandparent(root: TreeNode) -> int:
+    res = 0
+    even = set()
+        
+    def dfs(node, idx):
+        if not node:
+            return 
+        if node.val % 2 == 0:
+            even.add(idx)
+        if idx // 4 in even:
+            res += node.val 
+        dfs(node.left, idx * 2)
+        dfs(node.right, idx * 2 + 1)
+        
+    dfs(root, 1)
+        
+    return res
+```
+
 ## BFS
 ## Matching Parenthesis problem
 ## Using Hash Tables
