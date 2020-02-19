@@ -86,7 +86,7 @@ Given a binary tree, return the sum of values of nodes with even-valued grandpar
 
 If there are no nodes with an even-valued grandparent, return 0.
 
-这题可以使用二叉树的引索（index）的性质来解答。我们知道第1层根节点的引索是1，那么第2层的引索是2， 3，那么第3层的引索是4， 5， 6， 7，...， 第n层的引索是$[2^{(n-1)}, 2^n - 1]$，那么只要把引索整除4就可以得到
+这题可以使用二叉树的引索（index）的性质来解答。我们知道第1层根节点的引索是1，那么第2层的引索是2， 3，那么第3层的引索是4， 5， 6， 7，...， 第n层的引索是$[2^{(n-1)}, 2^n - 1]$，那么只要把引索整除4就可以得到上两层的节点的引索。
 
 ```python
 def sumEvenGrandparent(root: TreeNode) -> int:

@@ -33,6 +33,10 @@ Papers that include me:
 
 ### Quotes that I like OR make me laugh
 
+<b>(37)</b> This is a perfect time to wake up and listen.  <br>- My physics professor <em>Uwe Täuber</em> who I respect a lot talked to me when I could barely open my sleepy eyes during a quantum mechanics class. <br>
+
+<b>(36)</b> We choose to go to the moon in this decade and do the other things, not because they are easy, but because they are hard. <br><em>- John Fitzgerald Kennedy </em> <br>
+
 <b>(35)</b> 最毒不过心意把！<br><em>- 《人物周刊》，顾思义评论 </em> <br>
 
 <b>(34)</b> 科学的世界需要畅所欲言。<br><em>- 父亲有感于武汉疫情中李文亮医生之死 </em> <br>
