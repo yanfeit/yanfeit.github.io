@@ -11,7 +11,7 @@ comments: false
 
 <!-- more -->
 
-在正文之前，我首先致谢(ackownledge)我所采用的参考资料。程序部分主要参考了[Richard Teammco](https://www.cs.utexas.edu/~teammco/misc/kalman_filter/)的JavaScript代码，我对其中极小的错误进行了修改, 删减了我认为不重要的功能。因为本人不会JavaScript，所以我改成了python的代码。GUI动画的引擎借鉴（基本照搬）了[Irmen de Jong](https://github.com/irmen/rocketsimulator)的程序。
+在正文之前，我首先致谢(ackownledge)我所采用的参考资料。程序部分主要参考了[Richard Teammco](https://www.cs.utexas.edu/~teammco/misc/kalman_filter/)的JavaScript代码，我对其中极小的错误进行了修改, 删减了我认为不重要的功能。因为本人当时不会JavaScript，所以我改成了python的代码。GUI动画的引擎借鉴（基本照搬）了[Irmen de Jong](https://github.com/irmen/rocketsimulator)的程序。
 
 程序的效果如图所示，[代码](https://github.com/yanfeit/Kalman-Filter)可以自取。
 <p align="center">
