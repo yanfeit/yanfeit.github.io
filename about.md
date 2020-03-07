@@ -33,7 +33,7 @@ Papers that include me:
 
 ### Quotes that I like OR make me laugh
 
-<b>(40)</b> 无产阶级又何必自相残杀呢，都是为老板打工。 <br><em>- 父亲有感于我部门员工被HR辞退的情形</em> <br>
+<b>(40)</b> 无产阶级又何必自相残杀呢，都是为老板打工。 <br><em>- 父亲</em> 有感于我部门员工被HR辞退的情形 <br>
 
 <b>(39)</b> Whereas my dad, ever since I was little, has told me that pursuing your dreams is how you become homeless. <br><em>- Jimmy O. Yang </em> joked in <em>The Daily Show</em> <br>
 
