@@ -16,7 +16,7 @@ I consider myself as a junior level computational physicist who loves physics si
 
 ### Publications
 
-Papers that I made a major contributions:
+Papers that I made major contributions:
 
 <b>(6)</b> Y. Tang, G. S. Grest, and S. Cheng,  <a href="/publications/tang2019JCP.pdf">Stratification of drying particle suspensions: Comparison of implicit and explicit solvent simulations</a>, <em>J. Chem. Phys.</em> <b>150</b>, 224901 (2019). <br>
 <b>(5)</b> Y. Tang, G. S. Grest, and S. Cheng,  <a href="/publications/tang2019Langmuir.pdf">Control of stratification in drying particle suspensions via temperature gradients</a>, <em>Langmuir</em> <b>35</b>, 4296 (2019). <br>
