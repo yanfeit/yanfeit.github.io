@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  一场面试引发的思考
+title:  由一场面试想到的...
 date: 2020-03-03
 Author: Yanfei Tang
 tags: [physics]
