@@ -33,6 +33,8 @@ Papers that include me:
 
 ### Quotes that I like OR make me laugh
 
+<b>(41)</b> I was impressed. Braginsky was clever, deep, and had excellent taste in physics; and he was warm and forthright, as easy to talk to about politics as about science. We quickly became close friends and learned to respect each other’s world views. For me, a liberal Democrat in the American spectrum, the freedom of the individual was paramount over all other considerations. No government should have the right to dictate how one lives one’s life. For Braginsky, a nondoctrinaire Communist, the responsibility of the individual to society was paramount. We are our brothers’ keepers, and well we should be in a world where evil people like Joseph Stalin can gain control if we are not vigilant. <br><em>- Kip S. Thorne </em> <br>
+
 <b>(40)</b> 无产阶级又何必自相残杀呢，都是为老板打工。 <br><em>- 父亲</em> 有感于我部门员工被HR辞退的情形 <br>
 
 <b>(39)</b> Whereas my dad, ever since I was little, has told me that pursuing your dreams is how you become homeless. <br><em>- Jimmy O. Yang </em> joked in <em>The Daily Show</em> <br>
