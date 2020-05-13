@@ -10,9 +10,16 @@ I consider myself as a junior level computational physicist who loves physics si
 
 ### Education
 
-<p>Ph. D       Virginia Tech,        2018</p>
-<p>B.S.        Tongji Unversity,     2012</p>
+<p>Ph. D &nbsp; Virginia Tech,   &nbsp;    2018</p>
+<p>B.S. &nbsp;  Tongji Unversity, &nbsp;    2012</p>
 
+
+
+### Work Experience
+
+<p> Senior Algorithm Engineer, &nbsp;  Alibaba Group,  &nbsp;          2020.03 - Present </p>
+<p> Senior Algorithm Engineer,&nbsp;  Star Charge,  &nbsp;            2019.10 - 2020.03 </p>
+<p> Student Intern,&nbsp;             Oak Ridge National Lab, &nbsp;  2015.01 - 2015.11 </p>
 
 ### Publications
 
