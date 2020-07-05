@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  Inverse Problems On PDEs
+title:  Inverse Problems on PDEs
 date: 2020-04-28
 Author: Yanfei Tang
 tags: [math]

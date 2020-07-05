@@ -122,3 +122,9 @@ Papers that include me:
 
 <b>(1)</b> I think we agree, the past is over. <br><em>- George W. Bush</em> <br>
  
+
+### Some Useful Tips
+<b>(1)</b> Start website server on command line:
+```bash
+jekyll serve
+```
