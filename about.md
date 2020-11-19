@@ -40,6 +40,8 @@ Papers that include me:
 
 ### Quotes that I like OR make me laugh
 
+<b>(44)</b> 卡尔萨根《宇宙》：但我们同时也在反向地影响着气候变化，使地球温度降低。几十万年来，人类一直在燃烧砍伐森林，放牧活动也破坏了大片草地。刀耕火种的农业，对热带森林的工业采伐以及过度放牧在今天仍然猖獗。事实上草原的颜色要比森林浅，而沙漠又比草原颜色更浅，而沙漠又比草原颜色更浅。结果就是地面吸收的太阳光越来越少，随着土地使用目的的改变，我们又在降低地球的表面温度。这种冷却作用有可能使得两极的冰帽面积增大。因为冰帽的颜色更加明亮，会使到达地球的太阳光更多地反射回去，进一步让这一颗行星降温，导致反照率效应不可控。 <br><em>- 我的评论：在上实际八十年代，即使是一流的天文学家和科普学者在面对气候变化这样的复杂问题时还是会存在严重误判。 <br>
+
 <b>(43)</b> My enthusiam and optimism drove me, one evening in November 1976, to wander the streets of Pasadena until late into the night, struggling with myself over whether to propose that Caltech create a project to detect graviatational waves. The arguments in favor were obvious: for science in general, the enormous intellectual payoff if the project succeeded; for Caltech, the opportunity to get in on the ground floor of an exciting new field; for me, the possibility to have a team of experimenters at my hoe institution with whom to interact, instead of relying primarily on Braginsky and his team on the other side of the world, and the possibility to play a more central role than I could commuting to Moscow (and thereby have more fun). The argument against was also obvious: The project would be risky; to succeed, it would require large resources from Caltech and the U.S. National Science Foundation and enormous time and energy from me and others; and after all that investment, it might fail. It was much more risky than Caltech's entry into radio astronomy twenty-three years earlier. <br><em>- Kip S. Thorne<br>
 
 <b>(42)</b> 发愤忘食，乐以忘忧，不知老之将至云尔。<br><em>-《论语》</em>有感于人生苦短。<br>
