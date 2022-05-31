@@ -3,7 +3,7 @@ layout: post
 title: Statistical Methods from Bill Press
 date: 2021-10-24
 Author: Yanfei Tang
-tags: [Math]
+tags: [math]
 comments: true
 ---
 
