@@ -6,7 +6,7 @@ permalink: /about/
 
 ### Me
 
-I boldly consider myself as a computational physicist who loves physics simulations, machine learning and popular science. I graduated from Virginia Tech with a Ph. D degree in physics. Therefore, I learnt some minimal knowledge about physics in a wonderful town, <a href="/images/macfee.jpg">Blacksburg</a>. During my Ph. D time, I had one year experience in [coding and simulating](https://github.com/yanfeit/SSE) a quantum mechanical [toy model](https://en.wikipedia.org/wiki/Bose%E2%80%93Hubbard_model) by using a so called technique [Stochastic Series Expansion](http://physics.bu.edu/~sandvik/research/ssehistory.html). I also spent almost one year in another beautiful town, <a href="https://en.wikipedia.org/wiki/Oak_Ridge,_Tennessee"> Oak Ridge,</a> which was a production site for the Manhattan Project. It continued to serve as the site of <a href="/images/lab.jpeg">Oak Ridge National Laboratory</a> (ORNL). In the ORNL, I had an interesting research related with [numerical inverse problem](https://github.com/yanfeit/Maxent). This research lead my first publication under my [mentor's](https://web.ornl.gov/~maierta/) guide. After returning back from ORNL, I switched my research field from condensed matter physics to soft matter physics. These unique experience turned out to broaden my understanding of physics. I was exposed to lots of interesting subjects about polymers, colloidal suspension, chemisty, fluid dynamics and the most importantly [Molecular Dynamics Simulations](http://lammps.sandia.gov/) under [Prof. Shengfeng Cheng's](https://sites.google.com/a/vt.edu/shengfengcheng/) supervision. I enjoyed my Ph. D career on independent thinking and freedom to study different projects in my research field. As one of my teacher once said, quote, *Not all of those problems will lead to papers*, these work without publications eventually lead to futile efforts in today's social evaluation system. However, the *useless* experience made my journey. I eventually returned back to my mother country after my graduation. Now, I am empolyed in a privately owned enterprise. 
+I boldly consider myself as a computational physicist who loves physics simulations, machine learning and popular science. I graduated from Virginia Tech with a Ph. D degree in physics. Therefore, I learnt some minimal knowledge about physics in a wonderful town, <a href="/images/macfee.jpg">Blacksburg</a>. During my Ph. D time, I had one year experience in [coding and simulating](https://github.com/yanfeit/SSE) a quantum mechanical [toy model](https://en.wikipedia.org/wiki/Bose%E2%80%93Hubbard_model) by using a so called technique [Stochastic Series Expansion](http://physics.bu.edu/~sandvik/research/ssehistory.html). I also spent almost one year in another beautiful town, <a href="https://en.wikipedia.org/wiki/Oak_Ridge,_Tennessee"> Oak Ridge,</a> which was a production site for the Manhattan Project. It continued to serve as the site of <a href="/images/lab.jpeg">Oak Ridge National Laboratory</a> (ORNL). In the ORNL, I had an interesting research related with [numerical inverse problem](https://github.com/yanfeit/Maxent). This research lead my first publication under my [mentor's](https://web.ornl.gov/~maierta/) guide. After returning back from ORNL, I switched my research field from condensed matter physics to soft matter physics. These unique experience turned out to broaden my understanding of physics. I was exposed to lots of interesting subjects about polymers, colloidal suspension, chemisty, fluid dynamics and the most importantly [Molecular Dynamics Simulations](http://lammps.sandia.gov/) under [Prof. Shengfeng Cheng's](https://sites.google.com/a/vt.edu/shengfengcheng/) supervision. I enjoyed my Ph. D career on independent thinking and freedom to study different projects in my research field. As one of my teacher once said, quote, *Not all of those problems will lead to papers*, these work without publications eventually lead to futile efforts in today's social evaluation system. However, the *useless* experience made my journey. I eventually returned back to my mother country after my graduation.
 
 ### Education
 
@@ -17,7 +17,8 @@ I boldly consider myself as a computational physicist who loves physics simulati
 
 ### Work Experience
 
-<p> Senior Algorithm Engineer, &nbsp;  Alibaba Group,  &nbsp;          2020.03 - Present </p>
+<p> Senior Research Specialist, &nbsp; Zhejiang Lab, &nbsp;     2022.08 - Present </p>
+<p> Senior Algorithm Engineer, &nbsp;  Alibaba Group,  &nbsp;          2020.03 - 2022.05 </p>
 <p> Senior Algorithm Engineer,&nbsp;  Star Charge,  &nbsp;            2019.10 - 2020.03 </p>
 <p> Student Intern,&nbsp;             Oak Ridge National Lab, &nbsp;  2015.01 - 2015.11 </p>
 
@@ -127,7 +128,7 @@ Papers that include me:
 <b>(2)</b> Stop Trying to Reinvent the Wheel（不要重复造轮子 ）<br><em>- 佚名</em> <br>
 
 <b>(1)</b> I think we agree, the past is over. <br><em>- George W. Bush</em> <br>
- 
+
 
 ### Some Useful Tips
 <b>(1)</b> Start website server on command line:
