@@ -23,7 +23,7 @@ comments: false
 
 言归正传，我们现在要解决一个归类的问题：我们有一组数据$N \times M$, $N$是数据的个数，$M$是数据的维度（由于模型的局限，维度最好是个位数）。然后我们希望把这组数据归为$K$个类，每个类用一个多元高斯分布（multivariate gaussian distribution）来表示，比如说单个数据点是2维，那么数据集可以用$K$个2元高斯分布来表征。而事先，我们是不知道这$K$个多元高斯分布的中心位置（means）和协方差矩阵（covariance matrix）的，我们甚至不知道$K$是多少。（当然这些数据是否符合$K$个多元高斯分布的叠加也是未知的。）
 
-那为什么说这是无监督学习呢？因为我们事先也不知道哪些数据点是归于哪个高斯分布的。而这，倒是我们期待从模型和EM算法中得到的结果。对于高斯混合模型来说我们希望知道到底我这个数据点通过算法是归到了哪个类，概率是多少？我们把这个概率记作<span>$p(k|n)$</span>或者<span>$p\_{nk}$​</span>，其中$0 \le k < K$且$0 \le n < N​$。在文献中，<span>$p\_{nk}$</span>有时也被称为责任矩阵， 就是说第$K$个类需要对第$n$个数据点负多少点责任。
+那为什么说这是无监督学习呢？因为我们事先也不知道哪些数据点是归于哪个高斯分布的。而这，倒是我们期待从模型和EM算法中得到的结果。对于高斯混合模型来说我们希望知道到底我这个数据点通过算法是归到了哪个类，概率是多少？我们把这个概率记作<span>$p(k|n)$</span>或者<span>$p\_{nk}$​</span>，其中$0 \le k < K$且$0 \le n < N$。在文献中，<span>$p\_{nk}$</span>有时也被称为责任矩阵， 就是说第$K$个类需要对第$n$个数据点负多少点责任。
 
 总结下来，在给定一组数据，比如说$( N \times M )$的矩阵，我们希望估计以下的一组参数:
 
@@ -37,15 +37,15 @@ $$
 
 其中<span>$\boldsymbol{\mu}\_k (K \times M)$</span>是多元高斯分布的中心, <span>$\boldsymbol{\Sigma}\_k (K \times M \times M)$</span>是多元高斯分布的协方差矩阵。
 
-我们也会得到一些副产品，比如说$P(k)$, 它表示在第$k$​类的数据的个数在总数据个数的占比，等同于任意数据点在第$k$类的概率，很显然<span>$\sum\_{k} P(k) = 1​$</span>; 我们也可以得到<span>$P(\mathbf{x})​$</span>，它表示在任意位置$\mathbf{x}​$找到数据点的概率密度； 最重要的是我们可以得到整个数据集的似然函数$\mathscr L​ (likelihood)$。
+我们也会得到一些副产品，比如说$P(k)$, 它表示在第$k$​类的数据的个数在总数据个数的占比，等同于任意数据点在第$k$类的概率，很显然<span>$\sum\_{k} P(k) = 1$</span>; 我们也可以得到<span>$P(\mathbf{x})$</span>，它表示在任意位置$\mathbf{x}$找到数据点的概率密度； 最重要的是我们可以得到整个数据集的似然函数$\mathscr L​ (likelihood)$。
 
-其实整个模型的核心就是就是最大化似然函数$\mathscr L​$，似然函数正比于，给定拟合参数(比如说这里的<span>$\boldsymbol{\mu}\_k$</span>,  <span>$\boldsymbol{\Sigma}\_k$</span>)​, 数据集在这套模型下的概率。现在让我们从似然函数出发推导出高斯混合模型的流程。我们假设所有的数据都是独立的，那么似然函数就是在位置<span>$\mathbf{x}\_n​$</span>找到数据点概率的乘积,
+其实整个模型的核心就是就是最大化似然函数$\mathscr L$，似然函数正比于，给定拟合参数(比如说这里的<span>$\boldsymbol{\mu}\_k$</span>,  <span>$\boldsymbol{\Sigma}\_k$</span>)​, 数据集在这套模型下的概率。现在让我们从似然函数出发推导出高斯混合模型的流程。我们假设所有的数据都是独立的，那么似然函数就是在位置<span>$\mathbf{x}\_n$</span>找到数据点概率的乘积,
 
 $$
 \mathscr{L} = \prod\limits_{n} P(\mathbf{x}_n)  \tag{2}
 $$
 
-我们可以把<span>$P(\mathbf{x}\_n)​$</span>拆成来自于$K$个高斯分布的贡献，记作
+我们可以把<span>$P(\mathbf{x}\_n)$</span>拆成来自于$K$个高斯分布的贡献，记作
 
 $$
 P(\mathbf{x}_n) = \sum\limits_{k}N(\mathbf{x}_n|\boldsymbol{\mu}_k, \boldsymbol{\Sigma}_k)P(k) \tag{3}
@@ -57,11 +57,11 @@ $$
 N(\mathbf{x}|\boldsymbol{\mu}, \boldsymbol{\Sigma}) = \frac{1}{(2\pi)^{M/2}\text{det}(\boldsymbol{\Sigma})^{1/2}}\exp(-\frac{1}{2} (\mathbf{x} - \boldsymbol{\mu})^{\text{T}} \cdot \boldsymbol{\Sigma}^{-1} \cdot (\mathbf{x} - \boldsymbol{\mu}))  \\ \tag{4}
 $$
 
-从式(2)到式(5)是我们用来计算似然函数 $\mathscr L​$的流程，前提当然是我们已经知道了数据和给定的参数比如<span>$\boldsymbol{\mu}\_k$</span>, <span>$\boldsymbol{\Sigma}\_k$</span>和$P(k)​$。在EM算法里面，我么把这个流程叫做期望步骤(Expectation step)或(E-step)。
+从式(2)到式(5)是我们用来计算似然函数 $\mathscr L$的流程，前提当然是我们已经知道了数据和给定的参数比如<span>$\boldsymbol{\mu}\_k$</span>, <span>$\boldsymbol{\Sigma}\_k$</span>和$P(k)$。在EM算法里面，我么把这个流程叫做期望步骤(Expectation step)或(E-step)。
 
 那我们怎么得到<span>$\boldsymbol{\mu}\_k$</span>, <span>$\boldsymbol{\Sigma}\_k$</span> 和$P(k)$呢？
 
-假设我们知道$p_{nk}​$。 一个关于一维高斯分布的相关定理告诉我们，这个分布的最大似然平均期望就是所有点的算术平均。那么根据直觉来看，我们可以把它推广到多元高斯分布。因为我们知道了各个点归到给个类的责任矩阵$p_{nk}​$， 我们可以求出多元高斯分布的期望平均和期望协方差矩阵。
+假设我们知道$p_{nk}$。 一个关于一维高斯分布的相关定理告诉我们，这个分布的最大似然平均期望就是所有点的算术平均。那么根据直觉来看，我们可以把它推广到多元高斯分布。因为我们知道了各个点归到给个类的责任矩阵$p_{nk}$， 我们可以求出多元高斯分布的期望平均和期望协方差矩阵。
 
 $$
 \begin{align} 
@@ -79,7 +79,7 @@ $$
 
 有了E步骤和M步骤，我们只要不停地迭代就能最大化似然函数$\mathscr L$，至少这样的迭代能收敛到一个局部最大值。想要严格地证明EM算法能够最大化似然函数已经超越了本篇的范畴，直觉上告诉我们这样应该是可行的。以下我们归纳以下EM算法的过程：
 
-* 初始化 <span>$\boldsymbol{\mu}\_k$</span>, <span>$\boldsymbol{\Sigma}\_k$</span>和$P(k)​$
+* 初始化 <span>$\boldsymbol{\mu}\_k$</span>, <span>$\boldsymbol{\Sigma}\_k$</span>和$P(k)$
 * 迭代：先用E步骤得到新的$p_{nk}$和新的$\mathscr{L}$，接着用M步骤得到新的<span>$\boldsymbol{\mu}\_k$</span>, <span>$\boldsymbol{\Sigma}\_k$</span>和$P(k)$
 * 等到$\mathscr{L}$收敛， 退出程序。
 
@@ -119,19 +119,19 @@ $$
 
 ### Cholesky分解
 
-我们需要利用Cholesky分解来更有效地计算多元高斯分布，例如，我们需要更高效地计算像$\mathbf{y} \cdot \boldsymbol{\Sigma}^{-1} \cdot \mathbf{y}$这样的表达式。 因为协方差矩阵$\boldsymbol{\Sigma}​$是对称且正定的，而Cholesky分解比其他方法需要的操作更少一些，我们有
+我们需要利用Cholesky分解来更有效地计算多元高斯分布，例如，我们需要更高效地计算像$\mathbf{y} \cdot \boldsymbol{\Sigma}^{-1} \cdot \mathbf{y}$这样的表达式。 因为协方差矩阵$\boldsymbol{\Sigma}$是对称且正定的，而Cholesky分解比其他方法需要的操作更少一些，我们有
 
 $$
 \boldsymbol{\Sigma} = \mathbf{L \cdot L}^{\text{T}} \\ \tag{12}
 $$
 
-其中$\mathbf{L}​$是下三角矩阵，有
+其中$\mathbf{L}$是下三角矩阵，有
 
 $$
 Q = \mathbf{y} \cdot \boldsymbol{\Sigma}^{-1} \cdot \mathbf{y} = |\mathbf{L}^{-1} \cdot \mathbf{y} |^{2} \\ \tag{13}
 $$
 
-其中$\mathbf{L}​$是下三角矩阵，有
+其中$\mathbf{L}$是下三角矩阵，有
 
 $$
 Q = \mathbf{y} \cdot \boldsymbol{\Sigma}^{-1} \cdot \mathbf{y} = |\mathbf{L}^{-1} \cdot \mathbf{y} |^{2} \\ \tag{14}
@@ -144,10 +144,10 @@ $$
 ### K均值
 
 高斯混合模型的一个简化模型是K均值归类(K-means clustering)。K均值分类不关心概率问题（记住，我们在高斯混合模型中一个重要参数是
-$p_{nk}​$， 比如说，一个数据点被归为第1类的概率可以是$p_{n1} = 50\%​$ ，被归为第2类的概率是$p_{n2}= 50\%​ $，其余为0）。它只关心我这个数据点被分配到哪个类，也就是说一个数据点只能归属$K$个类中的某个。这里简述一下K均值中EM算法的流程，
+$p_{nk}$， 比如说，一个数据点被归为第1类的概率可以是$p_{n1} = 50\%$ ，被归为第2类的概率是$p_{n2}= 50\%​ $，其余为0）。它只关心我这个数据点被分配到哪个类，也就是说一个数据点只能归属$K$个类中的某个。这里简述一下K均值中EM算法的流程，
 
-* E步骤：根据欧式距离<span>$||\mathbf{x}_n - \boldsymbol{\mu}_k ||​$</span>，分配数据点<span>$\mathbf{x}\_n​$<span>到最近的k类。
-* M步骤：重新通过平均k类中的所有数据点 $\mathbf{x}_n​$来计算k类的中心$\boldsymbol{\mu}_k $，
+* E步骤：根据欧式距离<span>$||\mathbf{x}_n - \boldsymbol{\mu}_k ||$</span>，分配数据点<span>$\mathbf{x}\_n$<span>到最近的k类。
+* M步骤：重新通过平均k类中的所有数据点 $\mathbf{x}_n$来计算k类的中心$\boldsymbol{\mu}_k $，
 
 收敛的标准是当每个类分配到的数据点不变时，程序可以退出，当然$\boldsymbol{\mu}_k$也不会变动了。$K
 $均值的收敛可以说是保证的，也就是说不会陷入死循环。尽管K均值看起来很简单，但它还是很有用的：速度快，收敛快。它可以把很多数据点归到一些中心，而这些中心可以作为更高级一些的算法的输入值。
