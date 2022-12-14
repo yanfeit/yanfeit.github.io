@@ -7,7 +7,7 @@
 # 井号后面的文字是说明文档，不会被程序读取。
 name: Tang Yanfei
 # 描述/签名
-description: Notes about thoughts, applied math, popular science, and simulations.
+description: Notes about thoughts, science, and simulations.
 
 #
 # 下面的设定都是可选的
@@ -58,7 +58,7 @@ footer-links:
   youtube: # channel/<your_long_string> or user/<user-name>
 
 # 站点页脚的文字
-footer-text: Copyright (c) 2020 Yanfei Tang Powered by Jekyll
+footer-text: Copyright (c) 2022 Yanfei Tang Powered by Jekyll
 # 评论，注意，请不要同时添加多种不同的评论区
 
 # 输入Disqus shortname，即可添加评论区
