@@ -26,6 +26,7 @@ I boldly consider myself as a computational physicist who loves physics simulati
 
 Papers that I made major contributions:
 
+<b>(7)</b> Y. Tang, J. E. McLaughlan, G. S. Grest, and S. Cheng,  <a href="/publications/tang2022Polymers.pdf">Modeling Solution Drying by Moving a Liquid-Vapor Interface: Method and Applications</a>, <em>Polymers</em> <b>14</b>, 3996 (2022). <br>
 <b>(6)</b> Y. Tang, G. S. Grest, and S. Cheng,  <a href="/publications/tang2019JCP.pdf">Stratification of drying particle suspensions: Comparison of implicit and explicit solvent simulations</a>, <em>J. Chem. Phys.</em> <b>150</b>, 224901 (2019). <br>
 <b>(5)</b> Y. Tang, G. S. Grest, and S. Cheng,  <a href="/publications/tang2019Langmuir.pdf">Control of stratification in drying particle suspensions via temperature gradients</a>, <em>Langmuir</em> <b>35</b>, 4296 (2019). <br>
 <b>(4)</b> Y. Tang and S. Cheng,  <a href="/publications/tang2019JCIS.pdf">The meniscus on the outside of a circular cylinder from microscopic to macroscopic scales</a>, <em>J. Colloid Interface Sci.</em> <b>533</b>, 401 (2019). <br>
