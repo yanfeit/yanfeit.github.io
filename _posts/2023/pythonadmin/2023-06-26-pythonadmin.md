@@ -12,3 +12,10 @@ toc: false
 
 <!-- more -->
 
+#### Start A Downloading Server
+
+```python
+python -m http.server
+```
+This will start a server for collegues who want to downloading files.
+
