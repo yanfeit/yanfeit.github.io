@@ -26,21 +26,15 @@ I boldly consider myself as a computational physicist who loves physics simulati
 
 ### Publications
 
-Papers that I made major contributions:
-
-<b>(7)</b> Y. Tang, J. E. McLaughlan, G. S. Grest, and S. Cheng,  <a href="/publications/tang2022Polymers.pdf">Modeling Solution Drying by Moving a Liquid-Vapor Interface: Method and Applications</a>, <em>Polymers</em> <b>14</b>, 3996 (2022). <br>
-<b>(6)</b> Y. Tang, G. S. Grest, and S. Cheng,  <a href="/publications/tang2019JCP.pdf">Stratification of drying particle suspensions: Comparison of implicit and explicit solvent simulations</a>, <em>J. Chem. Phys.</em> <b>150</b>, 224901 (2019). <br>
-<b>(5)</b> Y. Tang, G. S. Grest, and S. Cheng,  <a href="/publications/tang2019Langmuir.pdf">Control of stratification in drying particle suspensions via temperature gradients</a>, <em>Langmuir</em> <b>35</b>, 4296 (2019). <br>
-<b>(4)</b> Y. Tang and S. Cheng,  <a href="/publications/tang2019JCIS.pdf">The meniscus on the outside of a circular cylinder from microscopic to macroscopic scales</a>, <em>J. Colloid Interface Sci.</em> <b>533</b>, 401 (2019). <br>
-<b>(3)</b> Y. Tang and S. Cheng,  <a href="/publications/tang2018PRE.pdf">Capillary forces on a small particle at a liquid-vapor interface: theory and simulation</a>, <em>Phys. Rev. E</em> <b>98</b>, 032802 (2018).<br>
-<b>(2)</b> Y. Tang, G. S. Grest, and S. Cheng,  <a href="/publications/tang2018Langmuir.pdf">Stratification in drying films containing bidisperse mixtures of nanoparticles</a>, <em>Langmuir</em> <b>34</b>, 7161 (2018).<br>
+<b>(9)</b> Y. Tang, J. E. McLaughlan, G. S. Grest, and S. Cheng,  <a href="/publications/tang2022Polymers.pdf">Modeling Solution Drying by Moving a Liquid-Vapor Interface: Method and Applications</a>, <em>Polymers</em> <b>14</b>, 3996 (2022). <br>
+<b>(8)</b> Y. Tang, G. S. Grest, and S. Cheng,  <a href="/publications/tang2019JCP.pdf">Stratification of drying particle suspensions: Comparison of implicit and explicit solvent simulations</a>, <em>J. Chem. Phys.</em> <b>150</b>, 224901 (2019). <br>
+<b>(7)</b> Y. Tang, G. S. Grest, and S. Cheng,  <a href="/publications/tang2019Langmuir.pdf">Control of stratification in drying particle suspensions via temperature gradients</a>, <em>Langmuir</em> <b>35</b>, 4296 (2019). <br>
+<b>(6)</b> Y. Tang and S. Cheng,  <a href="/publications/tang2019JCIS.pdf">The meniscus on the outside of a circular cylinder from microscopic to macroscopic scales</a>, <em>J. Colloid Interface Sci.</em> <b>533</b>, 401 (2019). <br>
+<b>(5)</b> Y. Tang and S. Cheng,  <a href="/publications/tang2018PRE.pdf">Capillary forces on a small particle at a liquid-vapor interface: theory and simulation</a>, <em>Phys. Rev. E</em> <b>98</b>, 032802 (2018).<br>
+<b>(4)</b> Y. Tang, G. S. Grest, and S. Cheng,  <a href="/publications/tang2018Langmuir.pdf">Stratification in drying films containing bidisperse mixtures of nanoparticles</a>, <em>Langmuir</em> <b>34</b>, 7161 (2018).<br>
+<b>(3)</b> S. Li, Y. Tang, T. A. Maier, and S. Johnston,  <a href="/publications/li2018.pdf">Phase competition in a one- dimensional three-orbital Hubbard-Holstein model</a>, <em>Phys. Rev. B</em> <b>97</b>, 195116 (2018). <br>
+<b>(2)</b> S. Li, N. Kausha, Y. Wang, Y. Tang, G. Alvarez, A. Nocera, T. A. Maier, E. Dagotto, and S. Johnston,  <a href="/publications/li2016.pdf">Nonlocal correlations in the orbital selective Mott phase of a one-dimensional multiorbital Hubbard model</a>, <em>Phys. Rev. B</em> <b>94</b>, 235126 (2016).<br>
 <b>(1)</b> F. Bao, Y. Tang, M. Summers, G. Zhang, C. Webster, V. Scarola, and T. A. Maier,  <a href="/publications/bao2016.pdf">Fast and efficient stochastic optimization for analytic continuation</a>, <em>Phys. Rev. B</em> <b>94</b>, 125129 (2016). <br>
-
-
-Papers that include me:
-
-<b>(2)</b> S. Li, Y. Tang, T. A. Maier, and S. Johnston,  <a href="/publications/li2018.pdf">Phase competition in a one- dimensional three-orbital Hubbard-Holstein model</a>, <em>Phys. Rev. B</em> <b>97</b>, 195116 (2018). <br>
-<b>(1)</b> S. Li, N. Kausha, Y. Wang, Y. Tang, G. Alvarez, A. Nocera, T. A. Maier, E. Dagotto, and S. Johnston,  <a href="/publications/li2016.pdf">Nonlocal correlations in the orbital selective Mott phase of a one-dimensional multiorbital Hubbard model</a>, <em>Phys. Rev. B</em> <b>94</b>, 235126 (2016).<br>
 
 ### Quotes that I like OR make me laugh
 
