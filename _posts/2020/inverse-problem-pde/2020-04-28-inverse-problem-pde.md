@@ -52,6 +52,7 @@ $$
 
 
 Now suppose that we want to recover $u(0, x)$ from $u(T, x)$. From above derivation, we know that $\hat{u}_k(T) = e^{-k^2 T}\hat{u}_k(0)$, thus $\hat{u}_k(0) = e^{k^2 T}\hat{u}_k(T)$. If we put all these into Fourier series expansion of $u(0, x)$, we will have
+
 $$
 u(0, x) \approx \sum_{k = -N}^{N}  e^{k^2 T}\hat{u}_k(T) e^{ikx} \tag{5}.
 $$
