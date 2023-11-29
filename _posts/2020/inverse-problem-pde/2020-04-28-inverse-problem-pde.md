@@ -7,7 +7,7 @@ tags: [math]
 comments: false
 ---
 
-Inverse problems have wide applications on real-world problems. When I was a PhD student in Oak Ridge, I was very excited at one of my researches on inverse problems of Fredholm integral of the first kind. I still remembered that when I first encountered with that problem, my immediate reaction was that this was a very realistic problem and I would have a solid training on applied mathematics if I worked on that. I happily took the chanllenge on that. Several year laters, my taste of problems does not change. I was right, this was one of the interesting problems that I was ever studied. 
+Inverse problems have wide applications on real-world problems. When I was a PhD student in Oak Ridge, I was very excited at one of my researches on inverse problems of Fredholm integral of the first kind. I still remembered that when I first encountered with that problem, my immediate reaction was that this was a very realistic problem and I would have a good training on applied mathematics if I worked on that. I happily took the chanllenge on that. Several year laters, my taste of problems does not change. I was right, this was one of the interesting problems that I was ever studied. 
 
 <!-- more -->
 
