@@ -101,7 +101,186 @@ const dim3   block_size(maxt, maxt, 1);
 * threadIdx.y 的取值范围是从 0 到 blockDim.y - 1。
 * threadIdx.z 的取值范围是从 0 到 blockDim.z - 1。
 
-同时CUDA中对能够定义的网格大小和线程块大小做了限制。对于从开普勒和安培架构的GPU来说，网格大小在x、y和z这3个方向的最大允许值分别为 $2^{31}-1$ 、$65535$ 和 $65535$。而线程块的大小在x、y和z这3个方向的最大允许值分别为 $1024$ 、$1024$ 和 $64$，并且要求了总线程块的大小不能大于 $1024$。
+同时CUDA中对能够定义的网格大小和线程块大小做了限制。对于从开普勒和安培架构的GPU来说，网格大小在x、y和z这3个方向的最大允许值分别为 $2^{31}-1$ 、$65535$ 和 $65535$。而线程块的大小在x、y和z这3个方向的最大允许值分别为 $1024$ 、$1024$ 和 $64$，并且要求了总线程块的大小不能大于 $1024$。通过主机代码对核函数的调用会指派很多线程。核函数的编写就需要关注到线程的标识与计算区域的对应关系即可。
+
+```c
+__global__ void mandel(const double *real_vals, const double *imag_vals, int *mandelbrot_graph)
+{
+    const int i = blockDim.x * blockIdx.x + threadIdx.x;
+    const int j = blockDim.y * blockIdx.y + threadIdx.y;
+
+    const int _X = blockDim.x * gridDim.x;
+
+    double z_real = 0.0;
+    double z_imag = 0.0;
+    double z_real_new = 0.0;
+    double z_imag_new = 0.0;
+
+    double c_real = real_vals[i];
+    double c_imag = imag_vals[j];
+
+    for (int k = 0; k < max_iters; k++)
+    {
+        z_real_new = z_real*z_real - z_imag*z_imag + c_real;
+        z_imag_new = 2 *z_real*z_imag + c_imag;
+        z_real = z_real_new;
+        z_imag = z_imag_new;
+
+        if (sqrt(z_real*z_real + z_imag*z_imag) > upper_bound){
+            mandelbrot_graph[i + _X*j] = 0;
+            break;
+        }              
+    }
+}
+```
+
+主函数以及一些全局变量的定义为，
+
+```c
+#include <stdio.h>
+#include <cmath>
+#include <complex>
+#include <ctime>
+#include "error.cuh"
+
+using namespace std;
+
+const int width = 512;
+const int height = 512;
+const int max_iters = 256;
+const double upper_bound = 2.5;
+
+const double real_low  = -2;
+const double real_high = 2;
+const double imag_low = -2;
+const double imag_high = 2;
+
+const int maxt = 32;
+
+__global__ void mandel(const double *real_vals, const double *imag_vals, int *mandelbrot_graph);
+
+int main(void)
+{
+    int *mandelbrot_graph = (int*)    malloc(sizeof(int)    * width * height);
+    double *real_vals     = (double*) malloc(sizeof(double) * width);
+    double *imag_vals     = (double*) malloc(sizeof(double) * height);
+
+    const dim3   grid_size(width/maxt, height/maxt, 1);
+    const dim3   block_size(maxt, maxt, 1);
+
+    clock_t start;
+    clock_t end;
+
+    // initialization
+    for (int i = 0; i < width; i++)
+    {
+        real_vals[i] = real_low + (real_high - real_low) * i/(width - 1);
+    }
+
+    for (int i = 0; i < height; i++)
+    {
+        imag_vals[i] = imag_low + (imag_high - imag_low) * i/(height - 1);
+    }
+
+    for (int i = 0; i < height; i++)
+    {
+        for (int j = 0; j < width; j++)
+        {
+            mandelbrot_graph[i*width+j] = 1;
+        }
+    }
+
+    // copy data from host to device
+    double *d_real_vals, *d_imag_vals;
+    int    *d_mandelbrot_graph;
+
+
+    start = clock();
+    cudaMalloc((void **)&d_real_vals, sizeof(double) * width);
+    cudaMalloc((void **)&d_imag_vals, sizeof(double) * height);
+    cudaMalloc((void **)&d_mandelbrot_graph, sizeof(int) * width * height);
+    end = clock();
+    double elapsed_time = (double(end - start))/CLOCKS_PER_SEC*1000;
+    printf("CUDA Memory Init takes %f ms\n", elapsed_time);
+
+    start = clock();
+    CHECK(cudaMemcpy(d_real_vals, real_vals, width*sizeof(double), cudaMemcpyHostToDevice));
+    CHECK(cudaMemcpy(d_imag_vals, imag_vals, height*sizeof(double), cudaMemcpyHostToDevice));
+    CHECK(cudaMemcpy(d_mandelbrot_graph, mandelbrot_graph, width*height*sizeof(int), cudaMemcpyHostToDevice));
+    end = clock();
+    elapsed_time = (double(end - start))/CLOCKS_PER_SEC*1000;
+    printf("CUDA Memory copy from host to device take %f ms\n", elapsed_time);
+
+    
+    start = clock();
+    mandel<<<grid_size, block_size>>>(d_real_vals, d_imag_vals, d_mandelbrot_graph) ;
+    cudaDeviceSynchronize();
+    end = clock();
+    elapsed_time = (double(end - start))/CLOCKS_PER_SEC*1000;
+    printf("CUDA Mandelbrot graph computation & Sync takes %f ms\n", elapsed_time);
+
+    start = clock();
+    cudaMemcpy(mandelbrot_graph, d_mandelbrot_graph, width*height*sizeof(int), cudaMemcpyDeviceToHost);
+    cudaDeviceSynchronize();
+    end = clock();
+    elapsed_time = (double(end - start))/CLOCKS_PER_SEC*1000;
+    printf("CUDA copy from device to host & Sync %f ms\n", elapsed_time);
+
+
+    // write data to file
+    start = clock();
+    FILE *ifile = fopen("mandelbrot0.txt", "w");
+    for (int i = 0; i < height; ++i)
+    {
+        for (int j = 0; j < width; ++j)
+        {
+            fprintf(ifile, "%d ", mandelbrot_graph[i*width+j]);
+        }
+        fprintf(ifile, "\n");
+    }
+    end = clock();
+    elapsed_time = (double(end - start))/CLOCKS_PER_SEC*1000;
+    printf("Write file takes %f ms\n", elapsed_time);
+
+    // free memory
+    start = clock();
+    fclose(ifile);
+    free(real_vals);
+    free(imag_vals);
+    free(mandelbrot_graph);
+    cudaFree(d_real_vals);
+    cudaFree(d_imag_vals);
+    cudaFree(d_mandelbrot_graph);
+    end = clock();
+    elapsed_time = (double(end - start))/CLOCKS_PER_SEC*1000;
+    printf("Free memory takes %f ms\n", elapsed_time);
+    return 0;
+}
+
+// error.cuh
+#pragma once
+#include <stdio.h>
+
+#define CHECK(call)                                   \
+do                                                    \
+{                                                     \
+    const cudaError_t error_code = call;              \
+    if (error_code != cudaSuccess)                    \
+    {                                                 \
+        printf("CUDA Error:\n");                      \
+        printf("    File:       %s\n", __FILE__);     \
+        printf("    Line:       %d\n", __LINE__);     \
+        printf("    Error code: %d\n", error_code);   \
+        printf("    Error text: %s\n",                \
+            cudaGetErrorString(error_code));          \
+        exit(1);                                      \
+    }                                                 \
+} while (0)
+
+```
+
+`cudaMalloc`是在设备中分配内存，`cudaMemcpy`是内存和设备内存之间的传输，`cudaFree`是设备内存释放。
+
 
 [^1]: 樊哲勇 (2020). *CUDA 编程: 基础与实践*. 清华大学出版社.
 
