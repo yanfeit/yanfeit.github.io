@@ -15,11 +15,16 @@ Gemini: "LAPACK functionality is typically accessed through the lapacke.h header
 Me: "😞"
 <!-- more -->
 
-This conversation between me and Gemini happened when our team tried to write a computational lithography program in C language. The consideration of invoking BLAS and LAPACK routine in Fortran in a pure C program is we already have a compiled Fortran library of `libblas.a` and `liblapack.a` dynamic library in our special supercomputer. Surely, we don't want to rewrite some matrix solvers by ourselves. Therefore, we have to 'inform' Gemini, our AI assistant, that the task is challenging, but feasible with some work. Hopefully, Gemini or other GPT models will modify their answer and prompt more examples in future. 
+This conversation between me and Gemini happened when our team tried to write a computational lithography program in C language. The consideration of invoking BLAS and LAPACK routine in Fortran in a C program is we already have a compiled Fortran library of `libblas.a` and `liblapack.a` dynamic library in our special supercomputer. Surely, we don't want to rewrite some matrix solvers by ourselves. Therefore, we have to 'inform' Gemini, our AI assistant, that the task is challenging, but feasible with some work. Hopefully, Gemini or other GPT models will modify their answer and prompt more examples in future. If you don't have the time to read the rest, you can directly refer the [repo](https://github.com/yanfeit/BlasLapackTest) to some worked cases. Before I did this, I tried my best to find some material to help me. I found two posts very useful, one[^1] is wrote by computational physicist Rubin H. Landau from Oregon state university and another one[^2] is wrote by Professor Nelson H. F. Beebe from Utah university from a point view of mixed language programming. Still, to my best knowledge, it still requires some efforts to collect all things together and make it out. 
+
+# Difference 
+
+# Compiling
+
+# Examples
 
 
 
+[^1]: https://www.math.utah.edu/software/c-with-fortran.html
 
-[^1]: 樊哲勇 (2020). *CUDA 编程: 基础与实践*. 清华大学出版社.
-
-[^2]: Tuomanen, B. (2018). *Hands-On GPU Programming with Python and CUDA: Explore high-performance parallel computing with CUDA*. Packt Publishing Ltd.
+[^2]: https://sites.science.oregonstate.edu/~landaur/nacphy/lapack/cprog.html
