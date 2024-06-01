@@ -8,7 +8,9 @@ comments: false
 toc: false
 ---
 
-&emsp;&emsp; CUDA是目前比较流行的高性能计算的开发工具之一，这种编程模式涉及了CPU+GPU的异构计算。
+&emsp;&emsp; Me: "Can you show me some examples using complex number in C language and use LAPACK library? and not use lapacke.h ?"
+Gemini: "LAPACK functionality is typically accessed through the lapacke.h header, which provides a C interface to the underlying Fortran routines.  Unfortunately, directly using the Fortran LAPACK routines from C can be challenging due to mismatched data types and calling conventions."
+Me: "😞"
 <!-- more -->
 
 
