@@ -36,15 +36,11 @@ I boldly consider myself as a computational physicist who loves physics simulati
 <b>(2)</b> S. Li, N. Kausha, Y. Wang, Y. Tang, G. Alvarez, A. Nocera, T. A. Maier, E. Dagotto, and S. Johnston,  <a href="/publications/li2016.pdf">Nonlocal correlations in the orbital selective Mott phase of a one-dimensional multiorbital Hubbard model</a>, <em>Phys. Rev. B</em> <b>94</b>, 235126 (2016).<br>
 <b>(1)</b> F. Bao, Y. Tang, M. Summers, G. Zhang, C. Webster, V. Scarola, and T. A. Maier,  <a href="/publications/bao2016.pdf">Fast and efficient stochastic optimization for analytic continuation</a>, <em>Phys. Rev. B</em> <b>94</b>, 125129 (2016). <br>
 
-<<<<<<< HEAD
-### Quotes that I like OR make me laugh
-=======
 ### Quotes/Paragraphs that I like OR make me laugh
 
 <b>(37)</b> 他只是坐在那里，嘴里说：“做这个！做那个！”当然，什么都不会发生，光说不做是没有用的。<br><em>- 哈里·杜鲁门《总统的权利》被《人月神话》所引用</em><br>
 
 <b>(36)</b> 勃列日涅夫本可以通过缓和对思想和观念的专制来降低党的脆弱性——但是这将产生对他的专制权力的挑战，因此他并不打算那么做。“这是危险的。”克格勃的首脑尤里·安德烈波夫在1974年一次政治局会议上如是警告，这次会议主要讨论如何应对苏联最杰出的作家索尔仁尼琴和最优秀的物理学家安德烈·萨哈罗夫对苏共的批评。<br><em>- 约翰·刘易斯·加迪斯《冷战》</em><br>
->>>>>>> 444c3b03e3b32dd287decccfab1575eea944c880
 
 <b>(35)</b> 沧浪之水清兮，可以濯吾缨；沧浪之水浊兮，可以濯吾足。<br><em>-《渔父》</em><br>
 
