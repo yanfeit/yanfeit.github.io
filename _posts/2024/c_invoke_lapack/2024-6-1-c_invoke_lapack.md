@@ -8,7 +8,7 @@ comments: false
 toc: false
 ---
 
-Me: "Can you show me some examples using complex number in C language while not using LAPACK library?  Please neither use lapacke.h."
+Me: "Can you show me some examples using complex number in C language while using LAPACK library?  Please don't use lapacke.h."
 
 Gemini: "LAPACK functionality is typically accessed through the lapacke.h header, which provides a C interface to the underlying Fortran routines.  **Unfortunately, directly using the Fortran LAPACK routines from C can be challenging due to mismatched data types and calling conventions.**"
 
