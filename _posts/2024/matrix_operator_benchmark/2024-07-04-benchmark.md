@@ -25,7 +25,7 @@ Nvidia provides some specs for consumers. Before we benchmark the some matrix op
 | A100 SXM4 80GB      | 19.49                | 9.746                |
 
 
-### Performance of matrix operators of numerical library on platforms
+### Performance of matrix operators of numerical library on various platforms
 
 For the hardware platform, I will use Intel Xeon Gold 5220R CPU with a frequency of 2.2GHz, along with Nvidia RTX 3060, Nvidia RTX 4070, and Nvidia RTX A5000. In the future, I might have access to Nvidia Tesla V100 or potentially even more advanced, such as A100. But currently, these hardware platforms are sufficient for me to gather some useful informations. Tests are run on a Linux-based system. The software libraries to be tested include Numpy, CuPy, Pytorch, scikit-cuda, and JAX. All tests are repeated 10 times to measure the average running time. No warm-up procedures were prepared. Below are partial results presented in the figures.
 
