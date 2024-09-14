@@ -1,9 +1,9 @@
 ---
 layout: post
-title: 用CUDA画Mandelbrot图
+title: HPC series 1 - 用CUDA画Mandelbrot图
 date: 2023-09-27
 Author: Yanfei Tang
-tags: [C]
+tags: [C, HPC]
 comments: false
 toc: false
 ---
