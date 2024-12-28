@@ -38,6 +38,9 @@ I boldly consider myself as a computational physicist who loves physics simulati
 
 ### Quotes/Paragraphs that I like OR make me laugh
 
+<b>(40)</b> As I browse throught Einstein's published scientific papers (a browsing which, unfortunately, I must do in the 1965 Russian edition of his collected works because I read no German and most of his papers have not as of 1993 been translated into English!), I am struck by the profound change of character of Einstein's work in 1912. Before 1912 his papers are fantastic for their elegance, their deep intuition, and their modest use of mathematics. Many of the arguments are the same as those which I and my friends use in the 1990s when we teach courses on relativity. Nobody has learned to improve on those arguments. By contrast, after 1912, complex mathematics abounds in Einstein's papers - though usually in combination with insights about physical laws. This combination of mathematics and physical insight, which only Einstein among all physicists working on gravity had in the period 1912 - 1915, ultimately led Einstein to the full form of his gravitational laws.
+<br>- Kip Thorne <br>
+
 <b>(39)</b> 想象力是数学家最重要的一件事情，而想象力跟人的经历有关系的。所以，是经历影响了人类做数学的风格。比如他自己，出生在安徽马鞍山的和县，项羽投江的地方，刘禹锡写《陋室铭》的地方。在乡下长大，他看到的是天空、原野，数学也做得粗旷，“框架清晰，细节却没有”。而多数数学家，比如老师王元，陈景润，城里出来的，计算会非常精确，细节做得很好，这是他所做不到的。<br>- 张寿武<br>
 
 <b>(38)</b> 但穆勒知道贝尔通讯公司是不可或缺的，而他也需要一批技术高超的人帮助自己明确现状、计划未来。因此他给予了贝尔通讯公司在总部推行系统工程的指挥权。这实行起来并不容易，各中心不能理解为什么让一个承包商从事总体设计工作。事实证明，贝尔通讯公司并没有靠自身去实操系统工程，而是培养了各中心运用系统工程的能力，确保自己能够在计划中做出适当的取舍。<br>- 阿瑟·斯洛特金 <em>《迎难而上：乔治·穆勒与NASA载人航天计划的管理》</em><br>
