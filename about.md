@@ -38,11 +38,11 @@ I boldly consider myself as a computational physicist who loves physics simulati
 
 ### Quotes/Paragraphs that I like OR make me laugh
 
-<b>(39)</b> 想象力是数学家最重要的一件事情，而想象力跟人的经历有关系的。所以，是经历影响了人类做数学的风格。比如他自己，出生在安徽马鞍山的和县，项羽投江的地方，刘禹锡写《陋室铭》的地方。在乡下长大，他看到的是天空、原野，数学也做得粗旷，“框架清晰，细节却没有”。而多数数学家，比如老师王元，陈景润，城里出来的，计算会非常精确，细节做得很好，这是他所做不到的。<p align="right"><em>- 张寿武</em></p>
+<b>(39)</b> 想象力是数学家最重要的一件事情，而想象力跟人的经历有关系的。所以，是经历影响了人类做数学的风格。比如他自己，出生在安徽马鞍山的和县，项羽投江的地方，刘禹锡写《陋室铭》的地方。在乡下长大，他看到的是天空、原野，数学也做得粗旷，“框架清晰，细节却没有”。而多数数学家，比如老师王元，陈景润，城里出来的，计算会非常精确，细节做得很好，这是他所做不到的。<br>- 张寿武</br>
 
-<b>(38)</b> 但穆勒知道贝尔通讯公司是不可或缺的，而他也需要一批技术高超的人帮助自己明确现状、计划未来。因此他给予了贝尔通讯公司在总部推行系统工程的指挥权。这实行起来并不容易，各中心不能理解为什么让一个承包商从事总体设计工作。事实证明，贝尔通讯公司并没有靠自身去实操系统工程，而是培养了各中心运用系统工程的能力，确保自己能够在计划中做出适当的取舍。<p align="right"><em>- 阿瑟·斯洛特金《迎难而上：乔治·穆勒与NASA载人航天计划的管理》</em></p>
+<b>(38)</b> 但穆勒知道贝尔通讯公司是不可或缺的，而他也需要一批技术高超的人帮助自己明确现状、计划未来。因此他给予了贝尔通讯公司在总部推行系统工程的指挥权。这实行起来并不容易，各中心不能理解为什么让一个承包商从事总体设计工作。事实证明，贝尔通讯公司并没有靠自身去实操系统工程，而是培养了各中心运用系统工程的能力，确保自己能够在计划中做出适当的取舍。<br>- 阿瑟·斯洛特金 <em>《迎难而上：乔治·穆勒与NASA载人航天计划的管理》</em></br>
 
-<b>(37)</b> 他只是坐在那里，嘴里说：“做这个！做那个！”当然，什么都不会发生，光说不做是没有用的。<p align="right"><em>- 哈里·杜鲁门《总统的权利》被《人月神话》所引用</em></p>
+<b>(37)</b> 他只是坐在那里，嘴里说：“做这个！做那个！”当然，什么都不会发生，光说不做是没有用的。<br><em>- 哈里·杜鲁门</em>《总统的权利》</em>被<em>《人月神话》</em>所引用</br>
 
 <b>(36)</b> 勃列日涅夫本可以通过缓和对思想和观念的专制来降低党的脆弱性——但是这将产生对他的专制权力的挑战，因此他并不打算那么做。“这是危险的。”克格勃的首脑尤里·安德烈波夫在1974年一次政治局会议上如是警告，这次会议主要讨论如何应对苏联最杰出的作家索尔仁尼琴和最优秀的物理学家安德烈·萨哈罗夫对苏共的批评。<p align="right"><em>- 约翰·刘易斯·加迪斯《冷战》</em></p>
 
@@ -54,7 +54,7 @@ I boldly consider myself as a computational physicist who loves physics simulati
 
 <b>(32)</b> My enthusiam and optimism drove me, one evening in November 1976, to wander the streets of Pasadena until late into the night, struggling with myself over whether to propose that Caltech create a project to detect graviatational waves. The arguments in favor were obvious: for science in general, the enormous intellectual payoff if the project succeeded; for Caltech, the opportunity to get in on the ground floor of an exciting new field; for me, the possibility to have a team of experimenters at my hoe institution with whom to interact, instead of relying primarily on Braginsky and his team on the other side of the world, and the possibility to play a more central role than I could commuting to Moscow (and thereby have more fun). The argument against was also obvious: The project would be risky; to succeed, it would require large resources from Caltech and the U.S. National Science Foundation and enormous time and energy from me and others; and after all that investment, it might fail. It was much more risky than Caltech's entry into radio astronomy twenty-three years earlier. <p align="right"><em>- Kip S. Thorne</em></p>
 
-<b>(31)</b> 发愤忘食，乐以忘忧，不知老之将至云尔。<br><em>-《论语》</em>有感于人生苦短。<br>
+<b>(31)</b> 发愤忘食，乐以忘忧，不知老之将至云尔。<p align="right"><em>-《论语》</em>有感于人生苦短。</p>
 
 <b>(30)</b> I was impressed. Braginsky was clever, deep, and had excellent taste in physics; and he was warm and forthright, as easy to talk to about politics as about science. We quickly became close friends and learned to respect each other’s world views. For me, a liberal Democrat in the American spectrum, the freedom of the individual was paramount over all other considerations. No government should have the right to dictate how one lives one’s life. For Braginsky, a nondoctrinaire Communist, the responsibility of the individual to society was paramount. We are our brothers’ keepers, and well we should be in a world where evil people like Joseph Stalin can gain control if we are not vigilant. <br><em>- Kip S. Thorne </em> <br>
 
