@@ -60,6 +60,8 @@ which is the desired integration by parts.
 
 ### Boundary conditions [^1]
 
+#### One-dimensional scalar field $\phi$ 
+
 For a one-dimensional scalar field $\phi$, we have three kinds of boundary conditions.
 
 * boundary condition of the **first** kind:
@@ -80,8 +82,31 @@ which is called Robin boundary condition.
 
 $\gamma = 0$, a special case of the third boundary condition, is also termed as Neumann condition.
 
+#### two-dimensional scalar field $\phi$
 
+<p align="center">
+   <img src="/images/2024/domain2d.png" alt="drawing" align="middle"/>
+   <em>Fig. Two-dimensional domain having a discontinuity interface .</em>
+</p>
 
-# Reference
+For a two-dimensional scalar field $\phi$, the three kinds of boundary conditions are
+
+* boundary condition of the **first** kind, also known as Dirichlet boundary condition:
+
+$$
+\phi = p \quad \text{on} \quad \Gamma_1
+$$
+
+* boundary condition of the **third** kind, known as Robin boundary:
+
+$$
+(\alpha_x \frac{\partial \phi}{\partial x} \hat{x} + \alpha_y \frac{\partial \phi}{\partial y} \hat{y})\cdot \hat{n} + \gamma \phi = q \quad \text{on} \quad \Gamma_2
+$$
+
+* boundary condition of the **second** kind:
+
+The boundary condition of the second kind is a special case of the above equation with $\gamma=0$ which is known as Neumann boundary condition.
+
+### Reference
 
 [^1]: Jian-Ming Jin, The finite element method in electromagnetics (2015). 
