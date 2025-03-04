@@ -58,3 +58,27 @@ $$
 
 which is the desired integration by parts.
 
+### boundary conditions
+
+For scalar field $\phi$, we have three kinds of boundary conditions.
+
+* boundary condition of the **first** kind:
+   
+$$
+\phi = p,
+$$
+which is typically called as Dirichlet boundary condition.
+
+* boundary condition of the **third** kind:
+
+$$
+[\alpha \frac{d \phi}{dx} + \gamma \phi] = q,
+$$
+which is called Robin boundary condition.
+
+* boundary condition of the **second** kind:
+
+$\gamma = 0$, a special case of the third boundary condition, is also termed as Neumann condition.
+
+
+
