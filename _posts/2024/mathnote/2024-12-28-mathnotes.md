@@ -58,9 +58,9 @@ $$
 
 which is the desired integration by parts.
 
-### boundary conditions
+### Boundary conditions [^1]
 
-For scalar field $\phi$, we have three kinds of boundary conditions.
+For a one-dimensional scalar field $\phi$, we have three kinds of boundary conditions.
 
 * boundary condition of the **first** kind:
    
@@ -82,3 +82,6 @@ $\gamma = 0$, a special case of the third boundary condition, is also termed as 
 
 
 
+# Reference
+
+[^1]: Jian-Ming Jin, The finite element method in electromagnetics (2015). 
