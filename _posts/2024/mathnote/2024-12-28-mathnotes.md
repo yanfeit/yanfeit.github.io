@@ -109,6 +109,26 @@ $$
 
 The boundary condition of the second kind is a special case of the above equation with $\gamma=0$ which is known as Neumann boundary condition.
 
+#### Three-dimensional scalar field $\phi$
+
+For a three-dimensional scalar field $\phi$, the three kinds of boundary conditions are
+
+* boundary condition of the **first** kind, also known as Dirichlet boundary condition:
+
+$$
+\phi = p 
+$$
+
+* boundary condition of the **third** kind, known as Robin boundary:
+
+$$
+(\alpha_x \frac{\partial \phi}{\partial x} \hat{x} + \alpha_y \frac{\partial \phi}{\partial y} \hat{y} + \alpha_z \frac{\partial \phi}{\partial z}\hat{z} )\cdot \hat{n} + \gamma \phi = q,
+$$
+
+* boundary condition of the **second** kind:
+
+The boundary condition of the second kind is a special case of the above equation with $\gamma=0$ which is known as Neumann boundary condition.
+
 ### Reference
 
 [^1]: Jian-Ming Jin, The finite element method in electromagnetics (2015). 
