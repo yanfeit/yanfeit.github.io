@@ -69,6 +69,7 @@ For a one-dimensional scalar field $\phi$, we have three kinds of boundary condi
 $$
 \phi = p,
 $$
+
 which is typically called as Dirichlet boundary condition.
 
 * boundary condition of the **third** kind:
@@ -76,6 +77,7 @@ which is typically called as Dirichlet boundary condition.
 $$
 [\alpha \frac{d \phi}{dx} + \gamma \phi] = q,
 $$
+
 which is called Robin boundary condition.
 
 * boundary condition of the **second** kind:
