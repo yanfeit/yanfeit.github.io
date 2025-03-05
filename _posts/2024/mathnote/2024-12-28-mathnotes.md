@@ -84,7 +84,7 @@ which is called Robin boundary condition.
 
 $\gamma = 0$, a special case of the third boundary condition, is also termed as Neumann condition.
 
-#### two-dimensional scalar field $\phi$
+#### Two-dimensional scalar field $\phi$
 
 <p align="center">
    <img src="/images/2024/domain2d.png" alt="drawing" align="middle"/>
