@@ -132,3 +132,4 @@ The boundary condition of the second kind is a special case of the above equatio
 ### Reference
 
 [^1]: Jian-Ming Jin, The finite element method in electromagnetics (2015). 
+[^2]: Dohyun Kim, https://dohyun-cse.github.io/mfem-tutorial.html
