@@ -64,7 +64,7 @@ Z_{series} = Z_1 + Z_2 + \cdots + Z_n
 $$
 
 <p align="center">
-   <img src="/images/2025/Impedances_in_series.svg.png" alt="drawing" align="middle" style="width:600px;" />
+   <img src="/images/2025/Impedances_in_series.svg.png" alt="drawing" align="middle" style="width:400px;" />
    <em>Fig.1 Components in series.</em>
 </p>
 
@@ -75,7 +75,7 @@ $$
 $$
 
 <p align="center">
-   <img src="/images/2025/Impedances_in_parallel.svg.png" alt="drawing" align="middle" style="width:600px;" />
+   <img src="/images/2025/Impedances_in_parallel.svg.png" alt="drawing" align="middle" style="width:400px;" />
    <em>Fig.2 Components in parallel.</em>
 </p>
 
@@ -114,7 +114,7 @@ $$
 where $V_n = V_n^+ +V_n^-$ and $I_n = I_n^+ - I_n^-$. 
 
 <p align="center">
-   <img src="/images/2025/nport.png" alt="drawing" align="middle" style="width:600px;" />
+   <img src="/images/2025/nport.png" alt="drawing" align="middle" style="width:400px;" />
    <em>Fig.3 Components in parallel.</em>
 </p>
 
@@ -299,7 +299,7 @@ $$
 Z_{12} = \frac{V_1}{I_2} \Big|_{I_1 = 0}
 $$
 
-The voltage drop $V_1$ can be computed from voltage divider rule $V_1 = \frac{Z_A}{Z_A + Z_B +Z_D} V_2$. The voltage $V_2$ can be computed from Ohm's law as $V_2 = I_2 [Z_C || (Z_A + Z_B + Z_D)]$. Thus, the transfer impedance element $Z_{12}$ is
+The voltage drop $V_1$ can be computed from voltage divider rule $V_1 = \frac{Z_A}{Z_A + Z_B +Z_D} V_2$. The voltage $V_2$ can be computed from Ohm's law as $V_2 = I_2 \[Z_C || (Z_A + Z_B + Z_D)\]$. Thus, the transfer impedance element $Z_{12}$ is
 
 $$
 Z_{12} = \frac{V_1}{I_2} \Big|_{I_1 = 0} = \frac{Z_A}{Z_A + Z_B + Z_D} [Z_C || (Z_A + Z_B + Z_D)] = \frac{Z_A Z_C}{Z_A + Z_B +Z_C + Z_D}.
@@ -472,7 +472,7 @@ S22: -0.519599575008295
 The above code is validated by Qucs Studio.
 
 <p align="center">
-   <img src="/images/2025/pi_simu.png" alt="drawing" align="middle" style="width:600px;" />
+   <img src="/images/2025/pi_simu.png" alt="drawing" align="middle" style="width:800px;" />
    <em>Fig.9 Qucs simulation of pi-network</em>
 </p>
 
@@ -542,7 +542,7 @@ S22: -0.7294287868456193
 The square network is validated by Qucs Studio.
 
 <p align="center">
-   <img src="/images/2025/s_simu.png" alt="drawing" align="middle" style="width:600px;" />
+   <img src="/images/2025/s_simu.png" alt="drawing" align="middle" style="width:800px;" />
    <em>Fig.10 Qucs simulation of square-network</em>
 </p>
 
@@ -552,7 +552,7 @@ The square network is validated by Qucs Studio.
 Let us go a little bit further. We consider an isolated TSV structure with a simple equivalent circuit model in Ref. [5]. 
 
 <p align="center">
-   <img src="/images/2025/tsv.png" alt="drawing" align="middle" style="width:600px;" />
+   <img src="/images/2025/tsv.png" alt="drawing" align="middle" style="width:200px;" />
    <em>Fig.11 circuit model of isolated TSV</em>
 </p>
 
