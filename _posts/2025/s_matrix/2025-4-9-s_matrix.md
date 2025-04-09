@@ -20,7 +20,7 @@ Electrical impedance is the opposition that a circuit presents to a current when
 Unlike resistance, which has only magnitude, impedance extends the concept of resistance to alternating current (AC) circuits, and possesses both magnitude and phase. Therefore, the impedance is represented as a complex number. The symbol is usually $Z$. Polar form $\| Z \| \angle \theta$ is sometimes used to represent impedance. Cartesian complex number representation is more often used. The impedance is defined as 
 
 $$
-Z = R + jX,
+Z = R + jX, \tag{1}
 $$
 
 where the real part of the impedance is the resistance $R$ and the imaginary part is the reactance $X$. 
@@ -30,7 +30,7 @@ where the real part of the impedance is the resistance $R$ and the imaginary par
 The impedance of an ideal resistor is purely real and is called resistive impedance:
 
 $$
-Z_R = R
+Z_R = R, \tag{2}
 $$
 
 where $R$ is the resistance with SI unit of Ohm ($\Omega$).
@@ -40,7 +40,7 @@ where $R$ is the resistance with SI unit of Ohm ($\Omega$).
 The impedance of capacitors is 
 
 $$
-Z_C = \frac{1}{j \omega C}
+Z_C = \frac{1}{j \omega C}, \tag{3}
 $$
 
 where $\omega$ is the angular frequency and $C$ is the capacitance with SI unit of Farad ($F$).
@@ -50,7 +50,7 @@ where $\omega$ is the angular frequency and $C$ is the capacitance with SI unit 
 The impedance of inductor is 
 
 $$
-Z_L = j \omega L
+Z_L = j \omega L, \tag{4}
 $$
 
 where $L$ is the inductance of SI unit of Henry ($H$). 
@@ -60,7 +60,7 @@ where $L$ is the inductance of SI unit of Henry ($H$).
 For components connected in series, the current through each circuit element is the same. The total impedance is the sum of the component impedances.
 
 $$
-Z_{series} = Z_1 + Z_2 + \cdots + Z_n
+Z_{series} = Z_1 + Z_2 + \cdots + Z_n. \tag{5}
 $$
 
 <p align="center">
@@ -260,7 +260,7 @@ $$
 Z_{12} = \frac{V_1}{I_2} \Big|_{I_1 = 0}
 $$
 
-The voltage drop $V_1$ can be computed from voltage divider rule $V_1 = \frac{Z_A}{Z_A + Z_B} V_2$. The voltage $V_2$ can be computed from Ohm's law as $V_2 = I_2 \[Z_C || (Z_A + Z_B)\]$. Thus, the transfer impedance element $Z_{12}$ is
+The voltage drop $V_1$ can be computed from voltage divider rule $V_1 = \frac{Z_A}{Z_A + Z_B} V_2$. The voltage $V_2$ can be computed from Ohm's law as $V_2 = I_2 \Big(Z_C || (Z_A + Z_B)\Big)$. Thus, the transfer impedance element $Z_{12}$ is
 
 $$
 Z_{12} = \frac{V_1}{I_2} \Big|_{I_1 = 0} = \frac{Z_A}{Z_A + Z_B} [Z_C || (Z_A + Z_B)] = \frac{Z_A Z_C}{Z_A + Z_B +Z_C}.
@@ -299,7 +299,7 @@ $$
 Z_{12} = \frac{V_1}{I_2} \Big|_{I_1 = 0}
 $$
 
-The voltage drop $V_1$ can be computed from voltage divider rule $V_1 = \frac{Z_A}{Z_A + Z_B +Z_D} V_2$. The voltage $V_2$ can be computed from Ohm's law as $V_2 = I_2 \[Z_C || (Z_A + Z_B + Z_D)\]$. Thus, the transfer impedance element $Z_{12}$ is
+The voltage drop $V_1$ can be computed from voltage divider rule $V_1 = \frac{Z_A}{Z_A + Z_B +Z_D} V_2$. The voltage $V_2$ can be computed from Ohm's law as $V_2 = I_2 (Z_C || \Big(Z_A + Z_B + Z_D) \Big)$. Thus, the transfer impedance element $Z_{12}$ is
 
 $$
 Z_{12} = \frac{V_1}{I_2} \Big|_{I_1 = 0} = \frac{Z_A}{Z_A + Z_B + Z_D} [Z_C || (Z_A + Z_B + Z_D)] = \frac{Z_A Z_C}{Z_A + Z_B +Z_C + Z_D}.
@@ -617,7 +617,7 @@ print(20 * np.log10(np.abs(isotsv.S[0, 1, -1])))
 ```
 
 <p align="center">
-   <img src="/images/2025/tsv_insertion.png" alt="drawing" align="middle" style="width:600px;" />
+   <img src="/images/2025/tsv_insertion.png" alt="drawing" align="middle" style="width:400px;" />
    <em>Fig.12 Insertion loss of TSV</em>
 </p>
 
@@ -625,7 +625,7 @@ print(20 * np.log10(np.abs(isotsv.S[0, 1, -1])))
 We can build the circuit model in Qucs Studio as follows,
 
 <p align="center">
-   <img src="/images/2025/tsv_simu.png" alt="drawing" align="middle" style="width:600px;" />
+   <img src="/images/2025/tsv_simu.png" alt="drawing" align="middle" style="width:800px;" />
    <em>Fig.13 Qucs Simulation of circuit model of TSV</em>
 </p>
 
