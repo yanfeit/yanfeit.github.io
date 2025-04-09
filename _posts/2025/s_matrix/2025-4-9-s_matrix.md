@@ -126,7 +126,7 @@ $$
 
 The formula states that $Z_{ij}$ can be found by driving port $j$ with the current $I_j$,  open circuiting all other ports (thus $I_k = 0$ for $k \neq j$), and measuring the open-circuit voltage at port $i$.  
 
-The S-parameter (or Scattering matrix) describes how wave interacts with the device under test (DUT). For historical reason, the word **scatter** is used to refer hit or collide. The wave that scatters back to the source is called reflected wave and the wave that scatters through the device is referred to transmitted wave. In the frequency domain, the instrument used to measure the reflected and transmitted response of the sine waves is a vector network analyzer (VNA). Vector refers to the fact that both the magnitude and phase of the sine wave are being measured. A scalar network analyzer just measures the amplitude of the sine wave, not its phase. The frequency domain reflected and transmitted terms are referred to as specific S-parameters, such as S11 and S21 or the return and insertion loss.
+The S-parameter (or Scattering matrix) describes how wave interacts with the device under test (DUT)[^3]. For historical reason, the word **scatter** is used to refer hit or collide. The wave that scatters back to the source is called reflected wave and the wave that scatters through the device is referred to transmitted wave. In the frequency domain, the instrument used to measure the reflected and transmitted response of the sine waves is a vector network analyzer (VNA). Vector refers to the fact that both the magnitude and phase of the sine wave are being measured. A scalar network analyzer just measures the amplitude of the sine wave, not its phase. The frequency domain reflected and transmitted terms are referred to as specific S-parameters, such as S11 and S21 or the return and insertion loss.
 
 <p align="center">
    <img src="/images/2025/scattering.png" alt="drawing" align="middle" style="width:600px;" />
@@ -643,5 +643,5 @@ We have formulate  the impedance and scattering matrix of three different struct
 [^1]: https://en.wikipedia.org/wiki/Electrical_impedance#Combining_impedances
 [^2]: Pozar, David M. *Microwave engineering: theory and techniques*. John wiley & sons, 2021.
 [^3]: Bogatin, Eric. *Signal and power integrity--simplified*. Pearson Education, 2010.
-[^4]:  Ludwig, Reinhold. *RF Circuit Design: Theory & Applications, 2/e*. Pearson Education India, 2000.
+[^4]: Ludwig, Reinhold. *RF Circuit Design: Theory & Applications, 2/e*. Pearson Education India, 2000.
 [^5]: Weerasekera, Roshan, et al. "Compact modelling of through-silicon vias (TSVs) in three-dimensional (3-D) integrated circuits." *2009 IEEE International Conference on 3D System Integration*. IEEE, 2009.
