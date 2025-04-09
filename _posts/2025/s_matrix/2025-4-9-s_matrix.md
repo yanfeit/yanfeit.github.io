@@ -155,8 +155,8 @@ $$
 $$
 The above equation can be organized as 
 $$
-(\mathbf{Z} \cdot \mathbf{Z_0^{-1}} + \mathbf{I}) \mathbf{V^{-}} &= (\mathbf{Z} \cdot \mathbf{Z_0^{-1}} - \mathbf{I}) \mathbf{V^+} \\
-(\mathbf{Z}  + \mathbf{Z_0}) \mathbf{V^{-}} &= (\mathbf{Z}  - \mathbf{Z_0}) \mathbf{V^+}
+(\mathbf{Z} \cdot \mathbf{Z_0^{-1}} + \mathbf{I}) \mathbf{V^{-}} = (\mathbf{Z} \cdot \mathbf{Z_0^{-1}} - \mathbf{I}) \mathbf{V^+} \\
+(\mathbf{Z}  + \mathbf{Z_0}) \mathbf{V^{-}} = (\mathbf{Z}  - \mathbf{Z_0}) \mathbf{V^+}
 $$
 where $\mathbf{I}$ is the identity matrix. Therefore, the scattering matrix can be computed as
 $$
@@ -168,9 +168,12 @@ $$
 
 ### 3.1 T-Network
 
-We can apply the above theory to a two-port T-network in the Figure of Pozar[^2]. 
+We can apply the above theory to a two-port T-network in the Fig.5 of Pozar[^2]. 
 
-![tnetwork](tnetwork.png)
+<p align="center">
+   <img src="/images/2025/tnetwork.png" alt="drawing" align="middle" style="width:600px;" />
+   <em>Fig.5 T-network.</em>
+</p>
 
 The $Z_{11}$ can be found as the input impedance of port 1 when port 2 is open-circuited:
 $$
@@ -199,12 +202,14 @@ $$
 The scattering matrix of the T-network can be computed from Eq.(14). 
 
 
-
 ### 3.2 $\Pi$- Network
 
 We consider a pi-network in the following[^4]:
 
-![pinetwork](pinetwork.png)
+<p align="center">
+   <img src="/images/2025/pinetwork.png" alt="drawing" align="middle" style="width:600px;" />
+   <em>Fig.6 pi-network.</em>
+</p>
 
 The $Z_{11}$ can be found as the input impedance of port 1 when port 2 is open-circuited:
 $$
@@ -229,13 +234,14 @@ Z_A Z_C     & Z_C(Z_A + Z_B)
 $$
 
 
-
-
 ### 3.3 Square Network
 
 We can consider a square network which is named by me. This type of network is often observed in the literature.
 
-![snetwork](snetwork.png)
+<p align="center">
+   <img src="/images/2025/snetwork.png" alt="drawing" align="middle" style="width:600px;" />
+   <em>Fig.7 Square-network.</em>
+</p>
 
 The $Z_{11}$ can be found as the input impedance of port 1 when port 2 is open-circuited:
 $$
@@ -348,7 +354,10 @@ Insertion loss:
 
 This simple codes can be validated by Qucs Studio software. We can build the network as follows,
 
-![](tnetwork_simulation.png)
+<p align="center">
+   <img src="/images/2025/tnetwork_simulation.png" alt="drawing" align="middle" style="width:600px;" />
+   <em>Fig.8 Qucs simulation of T-network</em>
+</p>
 
 Next, we can realize the $\Pi$-network. 
 
@@ -413,7 +422,11 @@ S22: -0.519599575008295
 
 The above code is validated by Qucs Studio.
 
-![pi_simu](pi_simu.png)
+<p align="center">
+   <img src="/images/2025/pi_simu.png" alt="drawing" align="middle" style="width:600px;" />
+   <em>Fig.9 Qucs simulation of pi-network</em>
+</p>
+
 
 At last, we can realize the square network.
 
@@ -479,15 +492,20 @@ S22: -0.7294287868456193
 
 The square network is validated by Qucs Studio.
 
-![s_simu](s_simu.png)
-
+<p align="center">
+   <img src="/images/2025/s_simu.png" alt="drawing" align="middle" style="width:600px;" />
+   <em>Fig.10 Qucs simulation of square-network</em>
+</p>
 
 
 ### 4.2 Isolated TSV equivalent circuit model[^5]
 
 Let us go a little bit further. We consider an isolated TSV structure with a simple equivalent circuit model in Ref. [5]. 
 
-![tsv](tsv.png)
+<p align="center">
+   <img src="/images/2025/tsv.png" alt="drawing" align="middle" style="width:600px;" />
+   <em>Fig.11 circuit model of isolated TSV</em>
+</p>
 
 As we can see in the Figure, it is a typical T-network.  In order to further validate the theory and code, we can provide some value for the parasite parameter.
 
@@ -549,13 +567,18 @@ print(20 * np.log10(np.abs(isotsv.S[0, 1, -1])))
 ### -0.009752507454361247
 ```
 
-![tsv_insertion](tsv_insertion.png)
-
+<p align="center">
+   <img src="/images/2025/tsv_insertion.png" alt="drawing" align="middle" style="width:600px;" />
+   <em>Fig.12 Insertion loss of TSV</em>
+</p>
 
 
 We can build the circuit model in Qucs Studio as follows,
 
-![tsv_simulation](tsv_simu.png)
+<p align="center">
+   <img src="/images/2025/tsv_simu.png" alt="drawing" align="middle" style="width:600px;" />
+   <em>Fig.13 Qucs Simulation of circuit model of TSV</em>
+</p>
 
 As we can see, the simulation of Qucs can successfully validate the results from python code.
 
