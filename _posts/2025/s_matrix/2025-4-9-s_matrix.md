@@ -17,7 +17,7 @@ This post is about S-parameter of networks.
 
 Electrical impedance is the opposition that a circuit presents to a current when a voltage is applied. It is a generalization of resistance from direct current (DC) to alternating current (AC), and, like resistance, it is measured in ohms (Ω). Impedance is the combined effect of resistance, inductance, and capacitance in an **AC circuit**.
 
-Unlike resistance, which has only magnitude, impedance extends the concept of resistance to alternating current (AC) circuits, and possesses both magnitude and phase. Therefore, the impedance is represented as a complex number. The symbol is usually $Z$. Polar form $|Z| \angle \theta$ is sometimes used to represent impedance. Cartesian complex number representation is more often used. The impedance is defined as 
+Unlike resistance, which has only magnitude, impedance extends the concept of resistance to alternating current (AC) circuits, and possesses both magnitude and phase. Therefore, the impedance is represented as a complex number. The symbol is usually $Z$. Polar form $\|Z\| \angle \theta$ is sometimes used to represent impedance. Cartesian complex number representation is more often used. The impedance is defined as 
 
 $$
 Z = R + jX,
