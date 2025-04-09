@@ -640,8 +640,7 @@ We have formulate  the impedance and scattering matrix of three different struct
 
 ## Reference
 
-[^1] : https://en.wikipedia.org/wiki/Electrical_impedance#Combining_impedances 
-
+[^1]: https://en.wikipedia.org/wiki/Electrical_impedance#Combining_impedances
 [^2]: Pozar, David M. *Microwave engineering: theory and techniques*. John wiley & sons, 2021.
 [^3]: Bogatin, Eric. *Signal and power integrity--simplified*. Pearson Education, 2010.
 [^4]:  Ludwig, Reinhold. *RF Circuit Design: Theory & Applications, 2/e*. Pearson Education India, 2000.
