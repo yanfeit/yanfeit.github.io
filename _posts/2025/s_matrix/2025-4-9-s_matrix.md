@@ -118,9 +118,11 @@ where $V_n = V_n^+ +V_n^-$ and $I_n = I_n^+ - I_n^-$.
 </p>
 
 From the above equation, we see that the matrix element $Z_{ij}$ can be computed as
+
 $$
 Z_{ij} = \frac{V_i}{I_j} \Big|_{I_k=0 \ \text{for} \ k \neq j}.
 $$
+
 The formula states that $Z_{ij}$ can be found by driving port $j$ with the current $I_j$,  open circuiting all other ports (thus $I_k = 0$ for $k \neq j$), and measuring the open-circuit voltage at port $i$.  
 
 The S-parameter (or Scattering matrix) describes how wave interacts with the device under test (DUT). For historical reason, the word **scatter** is used to refer hit or collide. The wave that scatters back to the source is called reflected wave and the wave that scatters through the device is referred to transmitted wave. In the frequency domain, the instrument used to measure the reflected and transmitted response of the sine waves is a vector network analyzer (VNA). Vector refers to the fact that both the magnitude and phase of the sine wave are being measured. A scalar network analyzer just measures the amplitude of the sine wave, not its phase. The frequency domain reflected and transmitted terms are referred to as specific S-parameters, such as S11 and S21 or the return and insertion loss.
@@ -132,6 +134,7 @@ The S-parameter (or Scattering matrix) describes how wave interacts with the dev
 
 
 The scattering matrix is defined in relation to theses incident and reflected voltage waves as 
+
 $$
 \begin{bmatrix}
 V_1^- \\
@@ -152,27 +155,37 @@ V_{2}^+  \\
 V_{N}^+ 
 \end{bmatrix},
 $$
+
 A specific element of the scattering matrix can be determined as
+
 $$
 S_{ij} = \frac{V_i^-}{V_j^+} \Big|_{V_k^+ = 0 \ \text{for} \ k \neq j}
 $$
+
 In words, the above equation says $S_{ij}$ is found by driving port $j$ with an incident wave of voltage $V_j^+$ and measuring the reflected wave amplitude $V_i^-$ coming out of port $i$. The incident waves on all ports except the $j$th port are set to zero, which means that all ports should be terminated in matched loads to avoid reflections. Thus, $S_{ii}$ is the reflection coefficient seen looking into port $i$ when all other ports are terminated in matched loads, and $S_{ij}$ is the transmission coefficient from port $j$ to port $i$ when all other ports are terminated in matched loads. 
 
 We can derive the scattering matrix from impedance matrix. First, we must assume that the characteristic impedance, $Z_{0n}$ , of all ports are identical. The total voltage and current at the $n$th port can be written as
+
 $$
 V_n = V_n^+ + V_n^-, \\
 I_n = I_n^+ - I_n^- = \frac{1}{Z_{0n}} (V_n^+ - V_n^-).
 $$
+
 From the definition of $\mathbf{Z}$ , we can have
+
 $$
 \mathbf{Z} \cdot \mathbf{I} = \mathbf{Z} \cdot \mathbf{Z_0}^{-1} (\mathbf{V^+} - \mathbf{V^-} ) = \mathbf{V} =  \mathbf{V^+} + \mathbf{V^-}
 $$
+
 The above equation can be organized as 
+
 $$
 (\mathbf{Z} \cdot \mathbf{Z_0^{-1}} + \mathbf{I}) \mathbf{V^{-}} = (\mathbf{Z} \cdot \mathbf{Z_0^{-1}} - \mathbf{I}) \mathbf{V^+} \\
 (\mathbf{Z}  + \mathbf{Z_0}) \mathbf{V^{-}} = (\mathbf{Z}  - \mathbf{Z_0}) \mathbf{V^+}
 $$
+
 where $\mathbf{I}$ is the identity matrix. Therefore, the scattering matrix can be computed as
+
 $$
 \mathbf{S} = (\mathbf{Z} + \mathbf{Z_0})^{-1} (\mathbf{Z} - \mathbf{Z_0})
 $$
@@ -190,14 +203,19 @@ We can apply the above theory to a two-port T-network in the Fig.5 of Pozar[^2].
 </p>
 
 The $Z_{11}$ can be found as the input impedance of port 1 when port 2 is open-circuited:
+
 $$
 Z_{11} = \frac{V_1}{I_1} \Big|_{I_2 = 0} = Z_A +Z_C.
 $$
+
 Similarly, $Z_{22}$ is $Z_B + Z_C$. The transfer impedance $Z_{12}$ can be found by measuring the open-circuit voltage at port 1 when a current $I_2$  is applied at port 2. 
+
 $$
 Z_{12} = \frac{V_1}{I_2} \Big|_{I_1 = 0} = \frac{ \frac{Z_C}{Z_B + Z_C} V_2 }{I_2} = Z_C
 $$
+
 Therefore, the impedance matrix for two-port T-network is
+
 $$
 \mathbf{Z} = 
 \begin{bmatrix}
@@ -208,11 +226,13 @@ $$
 
 We assume that the matched impedances of port 1 and port 2 are identical, $Z_{01} = Z_{02} $. In matrix form, it gives
 $$
+
 \mathbf{Z_0} = \begin{bmatrix}
 Z_{01} & 0  \\
 0     & Z_{02}
 \end{bmatrix}.
 $$
+
 The scattering matrix of the T-network can be computed from Eq.(14). 
 
 
@@ -226,20 +246,27 @@ We consider a pi-network in the following[^4]:
 </p>
 
 The $Z_{11}$ can be found as the input impedance of port 1 when port 2 is open-circuited:
+
 $$
 Z_{11} = \frac{V_1}{I_1} \Big|_{I_2 = 0} = Z_A || (Z_B + Z_C) = \frac{Z_A(Z_B + Z_C)}{Z_A + Z_B + Z_C}.
 $$
+
 Similarly, we can obtain $Z_{22}$ by driving port 2 when port 1 is open-circuited, $Z_{22} = \frac{Z_C(Z_A + Z_B)}{Z_A + Z_B + Z_C}$. 
 
 The value of $Z_{12}$ can be found as the ratio of open circuit voltage drop $V_1$ measured across port 1 to the current $I_2$ . 
+
 $$
 Z_{12} = \frac{V_1}{I_2} \Big|_{I_1 = 0}
 $$
+
 The voltage drop $V_1$ can be computed from voltage divider rule $V_1 = \frac{Z_A}{Z_A + Z_B} V_2$. The voltage $V_2$ can be computed from Ohm's law as $V_2 = I_2 [Z_C || (Z_A + Z_B)]$. Thus, the transfer impedance element $Z_{12}$ is
+
 $$
 Z_{12} = \frac{V_1}{I_2} \Big|_{I_1 = 0} = \frac{Z_A}{Z_A + Z_B} [Z_C || (Z_A + Z_B)] = \frac{Z_A Z_C}{Z_A + Z_B +Z_C}.
 $$
+
 Similarly, $Z_{21}$ can be determined in the same way. Thus, the impedance matrix for the $\Pi$ - network is written in the form
+
 $$
 \mathbf{Z} = \frac{1}{Z_A + Z_B + Z_C} \begin{bmatrix}
 Z_A(Z_B+Z_C) & Z_A Z_C  \\
@@ -258,22 +285,29 @@ We can consider a square network which is named by me. This type of network is o
 </p>
 
 The $Z_{11}$ can be found as the input impedance of port 1 when port 2 is open-circuited:
+
 $$
 Z_{11} = \frac{V_1}{I_1} \Big|_{I_2 = 0} = Z_A || (Z_B + Z_C + Z_D) = \frac{Z_A(Z_B + Z_C + Z_D)}{Z_A + Z_B + Z_C + Z_D}.
 $$
+
 Similarly, we can obtain $Z_{22}$ by driving port 2 when port 1 is open-circuited, $Z_{22} = \frac{Z_C(Z_A + Z_B + Z_D)}{Z_A + Z_B + Z_C + Z_D}$. 
 
-The value of $Z_{12}$ can be found as the ratio of open circuit voltage drop $V_1$ measured across port 1 to the current $I_2$ . 
+The value of $Z_{12}$ can be found as the ratio of open circuit voltage drop $V_1$ measured across port 1 to the current $I_2$. 
+
 $$
 Z_{12} = \frac{V_1}{I_2} \Big|_{I_1 = 0}
 $$
+
 The voltage drop $V_1$ can be computed from voltage divider rule $V_1 = \frac{Z_A}{Z_A + Z_B +Z_D} V_2$. The voltage $V_2$ can be computed from Ohm's law as $V_2 = I_2 [Z_C || (Z_A + Z_B + Z_D)]$. Thus, the transfer impedance element $Z_{12}$ is
+
 $$
 Z_{12} = \frac{V_1}{I_2} \Big|_{I_1 = 0} = \frac{Z_A}{Z_A + Z_B + Z_D} [Z_C || (Z_A + Z_B + Z_D)] = \frac{Z_A Z_C}{Z_A + Z_B +Z_C + Z_D}.
 $$
+
 Similarly, $Z_{21}$ can be determined in the same way.
 
 Thus, the impedance matrix for the $\Pi$ - network is written in the form
+
 $$
 \mathbf{Z} = \frac{1}{Z_A + Z_B + Z_C + Z_D} \begin{bmatrix}
 Z_A(Z_B+Z_C+Z_D) & Z_A Z_C  \\
