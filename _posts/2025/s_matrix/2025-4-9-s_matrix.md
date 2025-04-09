@@ -71,7 +71,7 @@ $$
 For components connected in parallel, the voltage across each circuit element is the same. Hence the inverse total impedance is the sum of the inverses of the component impedances:
 
 $$
-\frac{1}{Z_{parallel}} = \frac{1}{Z_1} + \frac{1}{Z_2} + \cdots + \frac{1}{Z_n}
+\frac{1}{Z_{parallel}} = \frac{1}{Z_1} + \frac{1}{Z_2} + \cdots + \frac{1}{Z_n}. \tag{6}
 $$
 
 <p align="center">
@@ -82,7 +82,7 @@ $$
 For two components connected in parallel, the impedance is
 
 $$
-Z_{parallel} = \frac{Z_1 Z_2}{Z_1 + Z_2}.
+Z_{parallel} = \frac{Z_1 Z_2}{Z_1 + Z_2}. \tag{7}
 $$
 
 
@@ -108,7 +108,7 @@ I_{1}   \\
 I_{2}  \\
 \vdots  \\
 I_{N} 
-\end{bmatrix},
+\end{bmatrix}, \tag{8}
 $$
 
 where $V_n = V_n^+ +V_n^-$ and $I_n = I_n^+ - I_n^-$. 
