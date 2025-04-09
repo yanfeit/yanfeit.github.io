@@ -9,19 +9,26 @@ toc: true
 pinned: false
 ---
 
+This post is about S-parameter of networks.
+
+<!-- more -->
+
 ## 1. Impedance of Resistor, Capacitor and Inductor[^1]
 
 Electrical impedance is the opposition that a circuit presents to a current when a voltage is applied. It is a generalization of resistance from direct current (DC) to alternating current (AC), and, like resistance, it is measured in ohms (Ω). Impedance is the combined effect of resistance, inductance, and capacitance in an **AC circuit**.
 
 Unlike resistance, which has only magnitude, impedance extends the concept of resistance to alternating current (AC) circuits, and possesses both magnitude and phase. Therefore, the impedance is represented as a complex number. The symbol is usually $Z$. Polar form $|Z| \angle \theta$ is sometimes used to represent impedance. Cartesian complex number representation is more often used. The impedance is defined as 
+
 $$
 Z = R + jX,
 $$
+
 where the real part of the impedance is the resistance $R$ and the imaginary part is the reactance $X$. 
 
 ### 1.1 Resistor
 
 The impedance of an ideal resistor is purely real and is called resistive impedance:
+
 $$
 Z_R = R
 $$
@@ -31,6 +38,7 @@ where $R$ is the resistance with SI unit of Ohm ($\Omega$).
 ### 1.2 Capacitor
 
 The impedance of capacitors is 
+
 $$
 Z_C = \frac{1}{j \omega C}
 $$
@@ -40,14 +48,17 @@ where $\omega$ is the angular frequency and $C$ is the capacitance with SI unit 
 ### 1.3 Inductor
 
 The impedance of inductor is 
+
 $$
 Z_L = j \omega L
 $$
+
 where $L$ is the inductance of SI unit of Henry ($H$). 
 
 ### 1.4 Combining impedance
 
 For components connected in series, the current through each circuit element is the same. The total impedance is the sum of the component impedances.
+
 $$
 Z_{series} = Z_1 + Z_2 + \cdots + Z_n
 $$
@@ -58,6 +69,7 @@ $$
 </p>
 
 For components connected in parallel, the voltage across each circuit element is the same. Hence the inverse total impedance is the sum of the inverses of the component impedances:
+
 $$
 \frac{1}{Z_{parallel}} = \frac{1}{Z_1} + \frac{1}{Z_2} + \cdots + \frac{1}{Z_n}
 $$
@@ -68,6 +80,7 @@ $$
 </p>
 
 For two components connected in parallel, the impedance is
+
 $$
 Z_{parallel} = \frac{Z_1 Z_2}{Z_1 + Z_2}.
 $$
@@ -76,6 +89,7 @@ $$
 ## 2. Impedance and Scattering Matrix[^2]
 
 An arbitrary N-port microwave network is shown in Figure. The incident $(V_n^+, I_n^+)$  and reflected $(V_n^-, I_n^-)$ waves are defined at a specific point on the $n$th plane. The impedance matrix $\mathbf{Z}$ of the microwave network relates the voltages and currents as
+
 $$
 \begin{bmatrix}
 V_1 \\
