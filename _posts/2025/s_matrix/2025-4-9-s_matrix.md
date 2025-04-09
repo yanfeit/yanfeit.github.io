@@ -17,7 +17,7 @@ This post is about S-parameter of networks.
 
 Electrical impedance is the opposition that a circuit presents to a current when a voltage is applied. It is a generalization of resistance from direct current (DC) to alternating current (AC), and, like resistance, it is measured in ohms (Ω). Impedance is the combined effect of resistance, inductance, and capacitance in an **AC circuit**.
 
-Unlike resistance, which has only magnitude, impedance extends the concept of resistance to alternating current (AC) circuits, and possesses both magnitude and phase. Therefore, the impedance is represented as a complex number. The symbol is usually $Z$. Polar form $\|Z\| \angle \theta$ is sometimes used to represent impedance. Cartesian complex number representation is more often used. The impedance is defined as 
+Unlike resistance, which has only magnitude, impedance extends the concept of resistance to alternating current (AC) circuits, and possesses both magnitude and phase. Therefore, the impedance is represented as a complex number. The symbol is usually $Z$. Polar form $\| Z \| \angle \theta$ is sometimes used to represent impedance. Cartesian complex number representation is more often used. The impedance is defined as 
 
 $$
 Z = R + jX,
@@ -110,6 +110,7 @@ I_{2}  \\
 I_{N} 
 \end{bmatrix},
 $$
+
 where $V_n = V_n^+ +V_n^-$ and $I_n = I_n^+ - I_n^-$. 
 
 <p align="center">
@@ -225,8 +226,8 @@ Z_C     & Z_B + Z_C
 $$
 
 We assume that the matched impedances of port 1 and port 2 are identical, $Z_{01} = Z_{02} $. In matrix form, it gives
-$$
 
+$$
 \mathbf{Z_0} = \begin{bmatrix}
 Z_{01} & 0  \\
 0     & Z_{02}
@@ -259,7 +260,7 @@ $$
 Z_{12} = \frac{V_1}{I_2} \Big|_{I_1 = 0}
 $$
 
-The voltage drop $V_1$ can be computed from voltage divider rule $V_1 = \frac{Z_A}{Z_A + Z_B} V_2$. The voltage $V_2$ can be computed from Ohm's law as $V_2 = I_2 [Z_C || (Z_A + Z_B)]$. Thus, the transfer impedance element $Z_{12}$ is
+The voltage drop $V_1$ can be computed from voltage divider rule $V_1 = \frac{Z_A}{Z_A + Z_B} V_2$. The voltage $V_2$ can be computed from Ohm's law as $V_2 = I_2 \[Z_C || (Z_A + Z_B)\]$. Thus, the transfer impedance element $Z_{12}$ is
 
 $$
 Z_{12} = \frac{V_1}{I_2} \Big|_{I_1 = 0} = \frac{Z_A}{Z_A + Z_B} [Z_C || (Z_A + Z_B)] = \frac{Z_A Z_C}{Z_A + Z_B +Z_C}.
