@@ -260,7 +260,7 @@ $$
 Z_{12} = \frac{V_1}{I_2} \Big|_{I_1 = 0}
 $$
 
-The voltage drop $V_1$ can be computed from voltage divider rule $V_1 = \frac{Z_A}{Z_A + Z_B} V_2$. The voltage $V_2$ can be computed from Ohm's law as $V_2 = I_2 \Big(Z_C || (Z_A + Z_B)\Big)$. Thus, the transfer impedance element $Z_{12}$ is
+The voltage drop $V_1$ can be computed from voltage divider rule $V_1 = \frac{Z_A}{Z_A + Z_B} V_2$. The voltage $V_2$ can be computed from Ohm's law as $V_2 = I_2 \Big(Z_C \|\| (Z_A + Z_B)\Big)$. Thus, the transfer impedance element $Z_{12}$ is
 
 $$
 Z_{12} = \frac{V_1}{I_2} \Big|_{I_1 = 0} = \frac{Z_A}{Z_A + Z_B} [Z_C || (Z_A + Z_B)] = \frac{Z_A Z_C}{Z_A + Z_B +Z_C}.
@@ -299,7 +299,7 @@ $$
 Z_{12} = \frac{V_1}{I_2} \Big|_{I_1 = 0}
 $$
 
-The voltage drop $V_1$ can be computed from voltage divider rule $V_1 = \frac{Z_A}{Z_A + Z_B +Z_D} V_2$. The voltage $V_2$ can be computed from Ohm's law as $V_2 = I_2 (Z_C || \Big(Z_A + Z_B + Z_D) \Big)$. Thus, the transfer impedance element $Z_{12}$ is
+The voltage drop $V_1$ can be computed from voltage divider rule $V_1 = \frac{Z_A}{Z_A + Z_B +Z_D} V_2$. The voltage $V_2$ can be computed from Ohm's law as $V_2 = I_2 (Z_C \|\| \Big(Z_A + Z_B + Z_D) \Big)$. Thus, the transfer impedance element $Z_{12}$ is
 
 $$
 Z_{12} = \frac{V_1}{I_2} \Big|_{I_1 = 0} = \frac{Z_A}{Z_A + Z_B + Z_D} [Z_C || (Z_A + Z_B + Z_D)] = \frac{Z_A Z_C}{Z_A + Z_B +Z_C + Z_D}.
