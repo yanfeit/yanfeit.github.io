@@ -322,6 +322,7 @@ def compute_TE_real(rho, phi, kc, n):
 def compute_TM_real(rho, phi, kc, n):
     """
     Computes the TM modes of a circular waveguide.
+    As the E and H are in the same phase, we can use the imaginary part.
     """
     E_rho = - 1.0 / kc * ( np.cos(n * phi)) * jvp(n, kc * rho)
     E_phi = - n / (kc*kc * rho) * ( - np.sin(n * phi)) * jv(n, kc * rho) 
