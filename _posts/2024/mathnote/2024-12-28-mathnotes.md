@@ -58,6 +58,63 @@ $$
 
 which is the desired integration by parts.
 
+### Typical Steps in Finite Element Analysis of Electromagnetics
+
+We have the divergence theorem,
+
+$$
+\int_{\Omega} \nabla \cdot \vec{w} \ d\Omega = \int_{\Gamma} \vec{w} \cdot \hat{n} \ d \Gamma, \tag{1}
+$$
+
+where $\Omega$ is the integral domain, and $\Gamma$ is the integral boundary, and $\vec{w}$ is a vector field, and $\hat{n}$ is the normal to the integral boundary outward. 
+
+For a scalar field $u$ in Poisson equation of the electrostatics, we wiil have the following steps used in the formulation of weak form of the Poisson equation.
+
+$$
+\nabla \cdot (v \ \epsilon \nabla u) = \nabla v \cdot (\epsilon \nabla u) + v \nabla \cdot (\epsilon \nabla u), 
+$$
+
+where $v$ is the test scalar field. If apply integral over domain to the above equation, we have
+
+$$
+\int_{\Omega} v \nabla \cdot (\epsilon \nabla u) \ d \Omega = \int_{\Omega} \nabla \cdot (v \epsilon \nabla u) \ d \Omega + \int_{\Omega} \nabla v \cdot \epsilon \nabla u \ d \Omega \\
+= \int_{\Gamma} v \epsilon \nabla u \cdot \hat{n} \ d\Gamma + \int_{\Omega} \nabla v \cdot \epsilon \nabla u \ d \Omega
+$$
+
+where we apply the divergence theorem in the second steps.
+
+For a vector filed $\vec{u}$ in the Helmholtz equation of waveguide problems, we will have the following steps used in the formulation of weak form of the Helmholtz equation.
+
+Recall from the vector analysis, we have the following equality,
+
+$$
+\nabla \cdot (\vec{a} \times \vec{b}) = \vec{b} \cdot \nabla \times \vec{a} - \vec{a} \cdot \nabla \times \vec{b}. \tag{2}
+$$
+
+We have the following steps in the formulation of Helmholtz equation with Eq. (2),
+
+$$
+\nabla \cdot [ \vec{v} \times (\frac{1}{\mu_r} \nabla \times \vec{u} ) ] = \frac{1}{\mu_r} \nabla \times \vec{u} \cdot \nabla \times \vec{v} - \vec{v} \cdot [ \nabla \times (\frac{1}{\mu_r} \nabla \times \vec{u} ) ],
+$$
+
+where $\vec{v}$ is the test vector field. We can apply the integral over the domain for the above equation, we have
+
+$$
+\int_{\Omega} \vec{v} \cdot [ \nabla \times (\frac{1}{\mu_r} \nabla \times \vec{u} ) ] \ d \Omega = \int_{\Omega}  \frac{1}{\mu_r} \nabla \times \vec{u} \cdot \nabla \times \vec{v} \ d \Omega - \int_{\Omega} \nabla \cdot [ \vec{v} \times (\frac{1}{\mu_r} \nabla \times \vec{u} ) ] \ d \Omega, \\
+= \int_{\Omega}  \frac{1}{\mu_r} \nabla \times \vec{u} \cdot \nabla \times \vec{v} \ d \Omega - \int_{\Gamma}  \vec{v} \times (\frac{1}{\mu_r} \nabla \times \vec{u} ) \cdot \hat{n} \ d \Gamma, \\
+= \int_{\Omega}  \frac{1}{\mu_r} \nabla \times \vec{u} \cdot \nabla \times \vec{v} \ d \Omega - \int_{\Gamma} \frac{1}{\mu_r} \nabla \times \vec{u} \cdot (\hat{n} \times \vec{v}) \ d \Gamma,
+$$
+
+where we apply divergence theorem for the second step and we apply the following equality for the third step,
+
+$$
+\vec{a} \cdot (\vec{b} \times \vec{c} ) = \vec{b} \cdot (\vec{c} \times \vec{a}) = \vec{c} \cdot (\vec{a} \times \vec{b} ).
+$$
+
+
+
+
+
 ### Boundary conditions [^1]
 
 #### One-dimensional scalar field $\phi$ 
