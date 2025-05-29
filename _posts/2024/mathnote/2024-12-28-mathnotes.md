@@ -81,7 +81,7 @@ $$
 = \int_{\Gamma} v \epsilon \nabla u \cdot \hat{n} \ d\Gamma + \int_{\Omega} \nabla v \cdot \epsilon \nabla u \ d \Omega
 $$
 
-where we apply the divergence theorem in the second steps.
+where we apply the divergence theorem in the second step.
 
 For a vector filed $\vec{u}$ in the Helmholtz equation of waveguide problems, we will have the following steps used in the formulation of weak form of the Helmholtz equation.
 
@@ -110,9 +110,6 @@ where we apply divergence theorem for the second step and we apply the following
 $$
 \vec{a} \cdot (\vec{b} \times \vec{c} ) = \vec{b} \cdot (\vec{c} \times \vec{a}) = \vec{c} \cdot (\vec{a} \times \vec{b} ).
 $$
-
-
-
 
 
 ### Boundary conditions [^1]
