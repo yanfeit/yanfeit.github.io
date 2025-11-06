@@ -38,6 +38,8 @@ I boldly consider myself as a computational physicist who loves physics simulati
 
 ### Quotes/Paragraphs that I like OR make me laugh
 
+<b>(41)</b>  21世纪理论物理学的主旋律是什么呢？在充分明白其中可能涉及的风险后，请允许我做如下的一些猜测。 由于人类面临大量的问题，21世纪物理学很可能被各种应用问题主导。这些当然非常非常重要，但是与20世纪的主旋律相比较，它将缺乏诗意和哲学的品质。<br>- 杨振宁《晨曦集》<br>
+
 <b>(40)</b> As I browse throught Einstein's published scientific papers (a browsing which, unfortunately, I must do in the 1965 Russian edition of his collected works because I read no German and most of his papers have not as of 1993 been translated into English!), I am struck by the profound change of character of Einstein's work in 1912. Before 1912 his papers are fantastic for their elegance, their deep intuition, and their modest use of mathematics. Many of the arguments are the same as those which I and my friends use in the 1990s when we teach courses on relativity. Nobody has learned to improve on those arguments. By contrast, after 1912, complex mathematics abounds in Einstein's papers - though usually in combination with insights about physical laws. This combination of mathematics and physical insight, which only Einstein among all physicists working on gravity had in the period 1912 - 1915, ultimately led Einstein to the full form of his gravitational laws.
 <br>- Kip Thorne <br>
 
