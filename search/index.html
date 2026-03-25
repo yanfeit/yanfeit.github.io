@@ -5,11 +5,18 @@ permalink: /search/
 ---
 
 <div class="search-container">
-  <input type="text" id="search-input" placeholder="Search posts..." aria-label="Search posts" autofocus>
+  <div class="search-input-wrapper">
+    <input type="text" id="search-input" placeholder="Search posts..." aria-label="Search posts" autofocus>
+    <kbd class="search-shortcut" id="search-shortcut">/</kbd>
+  </div>
   <div id="search-results"></div>
 </div>
 
 <style>
+  .search-input-wrapper {
+    position: relative;
+    margin-bottom: 20px;
+  }
   #search-input {
     width: 100%;
     padding: 12px 16px;
@@ -20,11 +27,25 @@ permalink: /search/
     color: var(--text-color, #333);
     outline: none;
     box-sizing: border-box;
-    margin-bottom: 20px;
     font-family: inherit;
   }
   #search-input:focus {
     border-color: var(--link-color, #15aabf);
+    box-shadow: 0 0 0 3px rgba(21, 170, 191, 0.15);
+  }
+  .search-shortcut {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 2px 8px;
+    font-size: 12px;
+    font-family: inherit;
+    color: var(--text-lightener, #aaa);
+    background-color: var(--tag-bg, #f1f3f5);
+    border: 1px solid var(--divider-color, #ddd);
+    border-radius: 4px;
+    pointer-events: none;
   }
   #search-results .search-item {
     padding: 12px 0;
@@ -45,13 +66,32 @@ permalink: /search/
     color: var(--text-lighten, #888);
     margin-bottom: 4px;
   }
+  #search-results .search-item .meta .search-tag {
+    display: inline-block;
+    padding: 1px 6px;
+    margin: 0 2px;
+    font-size: 12px;
+    background-color: var(--tag-bg, #f1f3f5);
+    color: var(--text-color, #333);
+    border-radius: 3px;
+  }
   #search-results .search-item .excerpt {
     font-size: 14px;
     color: var(--text-lighten, #666);
+    line-height: 1.5;
   }
   #search-results .no-results {
     color: var(--text-lighten, #888);
     padding: 20px 0;
+  }
+  mark.search-highlight {
+    background-color: rgba(21, 170, 191, 0.2);
+    color: inherit;
+    padding: 1px 2px;
+    border-radius: 2px;
+  }
+  [data-theme="dark"] mark.search-highlight {
+    background-color: rgba(102, 209, 255, 0.25);
   }
 </style>
 
@@ -59,6 +99,7 @@ permalink: /search/
 (function() {
   var searchInput = document.getElementById('search-input');
   var resultsContainer = document.getElementById('search-results');
+  var shortcutHint = document.getElementById('search-shortcut');
   var posts = [];
 
   var xhr = new XMLHttpRequest();
@@ -69,6 +110,39 @@ permalink: /search/
     }
   };
   xhr.send();
+
+  // Keyboard shortcut: press "/" to focus search input
+  document.addEventListener('keydown', function(e) {
+    if (e.key === '/' && document.activeElement !== searchInput &&
+        document.activeElement.tagName !== 'INPUT' &&
+        document.activeElement.tagName !== 'TEXTAREA') {
+      e.preventDefault();
+      searchInput.focus();
+    }
+  });
+
+  // Hide shortcut hint when input is focused, show when blurred
+  searchInput.addEventListener('focus', function() {
+    shortcutHint.style.display = 'none';
+  });
+  searchInput.addEventListener('blur', function() {
+    if (!searchInput.value) {
+      shortcutHint.style.display = '';
+    }
+  });
+
+  function escapeHtml(text) {
+    var div = document.createElement('div');
+    div.appendChild(document.createTextNode(text));
+    return div.innerHTML;
+  }
+
+  function highlightText(text, query) {
+    if (!query) return escapeHtml(text);
+    var escaped = escapeHtml(text);
+    var regex = new RegExp('(' + query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + ')', 'gi');
+    return escaped.replace(regex, '<mark class="search-highlight">$1</mark>');
+  }
 
   searchInput.addEventListener('input', function() {
     var query = this.value.toLowerCase().trim();
@@ -89,10 +163,15 @@ permalink: /search/
     }
 
     var html = results.map(function(post) {
+      var tagsHtml = post.tags.map(function(tag) {
+        var tagDisplay = highlightText(tag, query);
+        return '<span class="search-tag">' + tagDisplay + '</span>';
+      }).join(' ');
+
       return '<div class="search-item">' +
-        '<h2><a href="' + post.url + '">' + post.title + '</a></h2>' +
-        '<div class="meta">' + post.date + ' · ' + post.tags.join(', ') + '</div>' +
-        '<p class="excerpt">' + post.excerpt + '</p>' +
+        '<h2><a href="' + post.url + '">' + highlightText(post.title, query) + '</a></h2>' +
+        '<div class="meta">' + post.date + (tagsHtml ? ' · ' + tagsHtml : '') + '</div>' +
+        '<p class="excerpt">' + highlightText(post.excerpt, query) + '</p>' +
         '</div>';
     }).join('');
 

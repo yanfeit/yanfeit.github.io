@@ -15,6 +15,55 @@ code.highlighter-rouge {
   margin: 1em 0;
 }
 
+// Language label
+.code-lang-label {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 12px;
+  padding: 0 8px;
+  font-size: 11px;
+  font-family: $code-font;
+  font-weight: 600;
+  color: var(--text-lighten, #888);
+  background-color: var(--code-bg, #{$oc-gray-0});
+  border: 1px solid var(--code-border, #{$oc-gray-3});
+  border-top: none;
+  border-radius: 0 0 4px 4px;
+  z-index: 2;
+  line-height: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+// Line numbers
+.line-numbers {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  padding: .45em 0;
+  width: 3em;
+  text-align: right;
+  background-color: var(--code-bg, #{$oc-gray-0});
+  border-right: 1px solid var(--divider-color, #{$oc-gray-2});
+  user-select: none;
+  overflow: hidden;
+
+  span {
+    display: block;
+    padding: 0 8px 0 0;
+    font-size: $small-font-size;
+    font-family: $code-font;
+    line-height: inherit;
+    color: var(--text-lightener, #{$oc-gray-4});
+  }
+}
+
+.has-line-numbers pre.highlight {
+  padding-left: 3.5em;
+}
+
 .copy-btn {
   position: absolute;
   top: 6px;
@@ -50,6 +99,7 @@ pre.highlight {
   overflow: auto;
   -webkit-overflow-scrolling: touch;
   background-color: var(--code-bg, #{$oc-gray-0});
+  position: relative;
 }
 
 // VS Code Light+ inspired syntax highlighting
