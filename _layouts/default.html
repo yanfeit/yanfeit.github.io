@@ -8,6 +8,12 @@
       <aside class="toc">
         {% include toc.html html=content %}
       </aside>
+      <aside class="toc-mobile">
+        <button class="toc-mobile-toggle" id="toc-toggle">☰ Contents</button>
+        <div class="toc-mobile-content" id="toc-content">
+          {% include toc.html html=content %}
+        </div>
+      </aside>
     {% endif %}
 
     <div id="main" role="main" class="wrapper-content">
@@ -29,5 +35,58 @@
         {% include footer.html %}
       </footer>
     </div>
+
+    <script>
+      (function() {
+        var toggle = document.getElementById('dark-mode-toggle');
+        var theme = localStorage.getItem('theme') || 'light';
+        document.documentElement.setAttribute('data-theme', theme);
+        if (toggle) {
+          toggle.addEventListener('click', function() {
+            var current = document.documentElement.getAttribute('data-theme');
+            var next = current === 'dark' ? 'light' : 'dark';
+            document.documentElement.setAttribute('data-theme', next);
+            localStorage.setItem('theme', next);
+          });
+        }
+      })();
+    </script>
+
+    <script>
+      (function() {
+        var tocToggle = document.getElementById('toc-toggle');
+        var tocContent = document.getElementById('toc-content');
+        if (tocToggle && tocContent) {
+          tocToggle.addEventListener('click', function() {
+            tocContent.classList.toggle('open');
+            tocToggle.textContent = tocContent.classList.contains('open') ? '✕ Contents' : '☰ Contents';
+          });
+        }
+      })();
+    </script>
+
+    <script>
+      (function() {
+        document.querySelectorAll('pre.highlight').forEach(function(pre) {
+          var wrapper = document.createElement('div');
+          wrapper.className = 'highlight-wrapper';
+          pre.parentNode.insertBefore(wrapper, pre);
+          wrapper.appendChild(pre);
+
+          var btn = document.createElement('button');
+          btn.className = 'copy-btn';
+          btn.textContent = 'Copy';
+          btn.addEventListener('click', function() {
+            var code = pre.querySelector('code') || pre;
+            var text = code.innerText;
+            navigator.clipboard.writeText(text).then(function() {
+              btn.textContent = 'Copied!';
+              setTimeout(function() { btn.textContent = 'Copy'; }, 2000);
+            });
+          });
+          wrapper.insertBefore(btn, pre);
+        });
+      })();
+    </script>
   </body>
 </html>

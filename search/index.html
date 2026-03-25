@@ -1,0 +1,102 @@
+---
+layout: page
+title: Search
+permalink: /search/
+---
+
+<div class="search-container">
+  <input type="text" id="search-input" placeholder="Search posts..." aria-label="Search posts" autofocus>
+  <div id="search-results"></div>
+</div>
+
+<style>
+  #search-input {
+    width: 100%;
+    padding: 12px 16px;
+    font-size: 16px;
+    border: 1px solid var(--divider-color, #eee);
+    border-radius: 6px;
+    background-color: var(--bg-color, #fff);
+    color: var(--text-color, #333);
+    outline: none;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    font-family: inherit;
+  }
+  #search-input:focus {
+    border-color: var(--link-color, #15aabf);
+  }
+  #search-results .search-item {
+    padding: 12px 0;
+    border-bottom: 1px solid var(--divider-color, #eee);
+  }
+  #search-results .search-item h2 {
+    margin: 0 0 4px;
+    font-size: 20px;
+  }
+  #search-results .search-item h2 a {
+    color: var(--text-color, #333);
+  }
+  #search-results .search-item h2 a:hover {
+    color: var(--link-color, #15aabf);
+  }
+  #search-results .search-item .meta {
+    font-size: 13px;
+    color: var(--text-lighten, #888);
+    margin-bottom: 4px;
+  }
+  #search-results .search-item .excerpt {
+    font-size: 14px;
+    color: var(--text-lighten, #666);
+  }
+  #search-results .no-results {
+    color: var(--text-lighten, #888);
+    padding: 20px 0;
+  }
+</style>
+
+<script>
+(function() {
+  var searchInput = document.getElementById('search-input');
+  var resultsContainer = document.getElementById('search-results');
+  var posts = [];
+
+  var xhr = new XMLHttpRequest();
+  xhr.open('GET', '{{ site.baseurl }}/search.json');
+  xhr.onload = function() {
+    if (xhr.status === 200) {
+      posts = JSON.parse(xhr.responseText);
+    }
+  };
+  xhr.send();
+
+  searchInput.addEventListener('input', function() {
+    var query = this.value.toLowerCase().trim();
+    if (query.length < 2) {
+      resultsContainer.innerHTML = '';
+      return;
+    }
+
+    var results = posts.filter(function(post) {
+      return post.title.toLowerCase().indexOf(query) !== -1 ||
+             post.excerpt.toLowerCase().indexOf(query) !== -1 ||
+             post.tags.join(' ').toLowerCase().indexOf(query) !== -1;
+    });
+
+    if (results.length === 0) {
+      resultsContainer.innerHTML = '<p class="no-results">No posts found.</p>';
+      return;
+    }
+
+    var html = results.map(function(post) {
+      return '<div class="search-item">' +
+        '<h2><a href="' + post.url + '">' + post.title + '</a></h2>' +
+        '<div class="meta">' + post.date + ' · ' + post.tags.join(', ') + '</div>' +
+        '<p class="excerpt">' + post.excerpt + '</p>' +
+        '</div>';
+    }).join('');
+
+    resultsContainer.innerHTML = html;
+  });
+})();
+</script>
