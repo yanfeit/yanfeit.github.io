@@ -5,6 +5,7 @@ date: 2020-01-26
 Author: Yanfei Tang
 tags: [math, JavaScript, p5.js]
 comments: false
+p5: true
 ---
 
 *Maurer Rose* was introduced by Peter M. Maurer in his paper titled as [*A Rose is a Rose...*](https://www.jstor.org/stable/2322215?origin=crossref&seq=1). 

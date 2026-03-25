@@ -7,10 +7,16 @@
   <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
   <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
   <link rel="shortcut icon" href="{{ site.favicon }}">
+  {% if site.gitalk.clientID %}
   <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+  {% endif %}
+  {% if page.layout == 'default' or page.pinned %}
   <script src="https://unpkg.com/feather-icons"></script>
+  {% endif %}
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
-  <script language="javascript" type="text/javascript" src="https://cdn.jsdelivr.net/npm/p5@0.10.2/lib/p5.min.js"></script>
+  {% if page.p5 %}
+  <script language="javascript" type="text/javascript" src="{{ site.baseurl }}/assets/js/p5.min.js"></script>
+  {% endif %}
   <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
       tex2jax: {
