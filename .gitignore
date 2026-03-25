@@ -6,4 +6,6 @@ build_*
 a.out
 _site/
 _drafts
+vendor/
+.bundle/
 
