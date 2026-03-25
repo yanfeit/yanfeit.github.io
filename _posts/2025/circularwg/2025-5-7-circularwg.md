@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Modes of Circular Waveguide
+image: /images/2025/modes.png
 date: 2025-5-7
 author: Yanfei Tang
 tags: [electromagnetism, python]
