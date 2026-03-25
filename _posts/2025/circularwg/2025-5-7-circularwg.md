@@ -27,15 +27,21 @@ The Figure shows the geometry of a hollow, round metal pipe with inner radius $a
 Assuming that the waveguide is source free, we can write Maxwell's equation as
 
 $$
-\nabla \times \mathbf{E} = - j \omega \mu \mathbf{H},  \tag{1} \\
+\begin{gathered}
+\nabla \times \mathbf{E} = - j \omega \mu \mathbf{H},  \\
 \nabla \times \mathbf{H} = j \omega \epsilon \mathbf{E} 
+\end{gathered}
+\tag{1}
 $$
 
 In the cylindrical coordinate system, we can write the electric and magnetic ansatz of field as
 
 $$
-\mathbf{E}(\rho, \phi, z) = [\hat{\rho}E_{\rho}(\rho, \phi) + \hat{\phi}E_{\phi}(\rho, \phi) + \hat{z}E_{z}(\rho, \phi)] e^{-j \beta z}, \tag{2} \\
-\mathbf{H}(\rho, \phi, z) = [\hat{\rho}H_{\rho}(\rho, \phi) + \hat{\phi}H_{\phi}(\rho, \phi) + \hat{z}H_{z}(\rho, \phi)] e^{-j \beta z}, \\
+\begin{gathered}
+\mathbf{E}(\rho, \phi, z) = [\hat{\rho}E_{\rho}(\rho, \phi) + \hat{\phi}E_{\phi}(\rho, \phi) + \hat{z}E_{z}(\rho, \phi)] e^{-j \beta z}, \\
+\mathbf{H}(\rho, \phi, z) = [\hat{\rho}H_{\rho}(\rho, \phi) + \hat{\phi}H_{\phi}(\rho, \phi) + \hat{z}H_{z}(\rho, \phi)] e^{-j \beta z},
+\end{gathered}
+\tag{2}
 $$
 
 where $E_{\rho}(\rho, \phi)$, $E_{\phi}(\rho, \phi)$, $H_{\rho}(\rho, \phi)$ and $H_{\phi}(\rho, \phi)$ represent the transverse electric and magnetic filed components in the $\rho-\phi$ plane, and $E_z(\rho, \phi)$ and $H_z(\rho, \phi)$ are the longitudinal electric and magnetic field components. We will expand the Eq.(1) for each component. To do that, we will need the following vector analysis expression in the cylindrical system. 
@@ -47,21 +53,27 @@ $$
 With that, we can rewrite Eq.(1) for each component as
 
 $$
+\begin{gathered}
 \frac{1}{\rho} \frac{\partial E_z}{\partial \phi} + j \beta E_{\phi}= -j \omega \mu H_{\rho},  \\
 -j\beta E_{\rho} - \frac{\partial E_z}{\partial \rho} = -j \omega \mu H_{\phi}, \\
 \frac{1}{\rho}E_{\phi} - \frac{1}{\rho} \frac{\partial E_{\rho}}{\partial \phi} = -j \omega \mu H_z, \\
-\frac{1}{\rho} \frac{\partial H_z}{\partial \phi} + j \beta H_{\phi}= j \omega \epsilon E_{\rho}, \tag{4} \\
+\frac{1}{\rho} \frac{\partial H_z}{\partial \phi} + j \beta H_{\phi}= j \omega \epsilon E_{\rho}, \\
 -j\beta H_{\rho} - \frac{\partial H_z}{\partial \rho} = j \omega \epsilon E_{\phi}, \\
-\frac{1}{\rho}H_{\phi} - \frac{1}{\rho} \frac{\partial H_{\rho}}{\partial \phi} = j \omega \epsilon E_z, \\
+\frac{1}{\rho}H_{\phi} - \frac{1}{\rho} \frac{\partial H_{\rho}}{\partial \phi} = j \omega \epsilon E_z,
+\end{gathered}
+\tag{4}
 $$
 
 The four transverse component can be expressed in terms of longitudinal component $E_z$ and $H_z$, 
 
 $$
-E_{\rho} = -\frac{j}{k_c^2} (\beta \frac{\partial E_z}{\partial \rho} + \frac{\omega \mu}{\rho} \frac{\partial H_z}{\partial \phi}), \tag{5} \\
+\begin{gathered}
+E_{\rho} = -\frac{j}{k_c^2} (\beta \frac{\partial E_z}{\partial \rho} + \frac{\omega \mu}{\rho} \frac{\partial H_z}{\partial \phi}), \\
 E_{\phi} = -\frac{j}{k_c^2} (\frac{\beta}{\rho} \frac{\partial E_z}{\partial \phi} - \omega \mu \frac{\partial H_z}{\partial \rho}), \\
 H_{\rho} = \frac{j}{k_c^2} (\frac{\omega \epsilon}{\rho} \frac{\partial E_z}{\partial \phi} - \beta \frac{\partial H_z}{\partial \rho}), \\
-H_{\phi} = -\frac{j}{k_c^2} (\omega \epsilon \frac{\partial E_z}{\partial \rho} + \frac{\beta}{\rho} \frac{\partial H_z}{\partial \phi}), \\
+H_{\phi} = -\frac{j}{k_c^2} (\omega \epsilon \frac{\partial E_z}{\partial \rho} + \frac{\beta}{\rho} \frac{\partial H_z}{\partial \phi}),
+\end{gathered}
+\tag{5}
 $$
 
 where $k_c^2 = k^2 - \beta^2$.  The waveguide can both support TE ($E_z = 0$) and TM ($H_z = 0$) modes. 
@@ -71,10 +83,13 @@ where $k_c^2 = k^2 - \beta^2$.  The waveguide can both support TE ($E_z = 0$) an
 For transverse electric (TE) mode, the field component are given by
 
 $$
-E_{\rho} = -\frac{j\omega \mu}{k_c^2}\frac{1}{\rho} \frac{\partial H_z}{\partial \phi}, \tag{6}  \\
+\begin{gathered}
+E_{\rho} = -\frac{j\omega \mu}{k_c^2}\frac{1}{\rho} \frac{\partial H_z}{\partial \phi}, \\
 E_{\phi} = \frac{j \omega \mu }{k_c^2} \frac{\partial H_z}{\partial \rho}, \\
 H_{\rho} = -\frac{j \beta }{k_c^2}   \frac{\partial H_z}{\partial \rho}, \\
-H_{\phi} = -\frac{j \beta}{k_c^2} \frac{1}{\rho} \frac{\partial H_z}{\partial \phi}. \\
+H_{\phi} = -\frac{j \beta}{k_c^2} \frac{1}{\rho} \frac{\partial H_z}{\partial \phi}.
+\end{gathered}
+\tag{6}
 $$
 
 The longitudinal component $H_z$ is a solution to the wave equation
@@ -206,10 +221,13 @@ The first TE mode to propagate is the mode with the smallest $\chi'\_{nm}$, whic
 Finally, we summarize the transverse field components 
 
 $$
-E_{\rho} = \frac{- j \omega \mu n}{k_c^2 \rho} (A \cos n\phi - B \sin n\phi) J_n(k_c \rho) e^{-j\beta z}, \tag{24} \\
+\begin{gathered}
+E_{\rho} = \frac{- j \omega \mu n}{k_c^2 \rho} (A \cos n\phi - B \sin n\phi) J_n(k_c \rho) e^{-j\beta z}, \\
 E_{\phi} = \frac{j \omega \mu}{k_c} (A \sin n\phi + B \cos n\phi) J'_n(k_c \rho) e^{-j\beta z}, \\
 H_{\rho} = \frac{- j \beta}{k_c} (A \sin n\phi + B \cos n\phi) J'_n(k_c \rho) e^{-j\beta z}, \\
-H_{\phi} = \frac{- j \beta n}{k_c^2 \rho} (A \cos n\phi - B \sin n\phi) J_n(k_c \rho) e^{-j\beta z}. \\
+H_{\phi} = \frac{- j \beta n}{k_c^2 \rho} (A \cos n\phi - B \sin n\phi) J_n(k_c \rho) e^{-j\beta z}.
+\end{gathered}
+\tag{24}
 $$
 
 There are still two remaining constants $A$ and $B$. The actual amplitude will depend on the excitation of the waveguide. 
@@ -219,10 +237,13 @@ There are still two remaining constants $A$ and $B$. The actual amplitude will d
 For transverse magnetic (TM) mode, the field component are given by
 
 $$
-E_{\rho} = -\frac{j \beta}{k_c^2}  \frac{\partial E_z}{\partial \rho}, \tag{25}  \\
+\begin{gathered}
+E_{\rho} = -\frac{j \beta}{k_c^2}  \frac{\partial E_z}{\partial \rho}, \\
 E_{\phi} = -\frac{j \beta}{k_c^2} \frac{1}{\rho} \frac{\partial E_z}{\partial \phi} , \\
 H_{\rho} = \frac{j \omega \epsilon}{k_c^2} \frac{1}{\rho} \frac{\partial E_z}{\partial \phi}, \\
-H_{\phi} = -\frac{j  \omega \epsilon}{k_c^2} \frac{\partial E_z}{\partial \rho} , \\
+H_{\phi} = -\frac{j  \omega \epsilon}{k_c^2} \frac{\partial E_z}{\partial \rho} ,
+\end{gathered}
+\tag{25}
 $$
 
 Similarly, for the TM modes of the circular waveguide, we solve for $E_z$ from the wave equation in cylindrical coordinates,
@@ -282,10 +303,13 @@ The first TM mode to propagate is the mode with the smallest $\chi_{nm}$, which 
 The transverse fields can be summarized as,
 
 $$
-E_{\rho} = \frac{-j \beta}{k_c} (A \sin n\phi + B \cos n\phi) J'_n(k_c \rho) e^{-j\beta z}, \tag{33}  \\
+\begin{gathered}
+E_{\rho} = \frac{-j \beta}{k_c} (A \sin n\phi + B \cos n\phi) J'_n(k_c \rho) e^{-j\beta z}, \\
 E_{\phi} = \frac{- j \beta n}{k_c^2 \rho} (A \cos n\phi - B \sin n\phi) J_n(k_c \rho) e^{-j\beta z}, \\
 H_{\rho} = \frac{ j \omega \epsilon n}{k_c^2 \rho} (A \cos n\phi - B \sin n\phi) J_n(k_c \rho) e^{-j\beta z}, \\
-H_{\phi} = \frac{- j \omega \epsilon}{k_c} (A \sin n\phi + B \cos n\phi) J'_n(k_c \rho) e^{-j\beta z}. \\
+H_{\phi} = \frac{- j \omega \epsilon}{k_c} (A \sin n\phi + B \cos n\phi) J'_n(k_c \rho) e^{-j\beta z}.
+\end{gathered}
+\tag{33}
 $$
 
 ## Electric and Magnetic Mode Plots

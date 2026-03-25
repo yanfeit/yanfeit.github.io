@@ -57,15 +57,21 @@ $$
 其中<span>$\mathbf{\hat{x}}\_{k-1}$</span>是k-1时刻的后验估计，也就是我们的校正子，k时候的校正子即为<span>$\mathbf{\hat{x}}\_{k}$<span>。有了预测子和校正子，我们可以定义他们和真实的状态$\mathbf{x}\_k$之间的误差，对于预测子我们叫先验误差<span>$\mathbf{e}'\_k$</span>，对于校正子我们叫后验误差$\mathbf{e}\_k$, 
 
 $$
+\begin{gathered}
 \mathbf{e}'_k \equiv \mathbf{x}_k - \mathbf{\hat{x}'}_k, \\
-\mathbf{e}_k  \equiv \mathbf{x}_k - \mathbf{\hat{x}}_k。  \tag{4}
+\mathbf{e}_k  \equiv \mathbf{x}_k - \mathbf{\hat{x}}_k。
+\end{gathered}
+\tag{4}
 $$
 
 先验误差的协方差矩阵$\mathbf{P'}\_k$和后验误差的协方差矩阵$\mathbf{P}\_k$分别为
 
 $$
+\begin{gathered}
 \mathbf{P'}_k =  E[\mathbf{e}'_k {\mathbf{e}'_k}^{T}], \\
-\mathbf{P}_k =  E[\mathbf{e}_k {\mathbf{e}_k}^{T}]。 \tag{5}
+\mathbf{P}_k =  E[\mathbf{e}_k {\mathbf{e}_k}^{T}]。
+\end{gathered}
+\tag{5}
 $$
 
 有了这些定义，我们的目标就很明确了，一个好的校正子意味着它与真实的状态之间的误差相差无几。那么，很显然我们希望后验误差尽可能的小，在数学上也就是我们希望协方差矩阵$\mathbf{P}\_k$的迹尽可能的小。
@@ -87,16 +93,20 @@ $$
 **预测：**
 
 $$
+\begin{gathered}
 \mathbf{\hat{x}'}_k = \mathbf{A} \mathbf{\hat{x}}_{k-1} + \mathbf{B} \mathbf{u}_k \\
 \mathbf{P}'_k = \mathbf{A} \mathbf{P}_{k-1} \mathbf{A}^T + \mathbf{Q}。
+\end{gathered}
 $$
 
 **校正：**
 
 $$
+\begin{gathered}
 \mathbf{K}_k = \mathbf{P'}_k \mathbf{H}^T (\mathbf{H} \mathbf{P'}_k \mathbf{H}^T + \mathbf{R})^{-1}, \\
-\mathbf{\hat{x}}_{k} = \mathbf{\hat{x}’}_{k} + \mathbf{K}_k (\mathbf{z}_k -  \mathbf{H} \mathbf{\hat{x}’}_{k}), \\
+\mathbf{\hat{x}}_{k} = \mathbf{\hat{x}'}_{k} + \mathbf{K}_k (\mathbf{z}_k -  \mathbf{H} \mathbf{\hat{x}'}_{k}), \\
 \mathbf{P}_k = (\mathbf{I} - \mathbf{K}_k \mathbf{H}) \mathbf{P}'_k。
+\end{gathered}
 $$
 
 初始化的时候我们需要假设一个<span>$\mathbf{\hat{x}}\_0$</span>和$\mathbf{P}\_{0}$。通过不停地递归，我们就可以得到每一步的校正子和后验误差的协方差矩阵了。

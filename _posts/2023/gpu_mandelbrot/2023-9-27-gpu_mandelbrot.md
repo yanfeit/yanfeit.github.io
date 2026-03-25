@@ -16,8 +16,10 @@ toc: false
 首先，先说明一下产生Manderbrot集合的算法。对于给定的复数，$c$，定义循环序列
 
 $$
+\begin{gathered}
 z_0 = 0, \quad n = 0 \\
 z_n = z_{n-1}^2 + c, \quad n \ge 0
+\end{gathered}
 $$
 
 当 $n$ 趋向于无穷大是，$\|z_n\|$ 的上界为2，那么我们定义复数 $c$ 是Manderbrot集合的成员。为了找到了这样的集合，我们可以设计如下的算法，

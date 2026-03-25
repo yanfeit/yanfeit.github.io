@@ -77,8 +77,10 @@ $$
 where $v$ is the test scalar field. If apply integral over domain to the above equation, we have
 
 $$
+\begin{gathered}
 \int_{\Omega} v \nabla \cdot (\epsilon \nabla u) \ d \Omega = \int_{\Omega} \nabla \cdot (v \epsilon \nabla u) \ d \Omega + \int_{\Omega} \nabla v \cdot \epsilon \nabla u \ d \Omega \\
 = \int_{\Gamma} v \epsilon \nabla u \cdot \hat{n} \ d\Gamma + \int_{\Omega} \nabla v \cdot \epsilon \nabla u \ d \Omega
+\end{gathered}
 $$
 
 where we apply the divergence theorem in the second step.
@@ -100,9 +102,11 @@ $$
 where $\vec{v}$ is the test vector field. We can apply the integral over the domain for the above equation, we have
 
 $$
+\begin{gathered}
 \int_{\Omega} \vec{v} \cdot [ \nabla \times (\frac{1}{\mu_r} \nabla \times \vec{u} ) ] \ d \Omega = \int_{\Omega}  \frac{1}{\mu_r} \nabla \times \vec{u} \cdot \nabla \times \vec{v} \ d \Omega - \int_{\Omega} \nabla \cdot [ \vec{v} \times (\frac{1}{\mu_r} \nabla \times \vec{u} ) ] \ d \Omega, \\
 = \int_{\Omega}  \frac{1}{\mu_r} \nabla \times \vec{u} \cdot \nabla \times \vec{v} \ d \Omega - \int_{\Gamma}  \vec{v} \times (\frac{1}{\mu_r} \nabla \times \vec{u} ) \cdot \hat{n} \ d \Gamma, \\
 = \int_{\Omega}  \frac{1}{\mu_r} \nabla \times \vec{u} \cdot \nabla \times \vec{v} \ d \Omega - \int_{\Gamma} \frac{1}{\mu_r} \nabla \times \vec{u} \cdot (\hat{n} \times \vec{v}) \ d \Gamma,
+\end{gathered}
 $$
 
 where we apply divergence theorem for the second step and we apply the following equality for the third step,

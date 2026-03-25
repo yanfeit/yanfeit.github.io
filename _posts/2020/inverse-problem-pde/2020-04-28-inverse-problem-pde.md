@@ -18,7 +18,12 @@ This blog is an exploration on another kind of inverse problems about solving PD
 Suppose that we have a one dimensional diffusion equation of heat such as 
 
 $$
-\frac{\partial u}{\partial t} = \frac{\partial^2 u}{\partial x^2} \\(t, x) \in (0, \infty) \times(-1, 1) \\u(t, -1) = u(t, 1) = 0, \quad u(0, x)= u_0(x). \tag{1}
+\begin{gathered}
+\frac{\partial u}{\partial t} = \frac{\partial^2 u}{\partial x^2} \\
+(t, x) \in (0, \infty) \times(-1, 1) \\
+u(t, -1) = u(t, 1) = 0, \quad u(0, x)= u_0(x).
+\end{gathered}
+\tag{1}
 $$
 
 The problem is self-explained for students trained in physics or mathematics. Typically, we will be asked such as, given a $u_0(x)$ find out $u(t, x)$ for some $t>0$. This is what we called as a forward problem. The backward problem is to find $u_0$ given $u(t, x)$. Here I will try to explain why it will be hard to derive $u_0$ in reality. 

@@ -168,8 +168,11 @@ In words, the above equation says $S_{ij}$ is found by driving port $j$ with an 
 We can derive the scattering matrix from impedance matrix. First, we must assume that the characteristic impedance, $Z_{0n}$ , of all ports are identical. The total voltage and current at the $n$th port can be written as
 
 $$
+\begin{gathered}
 V_n = V_n^+ + V_n^-, \\
-I_n = I_n^+ - I_n^- = \frac{1}{Z_{0n}} (V_n^+ - V_n^-). \tag{12}
+I_n = I_n^+ - I_n^- = \frac{1}{Z_{0n}} (V_n^+ - V_n^-).
+\end{gathered}
+\tag{12}
 $$
 
 From the definition of $\mathbf{Z}$ , we can have
@@ -181,8 +184,11 @@ $$
 The above equation can be organized as 
 
 $$
+\begin{gathered}
 (\mathbf{Z} \cdot \mathbf{Z_0^{-1}} + \mathbf{I}) \mathbf{V^{-}} = (\mathbf{Z} \cdot \mathbf{Z_0^{-1}} - \mathbf{I}) \mathbf{V^+} \\
-(\mathbf{Z}  + \mathbf{Z_0}) \mathbf{V^{-}} = (\mathbf{Z}  - \mathbf{Z_0}) \mathbf{V^+}, \tag{14}
+(\mathbf{Z}  + \mathbf{Z_0}) \mathbf{V^{-}} = (\mathbf{Z}  - \mathbf{Z_0}) \mathbf{V^+},
+\end{gathered}
+\tag{14}
 $$
 
 where $\mathbf{I}$ is the identity matrix. Therefore, the scattering matrix can be computed as
