@@ -574,46 +574,50 @@ nav {
   font-weight: 300;
   padding: 40px 0;
   width: 100%;
-  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
 
   @include mobile {
     font-size: $small-font-size;
     padding: 24px 0;
   }
+}
 
-  > .prev {
-    float: left;
-    width: 50%;
-    a {
-      color: $base-lighten-color;
-      border: 1px solid $divider-color;
-      padding: 10px 20px;
-      background: $background-color;
+.pagination-item {
+  display: inline-block;
+  padding: 8px 14px;
+  color: $base-lighten-color;
+  border: 1px solid $divider-color;
+  border-radius: 4px;
+  background: $background-color;
+  text-decoration: none;
+  transition: all 0.2s;
 
-      &:hover, &:focus {
-        color: $link-lighten-color;
-        border: 1px solid $link-lighten-color;
-        background-color: $link-bghv-color;
-      }
-    }
+  &:hover, &:focus {
+    color: $link-lighten-color;
+    border-color: $link-lighten-color;
+    background-color: $link-bghv-color;
   }
 
-  > .next {
-    float: right;
-    text-align: right;
-    width: 50%;
-    a {
-      color: $base-lighten-color;
-      border: 1px solid $divider-color;
-      padding: 10px 20px;
-      background: $background-color;
+  &.disabled {
+    opacity: 0.4;
+    pointer-events: none;
+  }
 
-      &:hover, &:focus {
-        color: $link-lighten-color;
-        border: 1px solid $link-lighten-color;
-        background-color: $link-bghv-color;
-      }
-    }
+  &.current {
+    color: #fff;
+    background-color: $link-color;
+    border-color: $link-color;
+    font-weight: 600;
+  }
+
+  &.page {
+    min-width: 38px;
+    text-align: center;
+    padding: 8px 10px;
   }
 }
 
@@ -900,7 +904,7 @@ blockquote {
 hr { border-top-color: var(--divider-color); }
 .footnotes { border-top-color: var(--divider-color); }
 
-.pagination > .prev a, .pagination > .next a {
+.pagination-item {
   color: var(--text-lighten);
   border-color: var(--divider-color);
   background: var(--bg-color);
@@ -908,6 +912,15 @@ hr { border-top-color: var(--divider-color); }
     color: var(--link-lighten);
     border-color: var(--link-lighten);
     background-color: var(--link-bghv);
+  }
+  &.current {
+    color: #fff;
+    background-color: var(--link-color);
+    border-color: var(--link-color);
+  }
+  &.disabled {
+    color: var(--text-lightener);
+    border-color: var(--divider-color);
   }
 }
 

@@ -28,7 +28,7 @@ layout: default
           <ul class="tag">
             {% for tag in post.tags %}
             <li>
-              <a href="{{ site.url }}{{ site.baseurl }}/tags#{{ tag }}">
+              <a href="{{ site.baseurl }}/tags#{{ tag }}">
                 {{ tag }}
               </a>
             </li>
@@ -67,7 +67,7 @@ layout: default
         <ul class="tag">
           {% for tag in post.tags %}
           <li>
-            <a href="{{ site.url }}{{ site.baseurl }}/tags#{{ tag }}">
+            <a href="{{ site.baseurl }}/tags#{{ tag }}">
               {{ tag }}
             </a>
           </li>
@@ -87,17 +87,30 @@ layout: default
 
 <div class="pagination">
   {% if paginator.previous_page %}
-    <span class="prev">
-      <a href="{{ site.baseurl }}{{ paginator.previous_page_path }}" class="prev">
-        ← Prev
-      </a>
-    </span>
+    <a href="{{ site.baseurl }}{{ paginator.previous_page_path }}" class="pagination-item prev">
+      &larr; Prev
+    </a>
+  {% else %}
+    <span class="pagination-item prev disabled">&larr; Prev</span>
   {% endif %}
+
+  <span class="pagination-pages">
+    {% for page in (1..paginator.total_pages) %}
+      {% if page == paginator.page %}
+        <span class="pagination-item page current">{{ page }}</span>
+      {% elsif page == 1 %}
+        <a href="{{ site.baseurl }}/" class="pagination-item page">{{ page }}</a>
+      {% else %}
+        <a href="{{ site.baseurl }}/page{{ page }}/" class="pagination-item page">{{ page }}</a>
+      {% endif %}
+    {% endfor %}
+  </span>
+
   {% if paginator.next_page %}
-    <span class="next">
-      <a href="{{ site.baseurl}}{{ paginator.next_page_path }}" class="next">
-        Next →
-      </a>
-    </span>
+    <a href="{{ site.baseurl }}{{ paginator.next_page_path }}" class="pagination-item next">
+      Next &rarr;
+    </a>
+  {% else %}
+    <span class="pagination-item next disabled">Next &rarr;</span>
   {% endif %}
 </div>
