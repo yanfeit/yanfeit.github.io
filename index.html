@@ -35,9 +35,6 @@ layout: default
             {% endfor %}
           </ul>
 
-          <script>
-            feather.replace()
-          </script>
         </div>
 
         <div class="entry">
@@ -48,6 +45,7 @@ layout: default
       </article>
     {% endif %}
   {% endfor %}
+  <script>if(typeof feather !== 'undefined') feather.replace();</script>
   
   {% for post in paginator.posts %}
     {% unless post.pinned %}
