@@ -5,9 +5,10 @@
     {% include nav.html %}
 
     {% if page.toc==true %}
-      <aside class="toc">
+      <aside class="toc" id="toc-desktop">
         {% include toc.html html=content %}
       </aside>
+      <button class="toc-toggle-desktop" id="toc-desktop-toggle" aria-label="Toggle table of contents">◀</button>
       <aside class="toc-mobile">
         <button class="toc-mobile-toggle" id="toc-toggle">☰ Contents</button>
         <div class="toc-mobile-content" id="toc-content">
@@ -62,89 +63,35 @@
             tocToggle.textContent = tocContent.classList.contains('open') ? '✕ Contents' : '☰ Contents';
           });
         }
+        // Desktop TOC collapse
+        var dBtn = document.getElementById('toc-desktop-toggle');
+        var dToc = document.getElementById('toc-desktop');
+        var dMain = document.getElementById('main');
+        if (dBtn && dToc) {
+          dBtn.addEventListener('click', function() {
+            var collapsed = dToc.classList.toggle('toc-hidden');
+            dBtn.classList.toggle('toc-btn-collapsed', collapsed);
+            if (dMain) dMain.classList.toggle('toc-collapsed', collapsed);
+            dBtn.textContent = collapsed ? '▶' : '◀';
+          });
+        }
       })();
     </script>
 
     <script>
       (function() {
-        // Language name mapping for display
-        var langNames = {
-          'python': 'Python', 'py': 'Python',
-          'javascript': 'JavaScript', 'js': 'JavaScript',
-          'typescript': 'TypeScript', 'ts': 'TypeScript',
-          'c': 'C', 'cpp': 'C++', 'c++': 'C++',
-          'csharp': 'C#', 'cs': 'C#',
-          'java': 'Java', 'ruby': 'Ruby', 'rb': 'Ruby',
-          'go': 'Go', 'rust': 'Rust', 'swift': 'Swift',
-          'bash': 'Bash', 'sh': 'Shell', 'shell': 'Shell', 'zsh': 'Zsh',
-          'html': 'HTML', 'css': 'CSS', 'scss': 'SCSS', 'sass': 'Sass',
-          'json': 'JSON', 'yaml': 'YAML', 'yml': 'YAML', 'xml': 'XML',
-          'sql': 'SQL', 'r': 'R', 'matlab': 'MATLAB',
-          'latex': 'LaTeX', 'tex': 'LaTeX', 'markdown': 'Markdown', 'md': 'Markdown',
-          'cuda': 'CUDA', 'fortran': 'Fortran', 'f90': 'Fortran',
-          'makefile': 'Makefile', 'cmake': 'CMake',
-          'dockerfile': 'Dockerfile', 'docker': 'Docker',
-          'plaintext': 'Text', 'text': 'Text',
-          'console': 'Console', 'terminal': 'Terminal'
-        };
-
-        var LINE_NUMBER_THRESHOLD = 5;
-
         document.querySelectorAll('pre.highlight').forEach(function(pre) {
           var wrapper = document.createElement('div');
           wrapper.className = 'highlight-wrapper';
           pre.parentNode.insertBefore(wrapper, pre);
           wrapper.appendChild(pre);
 
-          // Detect language from code element's class
-          var codeEl = pre.querySelector('code');
-          var lang = '';
-          if (codeEl) {
-            var classes = codeEl.className.split(/\s+/);
-            for (var i = 0; i < classes.length; i++) {
-              var cls = classes[i].replace('language-', '');
-              if (cls && langNames[cls.toLowerCase()]) {
-                lang = langNames[cls.toLowerCase()];
-                break;
-              }
-            }
-          }
-
-          // Add language label
-          if (lang) {
-            var label = document.createElement('span');
-            label.className = 'code-lang-label';
-            label.textContent = lang;
-            wrapper.insertBefore(label, pre);
-          }
-
-          // Add line numbers for longer code blocks
-          var code = codeEl || pre;
-          var lines = code.textContent.split('\n');
-          // Remove trailing empty line (common in code blocks)
-          if (lines.length > 0 && lines[lines.length - 1].trim() === '') {
-            lines.pop();
-          }
-          if (lines.length >= LINE_NUMBER_THRESHOLD) {
-            wrapper.classList.add('has-line-numbers');
-            var lineNums = document.createElement('div');
-            lineNums.className = 'line-numbers';
-            lineNums.setAttribute('aria-hidden', 'true');
-            var numsHtml = '';
-            for (var j = 1; j <= lines.length; j++) {
-              numsHtml += '<span>' + j + '</span>';
-            }
-            lineNums.innerHTML = numsHtml;
-            pre.insertBefore(lineNums, pre.firstChild);
-          }
-
-          // Copy button
           var btn = document.createElement('button');
           btn.className = 'copy-btn';
           btn.textContent = 'Copy';
           btn.addEventListener('click', function() {
-            var copyCode = pre.querySelector('code') || pre;
-            var text = copyCode.innerText;
+            var code = pre.querySelector('code') || pre;
+            var text = code.innerText;
             navigator.clipboard.writeText(text).then(function() {
               btn.textContent = 'Copied!';
               setTimeout(function() { btn.textContent = 'Copy'; }, 2000);

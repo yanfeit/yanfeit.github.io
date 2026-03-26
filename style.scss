@@ -330,6 +330,8 @@ img {
 	position: fixed;
 	z-index: 4;
   border-right: 1px solid $divider-color;
+  overflow-y: auto;
+  overflow-x: hidden;
 
   @include mobile {
     width: 100%;
@@ -338,6 +340,7 @@ img {
     position: relative;
     border-bottom: 1px solid $divider-color;
     border-right: 0;
+    overflow-y: visible;
   }
 }
 
@@ -351,7 +354,7 @@ img {
 
 .site-info {
   text-align: center;
-  margin: 20px auto 0;
+  margin: 10px auto 0;
 
   @include mobile {
     float: none;
@@ -360,15 +363,14 @@ img {
   }
 
   .site-avatar {
-    // margin-top: 20px;
     margin:0 auto;
     display: block;
-    max-width: 200px;
-    max-height: 200px;
+    max-width: 120px;
+    max-height: 120px;
 
     @include mobile {
-      max-width: 120px;
-      max-height: 120px;
+      max-width: 100px;
+      max-height: 100px;
     }
 
     img {
@@ -384,17 +386,18 @@ img {
   cursor: pointer;
   font-family: $base-font;
   font-weight: 700;
-  font-size: 28px;
+  font-size: 20px;
   letter-spacing: 1px;
 }
 
 .site-description {
-  margin: 15px auto;
+  margin: 8px auto;
   color: $base-lighten-color;
-  font-size: 16px;
+  font-size: 13px;
 
   @include mobile {
     margin: 10px auto;
+    font-size: 16px;
   }
 }
 
@@ -404,11 +407,11 @@ img {
 
 nav {
   display : block;
-  margin-top: 23px; // @TODO: Vertically middle align
+  margin-top: 10px;
   text-align : center;
   font-family: $base-font;
   font-weight: 500;
-  font-size: 18px;
+  font-size: 15px;
 
   @include mobile {
     margin-top: 9px;
@@ -421,6 +424,7 @@ nav {
     text-align: center;
     font-weight: 300;
     letter-spacing: 1px;
+    line-height: 1.6;
 
     @include mobile {
       display: inline;
@@ -541,6 +545,8 @@ nav {
   position: fixed;
   z-index: 4;
   padding: 60px 20px 0 20px;
+  overflow-y: auto;
+  transition: transform 0.3s ease, opacity 0.3s ease;
   
   &:before{
     content:"Content";
@@ -556,14 +562,59 @@ nav {
     content:"";
   }
 
+  &.toc-hidden {
+    transform: translateX(-100%);
+    opacity: 0;
+    pointer-events: none;
+  }
+
   @include mobile{
     display:none;
+  }
+}
+
+.toc-toggle-desktop {
+  display: none;
+  position: fixed;
+  z-index: 5;
+  top: 14px;
+  background: var(--bg-color, #{$background-color});
+  border: 1px solid var(--divider-color, #{$divider-color});
+  border-left: none;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  padding: 4px 5px;
+  font-size: 12px;
+  color: var(--text-lighten, #{$base-lighten-color});
+  transition: left 0.3s ease;
+  line-height: 1;
+  opacity: 0.6;
+
+  &:hover {
+    border-color: var(--link-color, #{$link-color});
+    color: var(--link-color, #{$link-color});
+    opacity: 1;
+  }
+
+  @include mobile {
+    display: none !important;
   }
 }
 
 @media screen and (max-width:2200px) and (min-width:1200px){
   .withtoc{
     padding-left: 260px;
+    transition: padding-left 0.3s ease;
+  }
+  .withtoc.toc-collapsed {
+    padding-left: 0;
+  }
+  .toc-toggle-desktop {
+    display: block;
+    left: calc(15% + 280px);
+  }
+  .toc-toggle-desktop.toc-btn-collapsed {
+    left: 15%;
   }
 }
 
@@ -574,50 +625,46 @@ nav {
   font-weight: 300;
   padding: 40px 0;
   width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 6px;
-  flex-wrap: wrap;
+  display: inline-block;
 
   @include mobile {
     font-size: $small-font-size;
     padding: 24px 0;
   }
-}
 
-.pagination-item {
-  display: inline-block;
-  padding: 8px 14px;
-  color: $base-lighten-color;
-  border: 1px solid $divider-color;
-  border-radius: 4px;
-  background: $background-color;
-  text-decoration: none;
-  transition: all 0.2s;
+  > .prev {
+    float: left;
+    width: 50%;
+    a {
+      color: $base-lighten-color;
+      border: 1px solid $divider-color;
+      padding: 10px 20px;
+      background: $background-color;
 
-  &:hover, &:focus {
-    color: $link-lighten-color;
-    border-color: $link-lighten-color;
-    background-color: $link-bghv-color;
+      &:hover, &:focus {
+        color: $link-lighten-color;
+        border: 1px solid $link-lighten-color;
+        background-color: $link-bghv-color;
+      }
+    }
   }
 
-  &.disabled {
-    opacity: 0.4;
-    pointer-events: none;
-  }
+  > .next {
+    float: right;
+    text-align: right;
+    width: 50%;
+    a {
+      color: $base-lighten-color;
+      border: 1px solid $divider-color;
+      padding: 10px 20px;
+      background: $background-color;
 
-  &.current {
-    color: #fff;
-    background-color: $link-color;
-    border-color: $link-color;
-    font-weight: 600;
-  }
-
-  &.page {
-    min-width: 38px;
-    text-align: center;
-    padding: 8px 10px;
+      &:hover, &:focus {
+        color: $link-lighten-color;
+        border: 1px solid $link-lighten-color;
+        background-color: $link-bghv-color;
+      }
+    }
   }
 }
 
@@ -904,7 +951,7 @@ blockquote {
 hr { border-top-color: var(--divider-color); }
 .footnotes { border-top-color: var(--divider-color); }
 
-.pagination-item {
+.pagination > .prev a, .pagination > .next a {
   color: var(--text-lighten);
   border-color: var(--divider-color);
   background: var(--bg-color);
@@ -912,15 +959,6 @@ hr { border-top-color: var(--divider-color); }
     color: var(--link-lighten);
     border-color: var(--link-lighten);
     background-color: var(--link-bghv);
-  }
-  &.current {
-    color: #fff;
-    background-color: var(--link-color);
-    border-color: var(--link-color);
-  }
-  &.disabled {
-    color: var(--text-lightener);
-    border-color: var(--divider-color);
   }
 }
 
