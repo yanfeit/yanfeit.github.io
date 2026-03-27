@@ -2,7 +2,6 @@
 layout: post
 title: Local Jekyll Development Setup Guide
 date: 2026-3-25
-author: Claude Opus 4.6, verified by Yanfei Tang
 tags: [Jekyll, web serve]
 comments: false
 toc: false

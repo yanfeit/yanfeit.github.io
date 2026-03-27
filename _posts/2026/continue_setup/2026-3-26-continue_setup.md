@@ -2,7 +2,6 @@
 layout: post
 title: Setup Continue Extension in VS Code with a Local LLM model
 date: 2026-3-26
-author: Claude Opus 4.6, verified by Yanfei Tang
 tags: [LLM, agent]
 comments: false
 toc: false
