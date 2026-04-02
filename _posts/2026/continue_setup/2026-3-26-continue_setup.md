@@ -23,7 +23,7 @@ This guide documents how to set up the [Continue](https://www.continue.dev/) ext
 Before configuring Continue, confirm that your API server is reachable and check the **exact model name** it reports:
 
 ```bash
-curl -s http://<your-server>:30000/v1/models \
+curl -s http://<your-server>:<port>/v1/models \
   -H "Authorization: Bearer <your-api-key>"
 ```
 
@@ -45,7 +45,7 @@ Look at the `id` field in the response. The model name may include a full path, 
 You can also test a quick chat completion:
 
 ```bash
-curl -s http://<your-server>:30000/v1/chat/completions \
+curl -s http://<your-server>:<port>/v1/chat/completions \
   -H "Authorization: Bearer <your-api-key>" \
   -H "Content-Type: application/json" \
   -d '{
@@ -67,7 +67,7 @@ models:
   - name: "Qwen3.5"
     provider: openai
     model: "/workplace/Qwen3.5-397B-A17B-FP8"
-    apiBase: "http://<your-server>:30000/v1"
+    apiBase: "http://<your-server>:<port>/v1"
     apiKey: "<your-api-key>"
 ```
 
