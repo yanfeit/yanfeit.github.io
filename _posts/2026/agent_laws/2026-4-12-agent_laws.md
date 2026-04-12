@@ -182,7 +182,7 @@ Every architectural choice in a modern agent system — from skills to tools to 
 
 **Cited as:**
 
-> Tang, Yanfei. (Apr 2026). "Two Laws of Agent Systems." *Yanfei's Notes*. https://yanfeit.github.io/agent_laws/.
+> Tang, Yanfei. (Apr 2026). "Two Laws of Agent Systems. https://yanfeit.github.io/agent_laws/.
 
 Or
 
@@ -190,7 +190,6 @@ Or
 @article{tang2026twolaws,
   title   = "Two Laws of Agent Systems",
   author  = "Tang, Yanfei",
-  journal = "yanfeit.github.io",
   year    = "2026",
   month   = "Apr",
   url     = "https://yanfeit.github.io/agent_laws/"
