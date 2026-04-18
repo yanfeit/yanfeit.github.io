@@ -9,9 +9,11 @@ toc: true
 pinned: false
 ---
 
-In February 2025, Andrej Karpathy posted a reflection on X that resonated widely across the programming community[^10]:
+In February 2025, Andrej Karpathy posted a reflection on X that resonated widely across the programming community:
 
-> "There's a new programmable layer of abstraction to master (in addition to the usual layers below) involving agents, subagents, their prompts, contexts, memory, modes, permissions, tools, plugins, skills, hooks, MCP, LSP, slash commands, workflows, IDE integrations, and a need to build an all-encompassing mental model..."
+> "There's a new programmable layer of abstraction to master (in addition to the usual layers below) involving agents, subagents, their prompts, contexts, memory, modes, permissions, tools, plugins, skills, hooks, MCP, LSP, slash commands, workflows, IDE integrations, and a need to build an all-encompassing mental model..." [^10]
+
+<!-- more -->
 
 That is a *lot* of concepts. Agents, subagents, prompts, contexts, memory, modes, permissions, tools, plugins, skills, hooks, MCP, LSP, slash commands, workflows, IDE integrations — the list reads like a parts catalog for a machine whose blueprints nobody has published.
 
@@ -19,7 +21,7 @@ For a physicist, this profusion of concepts is disorienting but also familiar. W
 
 I believe we can. There are two empirical constraints that, taken together, explain most of the architectural choices in modern agent systems and bring order to Karpathy's daunting list. I call them the First Law and the Second Law — not because they carry the certainty of thermodynamics, but because they play an analogous role: they define the boundary conditions within which all agent engineering must operate.
 
-<!-- more -->
+
 
 # 1. The First Law: Better Prompts, Better Outputs
 

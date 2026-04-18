@@ -154,7 +154,8 @@ permalink: /search/
     var results = posts.filter(function(post) {
       return post.title.toLowerCase().indexOf(query) !== -1 ||
              post.excerpt.toLowerCase().indexOf(query) !== -1 ||
-             post.tags.join(' ').toLowerCase().indexOf(query) !== -1;
+             post.tags.join(' ').toLowerCase().indexOf(query) !== -1 ||
+             (post.content && post.content.toLowerCase().indexOf(query) !== -1);
     });
 
     if (results.length === 0) {
@@ -168,10 +169,22 @@ permalink: /search/
         return '<span class="search-tag">' + tagDisplay + '</span>';
       }).join(' ');
 
+      // Show a snippet around the match in full content if excerpt doesn't contain the query
+      var snippetText = post.excerpt;
+      if (post.excerpt.toLowerCase().indexOf(query) === -1 &&
+          post.content && post.content.toLowerCase().indexOf(query) !== -1) {
+        var idx = post.content.toLowerCase().indexOf(query);
+        var start = Math.max(0, idx - 80);
+        var end = Math.min(post.content.length, idx + query.length + 120);
+        snippetText = (start > 0 ? '...' : '') +
+                      post.content.substring(start, end) +
+                      (end < post.content.length ? '...' : '');
+      }
+
       return '<div class="search-item">' +
         '<h2><a href="' + post.url + '">' + highlightText(post.title, query) + '</a></h2>' +
         '<div class="meta">' + post.date + (tagsHtml ? ' · ' + tagsHtml : '') + '</div>' +
-        '<p class="excerpt">' + highlightText(post.excerpt, query) + '</p>' +
+        '<p class="excerpt">' + highlightText(snippetText, query) + '</p>' +
         '</div>';
     }).join('');
 
